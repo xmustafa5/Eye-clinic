@@ -142,6 +142,7 @@ const Basket = () => {
             handleInput2Change={handleInput2Change}
             handleInput3Change={handleInput3Change}
             handleByNowClick={handleByNowClick}
+            showPopup={showPopup}
           />
         </div>
       )}

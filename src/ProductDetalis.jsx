@@ -22,6 +22,7 @@ const ProductDetails = ({
             CLOSE
           </button> */}
         </div>
+        
       </div>
     </>
   );
