@@ -15,7 +15,7 @@ const ProductDetails = ({
           <div className="flex">
             <input type="text" name="input1" onChange={handleInput1Change} />
             <input type="text" name="input2" onChange={handleInput2Change} />
-            <input type="text" name="input3" onChange={handleInput4Change} />
+            <input type="text" name="input3"  onChange={handleInput3Change} />
             <button onClick={handleByNowClick}>By Now</button>
           </div>
           {/* <button className="close-modal" onClick={handlePopupToggle}>

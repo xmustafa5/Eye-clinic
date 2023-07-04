@@ -62,7 +62,7 @@ const Basket = () => {
   };
 
   const handleInput3Change = (e) => {
-    setInputValue4(e.target.value);
+    setInputValue3(e.target.value);
   };
   const handleByNowClick = async () => {
     // Check if the data already exists in the requests collection
@@ -70,6 +70,7 @@ const Basket = () => {
       .collection("requests")
       .where("input1", "==", inputValue1) // Replace input1Value with your actual value
       .where("input2", "==", inputValue2) // Replace input2Value with your actual value
+      .where("input3", "==", inputValue3) // Replace input2Value with your actual value
       .get();
 
     if (!existingRequestsSnapshot.empty) {
@@ -82,6 +83,7 @@ const Basket = () => {
       await db.collection("requests").add({
         input1: inputValue1, // Replace input1Value with your actual value
         input2: inputValue2, // Replace input2Value with your actual value
+        input3: inputValue3, // Replace input2Value with your actual value
         items: basketItems,
       });
 
