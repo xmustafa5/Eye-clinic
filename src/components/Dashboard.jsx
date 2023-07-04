@@ -1,22 +1,55 @@
 import React, { useState } from "react";
-import { db } from "../components/firebase";
-
+import { db, storage } from "../components/firebase";
 
 const Dashboard = () => {
-    const [imageUrl1, setImageUrl1] = useState("");
-    const [imageUrl2, setImageUrl2] = useState("");
-    const [title, setTitle] = useState("");
-    const [color1, setColor1] = useState("");
-    const [color2, setColor2] = useState("");
-    const [price, setPrice] = useState("");
-  
-    const handleInputChange = (e, setState) => {
-      setState(e.target.value);
-    };
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-  
+  const [imageFile1, setImageFile1] = useState(null);
+  const [imageFile2, setImageFile2] = useState(null);
+  const [title, setTitle] = useState("");
+  const [color1, setColor1] = useState("");
+  const [color2, setColor2] = useState("");
+  const [price, setPrice] = useState("");
+
+  const handleImageChange = (e, setImageFile) => {
+    const file = e.target.files[0];
+    setImageFile(file);
+  };
+
+  const handleUpload = (file) => {
+    return new Promise((resolve, reject) => {
+      const storageRef = storage.ref(`images/${file.name}`);
+      const uploadTask = storageRef.put(file);
+
+      uploadTask.on(
+        "state_changed",
+        (snapshot) => {
+          // Track progress if needed
+        },
+        (error) => {
+          reject(error);
+        },
+        () => {
+          // Upload completed successfully
+          storageRef
+            .getDownloadURL()
+            .then((url) => {
+              resolve(url);
+            })
+            .catch((error) => {
+              reject(error);
+            });
+        }
+      );
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      // Upload image files to Firebase Storage
+      const imageUrl1 = await handleUpload(imageFile1);
+      const imageUrl2 = await handleUpload(imageFile2);
+
       const item = {
         imageUrl1,
         imageUrl2,
@@ -25,76 +58,65 @@ const Dashboard = () => {
         color2,
         price,
       };
-  
-      // Add item to the "products" collection in Firebase
-      db.collection("products")
-        .add(item)
-        .then(() => {
-          console.log("Item added successfully!");
-          // Reset the form after successful submission
-          setImageUrl1("");
-          setImageUrl2("");
-          setTitle("");
-          setColor1("");
-          setColor2("");
-          setPrice("");
-        })
-        .catch((error) => {
-          console.error("Error adding item:", error);
-        });
-    };
-  
-    return (
-      <div>
-        <h1>Dashboard</h1>
-        <form onSubmit={handleSubmit}>
-          <label>Image URL 1:</label>
-          <input
-            type="text"
-            value={imageUrl1}
-            onChange={(e) => handleInputChange(e, setImageUrl1)}
-          />
-  
-          <label>Image URL 2:</label>
-          <input
-            type="text"
-            value={imageUrl2}
-            onChange={(e) => handleInputChange(e, setImageUrl2)}
-          />
-  
-          <label>Title:</label>
-          <input
-            type="text"
-            value={title}
-            onChange={(e) => handleInputChange(e, setTitle)}
-          />
-  
-          <label>Color 1:</label>
-          <input
-            type="text"
-            value={color1}
-            onChange={(e) => handleInputChange(e, setColor1)}
-          />
-  
-          <label>Color 2:</label>
-          <input
-            type="text"
-            value={color2}
-            onChange={(e) => handleInputChange(e, setColor2)}
-          />
-  
-          <label>Price:</label>
-          <input
-            type="text"
-            value={price}
-            onChange={(e) => handleInputChange(e, setPrice)}
-          />
-  
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-    );
+
+      // Add item to the "products" collection in Firestore
+      await db.collection("products").add(item);
+
+      console.log("Item added successfully!");
+      // Reset the form after successful submission
+      setImageFile1(null);
+      setImageFile2(null);
+      setTitle("");
+      setColor1("");
+      setColor2("");
+      setPrice("");
+    } catch (error) {
+      console.error("Error adding item:", error);
+    }
   };
-  
-  export default Dashboard;
-  
+
+  return (
+    <div>
+      <h1>Dashboard</h1>
+      <form onSubmit={handleSubmit}>
+        <label>Image 1:</label>
+        <input type="file" onChange={(e) => handleImageChange(e, setImageFile1)} />
+
+        <label>Image 2:</label>
+        <input type="file" onChange={(e) => handleImageChange(e, setImageFile2)} />
+
+        <label>Title:</label>
+        <input
+          type="text"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+
+        <label>Color 1:</label>
+        <input
+          type="text"
+          value={color1}
+          onChange={(e) => setColor1(e.target.value)}
+        />
+
+        <label>Color 2:</label>
+        <input
+          type="text"
+          value={color2}
+          onChange={(e) => setColor2(e.target.value)}
+        />
+
+        <label>Price:</label>
+        <input
+          type="text"
+          value={price}
+          onChange={(e) => setPrice(e.target.value)}
+        />
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
+};
+
+export default Dashboard;
