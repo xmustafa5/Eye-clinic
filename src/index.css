@@ -256,3 +256,12 @@ align-items: center;
   color: red;
   font-weight: 800;
 }
+.fex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #026161;
+  height: 200px;
+  flex-direction: column;
+  gap: 5px;
+}

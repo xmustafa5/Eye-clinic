@@ -3,7 +3,7 @@ import "./Card.css";
 import "../Modal.css";
 import imgg from "../img/1g.jpg";
 import imgg1 from "../img/1gc.png";
-import ProductDetails from './../ProductDetalis';
+import ProductDetails from '../ProductDetalis';
 import Basket from "./Basket";
 import { db } from '../components/firebase';
 
