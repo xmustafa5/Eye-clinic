@@ -6,10 +6,5 @@ export const links = [
   {
     link: '/Sighup',
     name: 'sighup',
-  },
-  {
-    link: '/Loading',
-    name: 'Loading',
-  },
- 
+  }
 ];

@@ -4,7 +4,7 @@ import './loading.css';
 const Loading = (props) => (
   <div className='loading'>
         <ReactLoading type={props.bars
-} color='black'  />
+} color='black'/>
         {/* <ReactLoading type={spokes} color='black' />
         <ReactLoading type={spokes} color='black' /> */}
   </div>

@@ -1,0 +1,128 @@
+body{
+    background-color: #1b1919;
+}
+li{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    color: #3a6cfc ;
+    font-size: 2.2em;
+    font-weight: 800 ;
+    margin-bottom: 30px;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; /*ينزل الكروت بالرسبومسف*/
+}
+.card{
+    background-color: #ffff;
+    width: 21.25em;
+    box-shadow: 0px 5px 25px rgba(1 1 1 / 45%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;   
+    transition: 0.7s ease;
+}
+@media screen and (min-width: 968px) {
+    .container {
+    }
+}
+/**/
+.card:hover{
+    transform: scale(1.1);
+
+}
+.icon{
+    color: #3a6cfc;
+    font-size: 8em;
+    text-align: center;
+
+}
+.info{
+    text-align: center;
+}
+.info h3{
+    color: #3a6cfc;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+    .pro{
+        background-color: #000016;
+
+    }
+    .pro .content{
+        margin-top: 30px;
+    }
+    .projcard{
+        
+        background-color: #ffff;
+        border: 1px solid #ffff;
+        min-height: 14em;
+        width: 20em;
+        overflow: hidden; /**/
+        border-radius: 10px;
+        margin: 20px;
+        transition: 0.7s ease;
+    }
+    .projcard:hover p{
+        color: aliceblue;
+        transition: 0.7s ease;
+    }
+    .projcard:hover{
+        background-color: blueviolet;
+        color: aliceblue;
+
+    }
+    .projcard:hover{
+        transform: scale(1.1);
+    }
+    .projcard:hover .projimg{
+    opacity: 0.9;}
+    .projimg img{
+        width: 100%;
+        transition: 0.7s ease;
+
+    }
+    .projimg img:hover{
+        opacity: 4;
+        transform: scale(1.1);
+    }
+    .projinfo{
+        padding: 1em;
+    }
+    .projinfo:hover{
+        color: #ffff;
+    }
+    .iopp{
+        font-size: 0.8em;
+        color: #000016;
+    }
+    .projtitle{
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-top: 10px;
+    }
+    .mpre{
+        text-decoration: none;
+        color: #3a6cfc;
+    }
+    .mpre:hover{
+        color: #ffff;
+    }
+    .e{
+        height: 100vh;
+        display: flex;
+        background-color: #3a6cfc;
+    }
