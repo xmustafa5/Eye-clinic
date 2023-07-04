@@ -58,17 +58,12 @@ const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket,
               setShowPopup(true);
             })
             .catch((error) => {
-              console.error("Error adding item to basket:", error);
               setPopupMessage("Failed to add item to the basket.");
               setShowPopup(true);
             });
         }
       })
-      .catch((error) => {
-        console.error("Error checking item in basket collection:", error);
-        setPopupMessage("Failed to check item in the basket.");
-        setShowPopup(true);
-      });
+      
   };
   
  

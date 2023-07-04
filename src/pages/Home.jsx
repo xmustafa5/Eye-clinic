@@ -50,12 +50,10 @@ export default function Home() {
       setPopupMessage('Item added to the basket!');
     } else {
       setPopupMessage('Item already in the basket!');
+      
     }
   
-    setShowPopup(true);
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 2000);
+   
   };
 
    
@@ -87,7 +85,17 @@ export default function Home() {
   //   }
   // ];
  
+  useEffect(() => {
+    if (showPopup) {
+      const timer = setTimeout(() => {
+        setShowPopup(false);
+      }, 1500);
 
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  }, [showPopup]);
   return (
     <>
     <div className="app">

@@ -12,7 +12,8 @@ const Basket = () => {
   const [inputValue1, setInputValue1] = useState("");
   const [inputValue2, setInputValue2] = useState("");
   const [inputValue3, setInputValue3] = useState("");
-
+  const [popupMessage, setPopupMessage] = useState('');
+  const [showPopup, setShowPopup] = useState(false);
   useEffect(() => {
     const fetchBasketItems = async () => {
       try {
@@ -22,14 +23,27 @@ const Basket = () => {
           ...doc.data(),
         }));
         setBasketItems(items);
+
         setIsLoading(false);
       } catch (error) {
         console.error("Error fetching basket items:", error);
       }
     };
-
+    
     fetchBasketItems();
   }, []);
+  useEffect(() => {
+    if (showPopup) {
+      const timer = setTimeout(() => {
+        setShowPopup(false);
+      }, 1500);
+
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  }, [showPopup]);
+
   if (isLoading) {
     return <p>Loading...</p>;
   }
@@ -38,7 +52,8 @@ const Basket = () => {
       .doc(itemId)
       .delete()
       .then(() => {
-        console.log("Item successfully removed from basket");
+        setPopupMessage("Item successfully removed from basket");
+        setShowPopup(true);
         setBasketItems((prevItems) =>
           prevItems.filter((item) => item.id !== itemId)
         );
@@ -74,7 +89,8 @@ const Basket = () => {
       .get();
 
     if (!existingRequestsSnapshot.empty) {
-      console.log("Data already exists in requests collection");
+      setPopupMessage("Data already exists in requests collection");
+      setShowPopup(true);
       return; // Exit the function to prevent adding duplicate data
     }
 
@@ -89,7 +105,8 @@ const Basket = () => {
 
       // Clear the basket or perform any other necessary actions
       setBasketItems([]);
-      console.log("Data added to requests collection");
+      setPopupMessage("Data added to requests collection");
+      setShowPopup(true);
     } catch (error) {
       console.error("Error adding data to requests collection:", error);
     }
@@ -123,11 +140,19 @@ const Basket = () => {
             handlePopupToggle={handlePopupToggle}
             handleInput1Change={handleInput1Change}
             handleInput2Change={handleInput2Change}
+            handleInput3Change={handleInput3Change}
             handleByNowClick={handleByNowClick}
           />
         </div>
       )}
             <Link to="/requests">View Requests</Link>
+            {showPopup && (
+          <div className="popup">
+          <div className="popup1">
+            <h1 className='massage'>{popupMessage}</h1>
+          </div>
+          </div>
+        )}
     </div>
   );
 };
