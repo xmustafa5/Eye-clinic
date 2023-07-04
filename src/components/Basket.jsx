@@ -11,6 +11,7 @@ const Basket = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [inputValue1, setInputValue1] = useState("");
   const [inputValue2, setInputValue2] = useState("");
+  const [inputValue3, setInputValue3] = useState("");
 
   useEffect(() => {
     const fetchBasketItems = async () => {
@@ -60,6 +61,9 @@ const Basket = () => {
     setInputValue2(e.target.value);
   };
 
+  const handleInput3Change = (e) => {
+    setInputValue4(e.target.value);
+  };
   const handleByNowClick = async () => {
     // Check if the data already exists in the requests collection
     const existingRequestsSnapshot = await db
