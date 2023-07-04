@@ -82,22 +82,26 @@ const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket,
               <strong className="projtitle">
                 <span>{title}</span>
                 <div>
-                  <button
-                    className={`radio-button ${
-                      selectedOption === "option1" ? "active" : ""
-                    }`}
-                    onClick={() => handleOptionClick("option1")}
-                  >
-                   {color1}
-                  </button>
-                  <button
-                    className={`radio-button ${
-                      selectedOption === "option2" ? "active" : ""
-                    }`}
-                    onClick={() => handleOptionClick("option2")}
-                  >
-                    {color2}
-                  </button>
+                  {color1 && (
+                    <button
+                      className={`radio-button ${
+                        selectedOption === "option1" ? "active" : ""
+                      }`}
+                      onClick={() => handleOptionClick("option1")}
+                    >
+                      {color1}
+                    </button>
+                  )}
+                  {color2 && (
+                    <button
+                      className={`radio-button ${
+                        selectedOption === "option2" ? "active" : ""
+                      }`}
+                      onClick={() => handleOptionClick("option2")}
+                    >
+                      {color2}
+                    </button>
+                  )}
                 </div>
               </strong>
               <p className="iopp">{price}$</p>

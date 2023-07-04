@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { db, storage } from "../components/firebase";
 
 const Dashboard = () => {
@@ -8,71 +8,100 @@ const Dashboard = () => {
   const [color1, setColor1] = useState("");
   const [color2, setColor2] = useState("");
   const [price, setPrice] = useState("");
+  const [products, setProducts] = useState([]);
 
   const handleImageChange = (e, setImageFile) => {
     const file = e.target.files[0];
     setImageFile(file);
   };
 
-  const handleUpload = (file) => {
-    return new Promise((resolve, reject) => {
-      const storageRef = storage.ref(`images/${file.name}`);
-      const uploadTask = storageRef.put(file);
-
-      uploadTask.on(
-        "state_changed",
-        (snapshot) => {
-          // Track progress if needed
-        },
-        (error) => {
-          reject(error);
-        },
-        () => {
-          // Upload completed successfully
-          storageRef
-            .getDownloadURL()
-            .then((url) => {
-              resolve(url);
-            })
-            .catch((error) => {
-              reject(error);
-            });
-        }
-      );
-    });
-  };
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    try {
-      // Upload image files to Firebase Storage
-      const imageUrl1 = await handleUpload(imageFile1);
-      const imageUrl2 = await handleUpload(imageFile2);
-
-      const item = {
-        imageUrl1,
-        imageUrl2,
-        title,
-        color1,
-        color2,
-        price,
-      };
-
-      // Add item to the "products" collection in Firestore
-      await db.collection("products").add(item);
-
-      console.log("Item added successfully!");
-      // Reset the form after successful submission
-      setImageFile1(null);
-      setImageFile2(null);
-      setTitle("");
-      setColor1("");
-      setColor2("");
-      setPrice("");
-    } catch (error) {
-      console.error("Error adding item:", error);
+    const uploadTasks = [];
+   
+    if (imageFile1) {
+      const uploadTask1 = storage.ref(`images/${imageFile1.name}`).put(imageFile1);
+      uploadTasks.push(uploadTask1);
     }
+
+    if (imageFile2) {
+      const uploadTask2 = storage.ref(`images/${imageFile2.name}`).put(imageFile2);
+      uploadTasks.push(uploadTask2);
+    }
+
+    Promise.all(uploadTasks)
+      .then(() => {
+        const imageUrlPromises = [];
+
+        if (imageFile1) {
+          const imageUrl1Promise = storage
+            .ref("images")
+            .child(imageFile1.name)
+            .getDownloadURL();
+          imageUrlPromises.push(imageUrl1Promise);
+        }
+
+        if (imageFile2) {
+          const imageUrl2Promise = storage
+            .ref("images")
+            .child(imageFile2.name)
+            .getDownloadURL();
+          imageUrlPromises.push(imageUrl2Promise);
+        }
+
+        return Promise.all(imageUrlPromises);
+      })
+      .then((imageUrls) => {
+        const item = {
+          imageUrl1: imageUrls[0] || "",
+          imageUrl2: imageUrls[1] || "",
+          title,
+          color1,
+          color2,
+          price,
+        };
+
+        return db.collection("products").add(item);
+
+        
+      })
+      .then(() => {
+        console.log("Item added successfully!");
+        setImageFile1(null);
+        setImageFile2(null);
+        setTitle("");
+        setColor1("");
+        setColor2("");
+        setPrice("");
+      })
+      .catch((error) => {
+        console.error("Error adding item:", error);
+      });
+  };
+
+  useEffect(() => {
+    const unsubscribe = db.collection("products").onSnapshot((snapshot) => {
+      const productList = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setProducts(productList);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  const handleRemoveProduct = (productId) => {
+    db.collection("products")
+      .doc(productId)
+      .delete()
+      .then(() => {
+        console.log("Product removed successfully!");
+      })
+      .catch((error) => {
+        console.error("Error removing product:", error);
+      });
   };
 
   return (
@@ -112,9 +141,27 @@ const Dashboard = () => {
           value={price}
           onChange={(e) => setPrice(e.target.value)}
         />
+          
+            
 
         <button type="submit">Submit</button>
       </form>
+      <div>
+      <h1>Dashboard</h1>
+      <h2>Products:</h2>
+      {products.map((product) => (
+        <div key={product.id}>
+          <h3>{product.title}</h3>
+          { product.color1 &&<p>Color 1: {product.color1}</p>}
+        { product.color2 && <p>Color 2: {product.color2}</p>} 
+          <p>Price: {product.price}</p>
+          <button onClick={() => handleRemoveProduct(product.id)}>
+            Remove Product
+          </button>
+          <hr />
+        </div>
+      ))}
+    </div>
     </div>
   );
 };
