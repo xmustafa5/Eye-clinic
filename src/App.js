@@ -5,6 +5,8 @@ import Sighup from './pages/SingUp';
 import Loading from './components/Loading';
 import Baskett from './pages/Baskett';
 import Requests from './components/Requests';
+import Dashboard from './components/Dashboard';
+
 function App() {
   return (
     <>
@@ -14,6 +16,7 @@ function App() {
           <Route path='/Baskett' element={<Baskett />} />
           <Route path='/Loading' element={<Loading />} />
           <Route  path="/requests" element={<Requests/>} />
+          <Route  path="/Dashboard" element={<Dashboard/>} />
 
         </Routes>
       </Layout>

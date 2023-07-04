@@ -1,5 +1,5 @@
 import React from 'react';
- 
+
 import Card from '../components/Card';
 import { useState } from 'react';
 import Basket from '../components/Basket';
@@ -134,7 +134,9 @@ export default function Home() {
     basketItems: basketItems,
     handleRemoveFromBasket: handleRemoveFromBasket
   }
-}}>Baskettttx</Link>    </>
+}}>Baskettttx</Link>
+  <Link to="/Dashboard">Dashboard</Link>
+    </>
   );
 }
 

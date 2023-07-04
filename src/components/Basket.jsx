@@ -83,9 +83,9 @@ const Basket = () => {
     // Check if the data already exists in the requests collection
     const existingRequestsSnapshot = await db
       .collection("requests")
-      .where("input1", "==", inputValue1) // Replace input1Value with your actual value
-      .where("input2", "==", inputValue2) // Replace input2Value with your actual value
-      .where("input3", "==", inputValue3) // Replace input2Value with your actual value
+      .where("input1", "==", inputValue1)
+      .where("input2", "==", inputValue2)
+      .where("input3", "==", inputValue3)
       .get();
 
     if (!existingRequestsSnapshot.empty) {
@@ -97,16 +97,27 @@ const Basket = () => {
     try {
       // Add the data to the requests collection
       await db.collection("requests").add({
-        input1: inputValue1, // Replace input1Value with your actual value
-        input2: inputValue2, // Replace input2Value with your actual value
-        input3: inputValue3, // Replace input2Value with your actual value
+        input1: inputValue1,
+        input2: inputValue2,
+        input3: inputValue3,
         items: basketItems,
       });
 
-      // Clear the basket or perform any other necessary actions
+      // Clear the basket by removing all items
+      const batch = db.batch();
+      basketItems.forEach((item) => {
+        const itemRef = db.collection("basket").doc(item.id);
+        batch.delete(itemRef);
+      });
+      await batch.commit();
+
+      // Clear the local state of basketItems
       setBasketItems([]);
+
       setPopupMessage("Data added to requests collection");
       setShowPopup(true);
+      setIsPopupOpen(false); // Close the popup
+      setIsOverlayVisible(false); // Close the overlay
     } catch (error) {
       console.error("Error adding data to requests collection:", error);
     }
