@@ -117,7 +117,7 @@ const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket,
             </div>
           </div>
         </li>
-        {isOverlayVisible && <div className="overlay"></div>}
+        {/* {isOverlayVisible && <div className="overlay"></div>}
         {isPopupOpen && (
           <div className="popup">
             <ProductDetails
@@ -129,7 +129,7 @@ const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket,
               selectedOption={selectedOption}
             />
           </div>
-        )}
+        )} */}
       </ul>
     </>
   );

@@ -19,16 +19,11 @@ import Basket from './components/Basket';
      <div className="modal">
           <div onClick={handlePopupToggle} className="overlay"></div>
           <div className="modal-content">
-            <h2>{title}</h2>
-            <img src={imageUrl1} alt="Selected Option" />
-            <p>{price}</p>
-            <p>{color1}</p>
-            <p>{color2}</p>
+            
             <button className="close-modal" onClick={handlePopupToggle}>
               CLOSE
             </button>
             <button onClick={handleAddToBasket} >fffff </button>
-            <Basket  basketItems={basketItems}  />
           </div>
         </div>
     </>
