@@ -3,6 +3,7 @@ import { db } from "../components/firebase";
 
 import ProductDetails from "../ProductDetalis";
 import { Link } from "react-router-dom";
+import Loading from "./Loading";
 const Basket = () => {
   const [basketItems, setBasketItems] = useState([]);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -44,7 +45,7 @@ const Basket = () => {
   }, [showPopup]);
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <Loading/>;
   }
   const removeFromBasket = (itemId) => {
     db.collection("basket")
@@ -121,12 +122,11 @@ const Basket = () => {
       console.error("Error adding data to requests collection:", error);
     }
   };
-  const myStyle = {
-    backgroundImage: `url(${basketItems})`
-  };
+ 
   return (
     <section className='pro'>
-      <h1>Basket</h1>
+      <div className="fex titles">
+      <h1>Basket</h1>   </div>
       {basketItems.length > 0 ? (
         <ul className="content">
           {basketItems.map((item, index) => (
@@ -172,19 +172,22 @@ const Basket = () => {
                 <button className="button-29" onClick={() => removeFromBasket(item.id)}>
                   remove 
                 </button>
+                </div>
               </div>
-            </div>
-          </li>
+          </li>            
+
           ))}
-          <button className="button-29" onClick={handlePopupToggle}>
-            Button 29
-          </button>
+         
           {/* dd */}
           
-        </ul>
-      ) : (
-        <p>No items in the basket.</p>
-      )}
+        </ul> 
+  ): (
+      <section className="noitem">  <p>No items in the basket.</p></section>
+        )}
+     <div className="fex bynow">
+      <button className="button-29" onClick={handlePopupToggle}>
+              Button 29
+            </button>  </div>  
       {isOverlayVisible && <div className="overlay"></div>}
       {isPopupOpen && (
         <div className="popup">
@@ -198,7 +201,7 @@ const Basket = () => {
           />
         </div>
       )}
-            <Link to="/requests">View Requests</Link>
+            {/* <Link to="/requests">View Requests</Link> */}
             {showPopup && (
           <div className="popup">
           <div className="popup1">

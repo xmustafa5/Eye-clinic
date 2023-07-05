@@ -31,9 +31,13 @@ const Requests = () => {
     try {
       // Remove the item from the request document
       await db.collection("requests").doc(requestId).update({
-        items: requestItems.find((item) => item.id === requestId).items.filter((item) => item.id !== itemId)
+        items: requestItems
+          .find((item) => item.id === requestId)
+          .items.filter((item) => item.id !== itemId),
+        input1: "", // Set input1 to an empty string
+        input2: "", // Set input2 to an empty string
       });
-
+  
       // Update the local state
       setRequestItems((prevRequestItems) => {
         return prevRequestItems.map((item) => {
@@ -41,17 +45,20 @@ const Requests = () => {
             return {
               ...item,
               items: item.items.filter((item) => item.id !== itemId),
+              input1: "", // Set input1 to an empty string
+              input2: "", // Set input2 to an empty string
             };
           }
           return item;
         });
       });
-
-      console.log("Item successfully removed from the request");
+  
+      console.log("Item and inputs successfully removed from the request");
     } catch (error) {
       console.error("Error removing item from the request:", error);
     }
   };
+  
 
   return (
     <div>

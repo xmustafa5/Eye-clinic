@@ -19,9 +19,9 @@ const Homepg = () => {
             </p>
             <a href="indexx.html">
               <div className="btn_wrapper">
-                <button className="btn view_more_btn">
+                {/* <button className="btn view_more_btn">
                   Visit our store <i className="ri-arrow-right-line"></i>
-                </button>
+                </button> */}
               </div>
             </a>
           </div>

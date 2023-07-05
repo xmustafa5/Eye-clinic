@@ -119,7 +119,7 @@ export default function Home() {
     <div className="app">
     <Homepg/>
       <section className='pro'>
-      <h2>shapping</h2>
+    <div className='fex titles'> <h2>shapping</h2></div> 
       <div className='r'>
       {products.map((product) => (
   <Card
