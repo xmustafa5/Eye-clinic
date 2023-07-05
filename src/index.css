@@ -125,7 +125,7 @@ form{
   transform: scale(1.1);
 }
 .pro {
-  background-color: var(--scolor);
+  background-color: var(--fcolor);
 
 }
 section {
@@ -255,7 +255,7 @@ padding-right: 13px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--fcolor);
+  background-color: var(--scolor);
 }
 .wrapper{
   background-image:url(./pec-hero-banner.jpg);
@@ -393,4 +393,8 @@ padding-right: 13px;
   color: #334157;
   line-height: 25px;
   font-size: 15.5px;
+}
+
+.basket{
+  height: 100vh;
 }

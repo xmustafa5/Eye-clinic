@@ -119,6 +119,7 @@ export default function Home() {
     <div className="app">
     <Homepg/>
       <section className='pro'>
+      <h2>shapping</h2>
       <div className='r'>
       {products.map((product) => (
   <Card

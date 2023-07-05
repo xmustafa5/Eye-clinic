@@ -62,18 +62,21 @@ const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket,
  
   
   
-
+  const myStyle = {
+    backgroundImage: `url(${imageSource})`,
+  };
   return (
-    <>
+    <>        
+
       <ul className="content">
         <li>
           <div className="projcard">
-            <div className="projimg">
-              <img src={imageSource} alt="Selected Option" />
+            <div className="projimg" style={myStyle}> 
+              {/* <img src={imageSource} alt="Selected Option"  /> */}
             </div>
             <div className="projinfo">
               <strong className="projtitle">
-                <span>{title}</span>
+                <span className="titlecard">{title}</span>
                 <div>
                   {color1 && (
                     <button
@@ -97,11 +100,11 @@ const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket,
                   )}
                 </div>
               </strong>
-              <p className="iopp">{price}$</p>
+            <div className="prices"><p className="iopp">{price}$</p></div>  
             </div>
             <div className="fexbtn">
               
-              <button className="add-to-basket-button" onClick={handleAddToBasket}>
+              <button className="button-29" onClick={handleAddToBasket}>
                 Add to Basket
               </button>
             </div>

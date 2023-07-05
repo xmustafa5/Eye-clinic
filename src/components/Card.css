@@ -1,3 +1,9 @@
+:root {
+  --fcolor: #17212b;
+  --scolor: #242f3d;
+  --thcolor: #12d0c5;
+  --blcolor: #30a3e6;
+}
 li{
   display: flex;
   justify-content: center;
@@ -49,45 +55,45 @@ li{
 
   .projcard{
       
-      background-color: #424141;
-      border: 1px solid #ffff;
+      background-color: var(--scolor);
+      border: 1px solid var(--scolor);
       min-height: 14em;
       width: 20em;
       overflow: hidden; /**/
       border-radius: 10px;
       margin: 20px;
-      transition: 0.7s ease;
+      transition:all 0.7s ease;
   }
-  .projcard:hover p{
-      transition: 0.7s ease;
-  }
-  .projcard:hover{
-      color: black;
-
-  }
+ 
+  
   .projcard:hover{
       transform: scale(1.1);
   }
   .projcard:hover .projimg{
   opacity: 0.9;}
   .projimg img{
-      width: 100%;
       transition: 0.7s ease;
-
+/*يخلي الصوره ثابته من انسوي سكرول داون*/
   }
-  .projimg img:hover{
-      opacity: 4;
-      transform: scale(1.1);
+  .projimg {
+    width: 100%; /* Adjust the width and height as per your requirement */
+    height: 200px;
+    background-size: cover ; /*غلمود تتعدل*/
+    background-position: center ; /*غلمود تتعدل*/
+    overflow: hidden; /* Hide any overflow of the image */
   }
+  
+  
+ 
   .projinfo{
-      padding: 1em;
+      padding: 0.7em;
   }
   .projinfo:hover{
       color: black;
   }
   .iopp{
       font-size: 0.8em;
-      color: #000016;
+      color: var(--blcolor);
   }
   .projtitle{
       display: flex;
@@ -97,9 +103,12 @@ li{
       align-items: center;
       margin-top: 10px;
   }
+  .titlecard{
+    color: #fff;
+  }
   .mpre{
       text-decoration: none;
-      color: #3a6cfc;
+      color: red;
   }
   .mpre:hover{
       color: #ffff;
@@ -117,16 +126,26 @@ li{
       padding: 5px 10px;
       margin-right: 10px;
       font-size: 16px;
-      border:solid 0.1px rgb(171, 87, 87);
+      border:solid 0.1px var(--fcolor);
       transition: all 0.7s ease;
+      
     }
     
     .radio-button.active {
       transition: all 0,7s ease;
-      background-color: rgb(136, 136, 136);
-      color: #000;
+      background-color: var(--blcolor);
+      
     }
-    
+    .prices{
+      width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    }
+    .prices p{
+      font-size: 16px;
+    }
     @media (min-width: 321px) and (max-width: 767px) {
       .projcard:hover{
         transform: none;
@@ -138,15 +157,15 @@ li{
    .fexbtn{
     display: grid;
     place-content: center;
+    padding: 5px;
    }
 .button-29 {
   align-items: center;
   appearance: none;
-  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  background-image: radial-gradient(100% 100% at 100% 0%, var(--thcolor) 0, var(--blcolor) 100%);
   border: 0;
   border-radius: 6px;
-  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
-  box-sizing: border-box;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 17px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
   color: #fff;
   cursor: pointer;
   display: inline-flex;
@@ -163,16 +182,16 @@ li{
 }
 
 .button-29:focus {
-  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  box-shadow: var(--thcolor) 0 0 0 1.5px inset, rgba(1, 217, 250, 0.4) 0 2px 4px, rgba(12, 215, 255, 0.3) 0 7px 13px -3px, var(--thcolor) 0 -3px 0 inset;
 }
 
 .button-29:hover {
-  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  box-shadow: rgba(0, 221, 255, 0.4) 0 4px 8px, rgba(5, 255, 255, 0.3) 0 7px 13px -3px, var(--thcolor) 0 -3px 0 inset;
   transform: translateY(-2px);
 }
 
 .button-29:active {
-  box-shadow: #3c4fe0 0 3px 7px inset;
+  box-shadow: var(--thcolor) 0 3px 7px inset;
   transform: translateY(2px);
 }
   

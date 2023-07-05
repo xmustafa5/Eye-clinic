@@ -3,7 +3,6 @@ import { db } from "../components/firebase";
 
 import ProductDetails from "../ProductDetalis";
 import { Link } from "react-router-dom";
-
 const Basket = () => {
   const [basketItems, setBasketItems] = useState([]);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -122,24 +121,66 @@ const Basket = () => {
       console.error("Error adding data to requests collection:", error);
     }
   };
-
+  const myStyle = {
+    backgroundImage: `url(${basketItems})`
+  };
   return (
-    <div>
+    <section className='pro'>
       <h1>Basket</h1>
       {basketItems.length > 0 ? (
-        <ul>
+        <ul className="content">
           {basketItems.map((item, index) => (
-            <li key={index}>
-              <p>{item.title}</p>
-              <p>{item.color}</p>
-              <p>{item.price}</p>
-              <img src={item.imageUrl} alt="" width={300} />
-              <button onClick={() => removeFromBasket(item.id)}>Remove</button>
-            </li>
+            // <li key={index}>
+            //   <p>{item.title}</p>
+            //   <p>{item.color}</p>
+            //   <p>{item.price}</p>
+            //   <img src={item.imageUrl} alt="" width={300} />
+            //   <button onClick={() => removeFromBasket(item.id)}>Remove</button>
+            // </li>
+            <li>
+            <div className="projcard">
+              <div className="projimg" style={  {  backgroundImage: `url(${item.imageUrl})`}}> 
+                {/* <img src={imageSource} alt="Selected Option"  /> */}
+              </div>
+              <div className="projinfo">
+                <strong className="projtitle">
+                  <span className="titlecard">{item.title}</span>
+                  <div>
+                    {item.color && (
+                      <button
+                        className={`radio-button`}
+                      >
+                        {item.color}
+                      </button>
+                    )}
+                    {/* {color2 && (
+                      <button
+                        className={`radio-button ${
+                          selectedOption === "option2" ? "active" : ""
+                        }`}
+                        onClick={() => handleOptionClick("option2")}
+                      >
+                        {color2}
+                      </button>
+                    )} */}
+                  </div>
+                </strong>
+              <div className="prices"><p className="iopp">{item.price}$</p></div>  
+              </div>
+              <div className="fexbtn">
+                
+                <button className="button-29" onClick={() => removeFromBasket(item.id)}>
+                  remove 
+                </button>
+              </div>
+            </div>
+          </li>
           ))}
           <button className="button-29" onClick={handlePopupToggle}>
             Button 29
           </button>
+          {/* dd */}
+          
         </ul>
       ) : (
         <p>No items in the basket.</p>
@@ -165,7 +206,7 @@ const Basket = () => {
           </div>
           </div>
         )}
-    </div>
+    </section>
   );
 };
 
