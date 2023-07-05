@@ -20,14 +20,9 @@ li{
   flex-direction: row;
   flex-wrap: wrap; /*ينزل الكروت بالرسبومسف*/
 }
-.card{
-  background-color: #ffff;
-  width: 21.25em;
-  box-shadow: 0px 5px 25px rgba(1 1 1 / 45%);
-  border-radius: 10px;
-  padding: 25px;
-  margin: 15px;   
-  transition: 0.7s ease;
+.cards{
+  background-color: #fd0606;
+ 
 }
 
 /**/
@@ -50,16 +45,11 @@ li{
   font-weight: 700;
   margin: 10px;
 }
-  .pro{
-      background-color: #000016;
+  
 
-  }
-  .pro .content{
-      margin-top: 30px;
-  }
   .projcard{
       
-      background-color: #ffff;
+      background-color: #424141;
       border: 1px solid #ffff;
       min-height: 14em;
       width: 20em;

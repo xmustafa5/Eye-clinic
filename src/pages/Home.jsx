@@ -2,19 +2,17 @@ import React from 'react';
 
 import Card from '../components/Card';
 import { useState } from 'react';
-import Basket from '../components/Basket';
 import { Link } from 'react-router-dom';
-import TodoList from './../components/TodoList';
 import { useEffect } from 'react';
 import { db } from '../components/firebase';
 import cart from '../img/cart1.png'
+import Homepg from '../components/Homepg';
 export default function Home() {
   const [basketItems, setBasketItems] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState('');
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
-  const [cards, setCards] = useState([]);
   const [products, setProducts] = useState([]);
   const [basketItemCount, setBasketItemCount] = useState(0);
   const handlePopupToggle = () => {
@@ -119,6 +117,8 @@ export default function Home() {
   return (
     <>
     <div className="app">
+    <Homepg/>
+      <section className='pro'>
       <div className='r'>
       {products.map((product) => (
   <Card
@@ -137,7 +137,7 @@ export default function Home() {
 ))}
 
 </div>  
-      
+      </section>
       {showPopup && (
           <div className="popup">
           <div className="popup1">

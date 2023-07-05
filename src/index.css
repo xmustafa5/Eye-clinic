@@ -2,42 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+:root {
+  --fcolor: #17212b;
+  --scolor: #242f3d;
+  --thcolor: #12d0c5;
+  --blcolor: #30a3e6;
+}
 
-body {
+* { font-family: "Inter", sans-serif;
+
   margin: 0;
   padding: 0;
-  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  text-decoration: none;
 }
  /* navbar */
 .navbar{
-  height: 50px;
+  height: 70px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(24, 93, 93);
+  background-color: var(--scolor);
 }
 
 .logo{
-  font-size: 30px;
-  margin: 10px;
-  margin-left: 100px;
+  color: var(--thcolor);
+  font-size: 28px;
+  font-weight: 600;
+  margin-left: 120px;
 }
 .burger{
   display: none;
 }
 nav{
-  margin-right: 200px;
+  display: flex;
+  margin-right: 260px;
+  gap: 56px;
+
 }
 nav a{
-  font-size: 20px;
-margin-right: 100px;
-transition: all .5s ease-in-out;
-padding: 5px 20px;
+  font-size: 18px;
+transition: all .3s ease-in-out;
 border-radius: 30px;
+color: white;
 }
 nav a:hover{
-  background-color: rgb(59, 180, 180);
+color: var(--blcolor);
 }
 @media screen and (max-width: 600px   ) {
  .burger{
@@ -112,13 +124,21 @@ form{
   background-color: #026161;
   transform: scale(1.1);
 }
+.pro {
+  background-color: var(--scolor);
 
+}
+section {
+  /*راح يطبق علئ اي سكشن بالبدي كله*/
+  padding: 100px 200px;
+}
 .r{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap; /*ينزل الكروت بالرسبومسف*/
+  
 }
 @media screen and (min-width: 968px) {
   .r {
@@ -219,4 +239,158 @@ padding-right: 13px;
 .contercart h1{
   color: aliceblue;
   font-size: 15px;
+}
+
+.fot{
+  height: 50px;
+  width: 100%;
+  background-color: #026161;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eye{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--fcolor);
+}
+.wrapper{
+  background-image:url(./pec-hero-banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 100%;
+}
+@media screen and (min-width: 1040px) {
+  .container {
+    width: 1040px;
+    margin: 0 auto;
+  }
+}
+.wrapper {
+  width: 100%;
+  padding-left: 1.7rem;
+  padding-right: 1.7rem;
+  padding-top: 5rem;
+  margin-bottom: 5rem;
+}
+.grid-cols-2 {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+.grid-item-1 {
+  padding-top: 5rem;
+  padding-left: 1.5rem;
+}
+.main-heading {
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 55px;
+}
+.main-heading span {
+  color: var(--thcolor);
+}
+.info-text {
+  margin-top: 1.5rem;
+  font-size: 19px;
+  line-height: 28px;
+  color: #fff;
+}
+.btn_wrapper {
+  margin-top: 3.5rem;
+  display: flex;
+  width: 100%;
+}
+.btn {
+  width: 110px;
+  height: 50px;
+  background-color: var(--blcolor);
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  text-transform: capitalize;
+  border-radius: 7px;
+  letter-spacing: 1px;
+  transition: 0.4s;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  background-color: var(--blcolor);
+}
+.view_more_btn {
+  width: 180px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  letter-spacing: 0;
+  color: #fff;
+  font-weight: 500;
+  margin-right: 10px;
+  box-shadow: 0 0.5rem 1.5rem rgba(22, 28, 45, 0.1);
+}
+.view_more_btn i {
+  margin-left: 0.7rem;
+}
+.view_more_btn:hover {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+
+.grid-item-2 {
+  width: 100%;
+  height: 100%;
+}
+
+.grid-cols-3 {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+  row-gap: 2rem;
+  padding: 1rem;
+}
+.grid-col-item {
+  height: 100%;
+}
+.icon {
+  width: 100%;
+  line-height: 40px;
+}
+.icon svg {
+  width: 30px;
+  height: 30px;
+  color: #6b85d8;
+}
+.featured_info {
+  width: 100%;
+}
+.featured_info span {
+  width: 100%;
+  display: block;
+  font-size: 21px;
+  line-height: 33px;
+  color: var(--lg-heading);
+}
+.featured_info p {
+  display: block;
+  width: 100%;
+  margin-top: 7px;
+  font-weight: 400;
+  color: #334157;
+  line-height: 25px;
+  font-size: 15.5px;
 }

@@ -11,14 +11,15 @@ export default function Navbar() {
   };
   return (
     <header className='navbar'>
-      <h1 className='logo' >books</h1>
+      <h1 className='logo' >Eye clinic</h1>
       <nav id='mune' className={isActive ? 'active ': ''} >
         {links.map((link, i) => (
           <Link key={i} to={link.link}>
             {link.name}
           </Link>
         ))}
-    
+                    <a class="aa" href="#shop" >shop</a>
+
       </nav>
       <img
         className='burger'

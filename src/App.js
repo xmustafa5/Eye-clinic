@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import Layout from './layout';
 import Home from './pages/Home';
-import Sighup from './pages/SingUp';
 import Loading from './components/Loading';
 import Baskett from './pages/Baskett';
 import Requests from './components/Requests';
