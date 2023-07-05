@@ -30,12 +30,15 @@ const Requests = () => {
   const removeItemFromRequest = async (requestId, itemId) => {
     try {
       // Remove the item from the request document
-      await db.collection("requests").doc(requestId).update({
-        items: requestItems
-          .find((item) => item.id === requestId)
-          .items.filter((item) => item.id !== itemId),
-      });
-  
+      await db
+        .collection("requests")
+        .doc(requestId)
+        .update({
+          items: requestItems
+            .find((item) => item.id === requestId)
+            .items.filter((item) => item.id !== itemId),
+        });
+
       // Update the local state
       setRequestItems((prevRequestItems) => {
         return prevRequestItems.map((item) => {
@@ -48,92 +51,104 @@ const Requests = () => {
           return item;
         });
       });
-  
+
       console.log("Item successfully removed from the request");
     } catch (error) {
       console.error("Error removing item from the request:", error);
     }
   };
-  
-  
-  
-  
+
+  const removeRequest = async (requestId) => {
+    try {
+      // Remove the request document from the collection
+      await db.collection("requests").doc(requestId).delete();
+
+      // Update the local state by filtering out the removed request
+      setRequestItems((prevRequestItems) => {
+        return prevRequestItems.filter((item) => item.id !== requestId);
+      });
+
+      console.log("Request successfully removed");
+    } catch (error) {
+      console.error("Error removing request:", error);
+    }
+  };
 
   return (
-    <section className='pro'>
+    <section className="pro">
       <div className="fex titles">
-      <h1>Requests</h1>   </div>
+        <h1>Requests</h1>
+      </div>
       {requestItems.length > 0 ? (
         <ul className="content d">
           {requestItems.map((request) => (
             <li className="borditem" key={request.id}>
               <div className="fex inputs">
-                <p className="pcolor">namt: {request.input1}</p>
-              <p>location: {request.input2}</p>
-              <p>number: {request.input3}</p>
-              <p>prudect:</p>
+                <p className="pcolor">name: {request.input1}</p>
+                <p>location: {request.input2}</p>
+                <p>number: {request.input3}</p>
+                <p>products:</p>
               </div>
-              
+
               {request.items && request.items.length > 0 ? (
                 <ul className="content">
                   {request.items.map((item) => (
-                    // <li key={item.id}>
-                    //   <p>Title: {item.title}</p>
-                    //   <p>Color: {item.color}</p>
-                    //   <p>Price: {item.price}</p>
-                    //   <img src={item.imageUrl} alt="" width={300} />
-                    //   <button onClick={() => removeItemFromRequest(request.id ,item.id)}>Remove Request</button>
-
-                    // </li>
-                    <li>
-                    <div className="projcard">
-                      <div className="projimg" style={  {  backgroundImage: `url(${item.imageUrl})`}}> 
-                        {/* <img src={imageSource} alt="Selected Option"  /> */}
-                      </div>
-                      <div className="projinfo">
-                        <strong className="projtitle">
-                          <span className="titlecard">{item.title}</span>
-                          <div>
-                            {item.color && (
-                              <button
-                                className={`radio-button`}
-                              >
-                                {item.color}
-                              </button>
-                            )}
-                            {/* {color2 && (
-                              <button
-                                className={`radio-button ${
-                                  selectedOption === "option2" ? "active" : ""
-                                }`}
-                                onClick={() => handleOptionClick("option2")}
-                              >
-                                {color2}
-                              </button>
-                            )} */}
+                    <li key={item.id}>
+                      <div className="projcard">
+                        <div
+                          className="projimg"
+                          style={{
+                            backgroundImage: `url(${item.imageUrl})`,
+                          }}
+                        ></div>
+                        <div className="projinfo">
+                          <strong className="projtitle">
+                            <span className="titlecard">{item.title}</span>
+                            <div>
+                              {item.color && (
+                                <button className={`radio-button`}>
+                                  {item.color}
+                                </button>
+                              )}
+                            </div>
+                          </strong>
+                          <div className="prices">
+                            <p className="iopp">{item.price}$</p>
                           </div>
-                        </strong>
-                      <div className="prices"><p className="iopp">{item.price}$</p></div>  
-                      </div>
-                      <div className="fexbtn">
-                        
-                        <button className="button-29" onClick={() => removeItemFromRequest(request.id ,item.id)}>
-                          remove 
-                        </button>
+                        </div>
+                        <div className="fexbtn">
+                          <button
+                            className="button-29"
+                            onClick={() => removeItemFromRequest(request.id, item.id)}
+                          >
+                            Remove Item
+                          </button>
                         </div>
                       </div>
-                  </li> 
+                    </li>
                   ))}
                 </ul>
               ) : (
+                
                 <p>No items in the request.</p>
               )}
+
+              <div className="fexbtn">
+                 <button
+                  className="button-29"
+                  onClick={() => removeRequest(request.id)}
+                >
+                  Remove Request
+                </button>
+              </div> 
+            
             </li>
           ))}
         </ul>
       ) : (
-        
-       <div className="noitem"> <h1> No requests available.</h1></div>
+        <div className="noitem">
+          <h1>No requests available.</h1>
+        </div>
       )}
     </section>
   );
