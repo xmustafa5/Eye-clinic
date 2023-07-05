@@ -410,3 +410,25 @@ padding-right: 13px;
   display: flex;
   justify-content: center;
 }
+.noitem h1{
+color: wheat;
+font-size: 20px;
+}
+
+.borditem{
+  display: flex;
+  border: solid 1px var(--thcolor);
+  padding: 20px;
+}
+.inputs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  padding-top: 10px;
+}
+.d{
+  gap: 10px;
+
+}

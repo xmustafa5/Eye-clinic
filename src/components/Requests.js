@@ -60,26 +60,69 @@ const Requests = () => {
   
 
   return (
-    <div>
-      <h1>Requests</h1>
+    <section className='pro'>
+      <div className="fex titles">
+      <h1>Requests</h1>   </div>
       {requestItems.length > 0 ? (
-        <ul>
+        <ul className="content d">
           {requestItems.map((request) => (
-            <li key={request.id}>
-              <p>Input 1: {request.input1}</p>
-              <p>Input 2: {request.input2}</p>
-              <p>Items:</p>
+            <li className="borditem" key={request.id}>
+              <div className="fex inputs">
+                <p className="pcolor">namt: {request.input1}</p>
+              <p>location: {request.input2}</p>
+              <p>number: {request.input3}</p>
+              <p>prudect:</p>
+              </div>
+              
               {request.items && request.items.length > 0 ? (
-                <ul>
+                <ul className="content">
                   {request.items.map((item) => (
-                    <li key={item.id}>
-                      <p>Title: {item.title}</p>
-                      <p>Color: {item.color}</p>
-                      <p>Price: {item.price}</p>
-                      <img src={item.imageUrl} alt="" width={300} />
-                      <button onClick={() => removeItemFromRequest(request.id ,item.id)}>Remove Request</button>
+                    // <li key={item.id}>
+                    //   <p>Title: {item.title}</p>
+                    //   <p>Color: {item.color}</p>
+                    //   <p>Price: {item.price}</p>
+                    //   <img src={item.imageUrl} alt="" width={300} />
+                    //   <button onClick={() => removeItemFromRequest(request.id ,item.id)}>Remove Request</button>
 
-                    </li>
+                    // </li>
+                    <li>
+                    <div className="projcard">
+                      <div className="projimg" style={  {  backgroundImage: `url(${item.imageUrl})`}}> 
+                        {/* <img src={imageSource} alt="Selected Option"  /> */}
+                      </div>
+                      <div className="projinfo">
+                        <strong className="projtitle">
+                          <span className="titlecard">{item.title}</span>
+                          <div>
+                            {item.color && (
+                              <button
+                                className={`radio-button`}
+                              >
+                                {item.color}
+                              </button>
+                            )}
+                            {/* {color2 && (
+                              <button
+                                className={`radio-button ${
+                                  selectedOption === "option2" ? "active" : ""
+                                }`}
+                                onClick={() => handleOptionClick("option2")}
+                              >
+                                {color2}
+                              </button>
+                            )} */}
+                          </div>
+                        </strong>
+                      <div className="prices"><p className="iopp">{item.price}$</p></div>  
+                      </div>
+                      <div className="fexbtn">
+                        
+                        <button className="button-29" onClick={() => removeItemFromRequest(request.id ,item.id)}>
+                          remove 
+                        </button>
+                        </div>
+                      </div>
+                  </li> 
                   ))}
                 </ul>
               ) : (
@@ -89,9 +132,10 @@ const Requests = () => {
           ))}
         </ul>
       ) : (
-      <div> <p>No requests available.</p><div/> 
+        
+       <div className="noitem"> <h1> No requests available.</h1></div>
       )}
-    </div>
+    </section>
   );
 };
 
