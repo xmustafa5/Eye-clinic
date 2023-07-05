@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./Card.css";
 import "../Modal.css";
-import imgg from "../img/1g.jpg";
-import imgg1 from "../img/1gc.png";
-import ProductDetails from '../ProductDetalis';
-import Basket from "./Basket";
+
 import { db } from '../components/firebase';
 
 const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket, basketItems, setPopupMessage, setShowPopup }) => {
   const [selectedOption, setSelectedOption] = useState("option1");
   const [imageSource, setImageSource] = useState(imageUrl1);
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+
   useEffect(() => {
     if (selectedOption === "option1") {
       setImageSource(imageUrl1);
@@ -24,10 +20,7 @@ const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket,
     setSelectedOption(option);
   };
 
-  const handlePopupToggle = () => {
-    setIsPopupOpen(!isPopupOpen);
-    setIsOverlayVisible(!isOverlayVisible);
-  };
+
 
   const handleAddToBasket = () => {
     const item = {
@@ -107,28 +100,14 @@ const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket,
               <p className="iopp">{price}$</p>
             </div>
             <div className="fexbtn">
-              <button className="button-29" onClick={handlePopupToggle}>
-                Button 29
-              </button>
+              
               <button className="add-to-basket-button" onClick={handleAddToBasket}>
                 Add to Basket
               </button>
             </div>
           </div>
         </li>
-        {/* {isOverlayVisible && <div className="overlay"></div>}
-        {isPopupOpen && (
-          <div className="popup">
-            <ProductDetails
-              handlePopupToggle={handlePopupToggle}
-              price={price}
-              color1={color1}
-              color2={color2}
-              imageUrl1={imageUrl1}
-              selectedOption={selectedOption}
-            />
-          </div>
-        )} */}
+        
       </ul>
     </>
   );
