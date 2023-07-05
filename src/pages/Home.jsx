@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import TodoList from './../components/TodoList';
 import { useEffect } from 'react';
 import { db } from '../components/firebase';
-
+import cart from '../img/cart1.png'
 export default function Home() {
   const [basketItems, setBasketItems] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
@@ -16,7 +16,7 @@ export default function Home() {
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
   const [cards, setCards] = useState([]);
   const [products, setProducts] = useState([]);
-
+  const [basketItemCount, setBasketItemCount] = useState(0);
   const handlePopupToggle = () => {
     setIsPopupOpen(!isPopupOpen);
     setIsOverlayVisible(!isOverlayVisible);
@@ -96,6 +96,26 @@ export default function Home() {
       };
     }
   }, [showPopup]);
+  useEffect(() => {
+    const fetchBasketItems = async () => {
+      try {
+        const snapshot = await db.collection('basket').get();
+        const items = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setBasketItems(items);
+  
+      } catch (error) {
+        console.error('Error fetching basket items:', error);
+      }
+    };
+  
+    fetchBasketItems();
+  }, []);
+  useEffect(() => {
+    setBasketItemCount(basketItems.length);
+  }, [basketItems]);
   return (
     <>
     <div className="app">
@@ -117,9 +137,7 @@ export default function Home() {
 ))}
 
 </div>  
-      <Basket           handleRemoveFromBasket={handleRemoveFromBasket}
-         basketItems={basketItems}  />
-         <TodoList/>
+      
       {showPopup && (
           <div className="popup">
           <div className="popup1">
@@ -128,14 +146,27 @@ export default function Home() {
           </div>
         )}
     </div>
+    <div className='conn'>
+    <div className='contt'>
+
     <Link to={{
   pathname: "/Baskett",
   state: {
     basketItems: basketItems,
     handleRemoveFromBasket: handleRemoveFromBasket
   }
-}}>Baskettttx</Link>
+}}>   
+<div className='cartfex'>
+  <h3 className='titlecart'>basket</h3>
+<img src={cart} alt="" className='cartimg' />
+  <div className='contercart'><h1>{basketItemCount}</h1></div>
+
+</div>
+</Link> 
+</div>
+</div>
   <Link to="/Dashboard">Dashboard</Link>
+   
     </>
   );
 }
