@@ -77,7 +77,7 @@ const Requests = () => {
                       <p>Color: {item.color}</p>
                       <p>Price: {item.price}</p>
                       <img src={item.imageUrl} alt="" width={300} />
-                      <button onClick={() => removeItemFromRequest(request.id)}>Remove Request</button>
+                      <button onClick={() => removeItemFromRequest(request.id ,item.id)}>Remove Request</button>
 
                     </li>
                   ))}
@@ -89,7 +89,7 @@ const Requests = () => {
           ))}
         </ul>
       ) : (
-        <p>No requests available.</p>
+      <div> <p>No requests available.</p><div/> 
       )}
     </div>
   );
