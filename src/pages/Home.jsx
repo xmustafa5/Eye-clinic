@@ -12,7 +12,7 @@ export default function Home() {
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState('');
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+  const [isOverlayVisible, setIsOverlayVisible] = useState(false);   
   const [products, setProducts] = useState([]);
   const [basketItemCount, setBasketItemCount] = useState(0);
   const handlePopupToggle = () => {

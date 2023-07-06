@@ -5,6 +5,7 @@ import Loading from './components/Loading';
 import Baskett from './pages/Baskett';
 import Requests from './components/Requests';
 import Dashboard from './components/Dashboard';
+import LoginPage from './components/LoginPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/Loading' element={<Loading />} />
           <Route  path="/requests" element={<Requests/>} />
           <Route  path="/Dashboard" element={<Dashboard/>} />
+          <Route  path="/LoginPage" element={<LoginPage />} />
 
         </Routes>
       </Layout>

@@ -27,7 +27,7 @@ const Requests = () => {
     return <p>Loading...</p>;
   }
 
-  const removeItemFromRequest = async (requestId, itemId) => {
+  const removeItemFromRequest = async (requestId, itemId,length) => {
     try {
       // Remove the item from the request document
       await db
@@ -51,10 +51,13 @@ const Requests = () => {
           return item;
         });
       });
-
+      
       console.log("Item successfully removed from the request");
     } catch (error) {
       console.error("Error removing item from the request:", error);
+    }
+    if(length == 1){
+      removeRequest(requestId)
     }
   };
 
@@ -72,6 +75,7 @@ const Requests = () => {
     } catch (error) {
       console.error("Error removing request:", error);
     }
+    
   };
 
   return (
@@ -119,7 +123,7 @@ const Requests = () => {
                         <div className="fexbtn">
                           <button
                             className="button-29"
-                            onClick={() => removeItemFromRequest(request.id, item.id)}
+                            onClick={() => removeItemFromRequest(request.id, item.id,request.items.length)}
                           >
                             Remove Item
                           </button>
