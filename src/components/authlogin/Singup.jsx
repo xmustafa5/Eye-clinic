@@ -13,6 +13,9 @@ const Singup = () => {
     const navigate = useNavigate();
   
     async function handleSubmit(e) {
+        if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+            return setError("Passwords do not match");
+          }
         e.preventDefault();
         try{
             setError("")
