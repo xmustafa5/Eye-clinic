@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import { db } from '../components/firebase';
 import cart from '../img/cart1.png'
 import Homepg from '../components/Homepg';
+import { useAuth } from '../context/AuthContext';
 export default function Home() {
   const [basketItems, setBasketItems] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
@@ -15,6 +16,7 @@ export default function Home() {
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);   
   const [products, setProducts] = useState([]);
   const [basketItemCount, setBasketItemCount] = useState(0);
+  const { currentUser } = useAuth();
   const handlePopupToggle = () => {
     setIsPopupOpen(!isPopupOpen);
     setIsOverlayVisible(!isOverlayVisible);
@@ -97,20 +99,22 @@ export default function Home() {
   useEffect(() => {
     const fetchBasketItems = async () => {
       try {
-        const snapshot = await db.collection('basket').get();
+        const snapshot = await db
+          .collection('basket')
+          .where('userId', '==', currentUser.uid) // Filter by the user's ID
+          .get();
         const items = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
         setBasketItems(items);
-  
       } catch (error) {
         console.error('Error fetching basket items:', error);
       }
     };
   
     fetchBasketItems();
-  }, []);
+  }, [currentUser.uid]);
   useEffect(() => {
     setBasketItemCount(basketItems.length);
   }, [basketItems]);
@@ -154,7 +158,7 @@ export default function Home() {
   pathname: "/Baskett",
   state: {
     basketItems: basketItems,
-    handleRemoveFromBasket: handleRemoveFromBasket
+      handleRemoveFromBasket: handleRemoveFromBasket,
   }
 }}>   
 <div className='cartfex'>

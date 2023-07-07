@@ -17,22 +17,26 @@ const Basket = () => {
   const [showPopup, setShowPopup] = useState(false);
   const { currentUser } = useAuth();
 
-  const fetchBasketItems = async () => {
-    try {
-      const snapshot = await db
-        .collection("basket")
-        .where("userId", "==", currentUser.uid) // Add the user's ID as a filter
-        .get();
-      const items = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      setBasketItems(items);
-      setIsLoading(false);
-    } catch (error) {
-      console.error("Error fetching basket items:", error);
-    }
-  };
+  useEffect(() => {
+    const fetchBasketItems = async () => {
+      try {
+        const snapshot = await db
+          .collection("basket")
+          .where("userId", "==", currentUser.uid) // Add the user's ID as a filter
+          .get();
+        const items = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setBasketItems(items);
+        setIsLoading(false);
+      } catch (error) {
+        console.error("Error fetching basket items:", error);
+      }
+    };
+    
+    fetchBasketItems();
+  }, [currentUser]);
   useEffect(() => {
     if (showPopup) {
       const timer = setTimeout(() => {
