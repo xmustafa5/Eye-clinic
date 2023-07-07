@@ -1,9 +1,10 @@
 import React, {  useState } from "react";
 import { Card, Button, Alert } from "react-bootstrap";
-import { useAuth } from "../context/AuthContext";
+
 import { Link, useNavigate } from "react-router-dom";
 import Items from './Items';
-const Dashboard = () => {
+import { useAuth } from "../../context/AuthContext";
+const Dashboardd = () => {
   const { currentUser } = useAuth();
   const { logout } = useAuth();
   const [error, setError] = useState("");
@@ -37,4 +38,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Dashboardd;

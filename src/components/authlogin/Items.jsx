@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { collection, addDoc, getDocs, updateDoc, deleteDoc, doc, query, where } from 'firebase/firestore';
-import { useAuth } from '../context/AuthContext';
-import { firestore } from '../firebase';
+import { useAuth } from '../../context/AuthContext';
+import { db } from '../firebase';
 
 const Items = () => {
   const { currentUser } = useAuth();
@@ -16,7 +16,7 @@ const Items = () => {
       }
 
       const userItemsQuery = query(
-        collection(firestore, 'items'),
+        collection(db, 'items'),
         where('userId', '==', currentUser.uid)
       );
       const querySnapshot = await getDocs(userItemsQuery);
@@ -30,7 +30,7 @@ const Items = () => {
   const handleAddItem = async () => {
     try {
       const item = { name: newItem, userId: currentUser.uid };
-      const docRef = await addDoc(collection(firestore, 'items'), item);
+      const docRef = await addDoc(collection(db, 'items'), item);
       setItems((prevItems) => [...prevItems, { id: docRef.id, ...item }]);
       setNewItem('');
     } catch (error) {
@@ -40,7 +40,7 @@ const Items = () => {
 
   const handleUpdateItem = async (itemId, newName) => {
     try {
-      const itemDoc = doc(firestore, 'items', itemId);
+      const itemDoc = doc(db, 'items', itemId);
       await updateDoc(itemDoc, { name: newName });
       setItems((prevItems) =>
         prevItems.map((item) => (item.id === itemId ? { ...item, name: newName } : item))
@@ -52,7 +52,7 @@ const Items = () => {
 
   const handleDeleteItem = async (itemId) => {
     try {
-      const itemDoc = doc(firestore, 'items', itemId);
+      const itemDoc = doc(db, 'items', itemId);
       await deleteDoc(itemDoc);
       setItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
     } catch (error) {

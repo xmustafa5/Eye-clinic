@@ -11,16 +11,15 @@ import Singup from './components/authlogin/Singup';
 import ForgotPassword from './components/authlogin/ForgotPassword'
 import AuthProvider from './context/AuthContext';
 import RequireAuth from './context/RequirAuth';
-
+import Dashboardd from './components/authlogin/Dashboardd';
 function App() {
   return (
     <>
       <Layout>
         <AuthProvider>
         <Routes>
-
-          <Route index element={<Home />} />
-          <Route path='/Baskett' element={<Baskett />} />
+          <Route path='/' element={<RequireAuth><Home/></RequireAuth>} />
+          <Route path='/Baskett' element={<RequireAuth><Baskett /></RequireAuth>} />
           <Route path='/Loading' element={<Loading />} />
           <Route  path="/requests" element={<Requests/>} />
           <Route  path="/Dashboard" element={<Dashboard/>} />
@@ -28,8 +27,7 @@ function App() {
           <Route  path="/login" element={<Login/>} />
           <Route path='/forgot-password' element={<ForgotPassword />} />
           <Route path='/Singup' element={<Singup />} />
-          <Route path='/' element={<RequireAuth><Dashboard /></RequireAuth>} />
-
+          <Route path='/Dashboardd' element={<RequireAuth><Dashboardd /></RequireAuth>} />
         </Routes>
         </AuthProvider>
       </Layout>
