@@ -1,10 +1,17 @@
 import React from 'react'
+import { useRef } from 'react';
         import { Form, Button, Card, Alert } from "react-bootstrap";
 import { Link } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 const Singup = () => {
+    const {signup} = useAuth()
+    const emailRef = useRef();
+    const passwordRef = useRef();
+    const passwordConfirmRef = useRef(); 
     async function handleSubmit(e) {
 
     }
+
   return (
     <>
          <div className='d-flex align-items-center justify-content-center ' style={{minHeight:"100vh"}}>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Button,Form } from "react-bootstrap";
-
+import { Link } from "react-router-dom";
 const Login = () => {
   return (
 
@@ -13,18 +13,17 @@ const Login = () => {
           <Form >
             <Form.Group>
               <Form.Label htmlFor="email">Email</Form.Label>
-              <Form.Control id="email" type="email" ref={emailRef} required />
+              <Form.Control id="email" type="email"  />
             </Form.Group>
             <Form.Group>
               <Form.Label htmlFor="password">Password</Form.Label>
               <Form.Control
                 id="password"
                 type="password"
-                ref={passwordRef}
-                required
+            
               />
             </Form.Group>
-            <Button disabled={loading} className="w-100 mt-3" type="submit">
+            <Button  className="w-100 mt-3" type="submit">
               Log In
             </Button>
           </Form>
