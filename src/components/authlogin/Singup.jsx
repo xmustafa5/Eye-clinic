@@ -7,7 +7,10 @@ const Singup = () => {
     }
   return (
     <>
-       
+         <div className='d-flex align-items-center justify-content-center ' style={{minHeight:"100vh"}}>
+
+<div className='w-100' style={{maxWidth:"400px"}}>
+
           <h2 className="text-center mb-4">Sign Up</h2>
           <Form onSubmit={handleSubmit}>
             <Form.Group>
@@ -34,10 +37,12 @@ const Singup = () => {
               Sign Up
             </Button>
           </Form>
+         
       
       <div className="w-100 text-center mt-2">
         Already have an account? <Link to="/login">Log In</Link>
-      </div>
+      </div> </div>
+          </div>
     </>
   )
 }
