@@ -8,8 +8,19 @@ const Singup = () => {
     const emailRef = useRef();
     const passwordRef = useRef();
     const passwordConfirmRef = useRef(); 
+    const [error, setError] = useState("");
+    const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
+  
     async function handleSubmit(e) {
-
+        e.preventDefault();
+        try{
+            setError("")
+            setLoading(true)
+            await signup(emailRef.current.value,passwordConfirmRef.current.value)
+        }catch{
+            setError("Failed to create an account");
+        }
     }
 
   return (
@@ -22,13 +33,14 @@ const Singup = () => {
           <Form onSubmit={handleSubmit}>
             <Form.Group>
               <Form.Label htmlFor="email">Email</Form.Label>
-              <Form.Control id="email" type="email"  />
+              <Form.Control id="email" type="email" ref={emailRef}  />
             </Form.Group>
             <Form.Group>
               <Form.Label htmlFor="password">Password</Form.Label>
               <Form.Control
                 id="password"
                 type="password"
+                ref={passwordRef}
               />
             </Form.Group>
             <Form.Group>
@@ -38,6 +50,7 @@ const Singup = () => {
               <Form.Control
                 id="password-confirm"
                 type="password"
+                ref={passwordConfirmRef}
               />
             </Form.Group>
             <Button  className="w-100 mt-3" type="submit">
