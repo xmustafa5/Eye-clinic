@@ -110,9 +110,10 @@ export default function Signup() {
             </Button>
             <Typography color="gray" className="mt-4 text-center font-normal">
               Already have an account?{" "}
-              <Link href="#"className="font-medium text-blue-500 transition-colors hover:text-blue-700">
+              <Link to="/login" className="font-medium text-blue-500 transition-colors hover:text-blue-700">
                 Sign In
               </Link>
+
             </Typography>
           </form>
         </Card>
