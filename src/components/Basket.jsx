@@ -195,7 +195,7 @@ const Basket = () => {
             </button>  </div>  
       {isOverlayVisible && <div className="overlay"></div>}
       {isPopupOpen && (
-        <div className="popup">
+        <div className="popuplog">
           <ProductDetails
             handlePopupToggle={handlePopupToggle}
             handleInput1Change={handleInput1Change}
@@ -208,6 +208,7 @@ const Basket = () => {
       )}
             {/* <Link to="/requests">View Requests</Link> */}
             {showPopup && (
+            
           <div className="popup">
           <div className="popup1">
             <h1 className='massage'>{popupMessage}</h1>
