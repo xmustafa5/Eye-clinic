@@ -11,7 +11,7 @@ const ProductDetails = ({
   return (
     <>
       <div className="modal">
-        <div onClick={handlePopupToggle} className="overlay"></div>
+        <div onClick={handlePopupToggle} className="overlay1"></div>
         <div className="modal-content">
           <div className="flex">
           <div className="flex flex-col w-96 mt-4 mb-4 items-start gap-8">
