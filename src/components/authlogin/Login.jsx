@@ -5,7 +5,10 @@ const Login = () => {
   return (
 
     <>      
-    
+             <div className='d-flex align-items-center justify-content-center ' style={{minHeight:"100vh"}}>
+
+<div className='w-100' style={{maxWidth:"400px"}}>
+
              <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
@@ -26,7 +29,8 @@ const Login = () => {
         Submit
       </Button>
     </Form>
-
+</div>
+</div>
     </>
   );
 };
