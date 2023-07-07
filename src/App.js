@@ -18,7 +18,7 @@ function App() {
 
       <Layout>
         <Routes>
-          <Route path='/' element={<RequireAuth><Home/></RequireAuth>} />
+          <Route path='/' element={<Home/>} />
           <Route path='/Baskett' element={<RequireAuth><Baskett /></RequireAuth>} />
           <Route path='/Loading' element={<Loading />} />
           <Route  path="/requests" element={<Requests/>} />

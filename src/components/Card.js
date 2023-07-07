@@ -3,11 +3,11 @@ import "./Card.css";
 import "../Modal.css";
 import { db } from "./firebase";
 import { useAuth } from "../context/AuthContext";
-
+import ProductDetails from "../ProductDetalis";
 const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket, basketItems, setPopupMessage, setShowPopup }) => {
   const [selectedOption, setSelectedOption] = useState("option1");
   const [imageSource, setImageSource] = useState(imageUrl1);
-  const { currentUser } = useAuth();
+  const { currentUser, handlePopupToggle ,isOverlayVisible,isPopupOpen} = useAuth();
 
   useEffect(() => {
     if (selectedOption === "option1") {
@@ -26,6 +26,11 @@ const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket,
  
   
     const handleAddToBasket = () => {
+      // handlePopupToggle()
+      
+  if(!currentUser){
+    handlePopupToggle()
+}
       const item = {
         title,
         imageUrl: selectedOption === "option1" ? imageUrl1 : imageUrl2,
@@ -62,11 +67,12 @@ const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket,
         });
     };
  
-  
+    
   
   const myStyle = {
     backgroundImage: `url(${imageSource})`,
   };
+
   return (
     <>        
 
@@ -109,7 +115,11 @@ const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket,
               <button className="button-29" onClick={handleAddToBasket}>
                 Add to Basket
               </button>
+              <button className="button-29" onClick={handlePopupToggle}>
+                Add to Basket
+              </button>
             </div>
+           
           </div>
         </li>
         

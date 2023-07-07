@@ -7,6 +7,7 @@ const RequireAuth = ({ children }) => {
   if (!currentUser) {
     return <Navigate to="/login" state={{ path: location.pathname }} />;
   }
+  
   return children;
 };
 

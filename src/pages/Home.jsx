@@ -8,19 +8,22 @@ import { db } from '../components/firebase';
 import cart from '../img/cart1.png'
 import Homepg from '../components/Homepg';
 import { useAuth } from '../context/AuthContext';
+import ProductDetails from "../ProductDetalis";
+import Login from '../components/authlogin/Login';
+
 export default function Home() {
   const [basketItems, setBasketItems] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState('');
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [isOverlayVisible, setIsOverlayVisible] = useState(false);   
+  // const [isPopupOpen, setIsPopupOpen] = useState(false);
+  // const [isOverlayVisible, setIsOverlayVisible] = useState(false);   
   const [products, setProducts] = useState([]);
   const [basketItemCount, setBasketItemCount] = useState(0);
-  const { currentUser } = useAuth();
-  const handlePopupToggle = () => {
-    setIsPopupOpen(!isPopupOpen);
-    setIsOverlayVisible(!isOverlayVisible);
-  };
+  const { currentUser, handlePopupToggle , isOverlayVisible,isPopupOpen} = useAuth();
+  // const handlePopupToggle = () => {
+  //   setIsPopupOpen(!isPopupOpen);
+  //   setIsOverlayVisible(!isOverlayVisible);
+  // };
   const handleRemoveFromBasket = (index) => {
     setBasketItems((prevBasketItems) =>
       prevBasketItems.filter((item, i) => i !== index)
@@ -139,6 +142,7 @@ export default function Home() {
   addToBasket={handleAddToBasket}
   setPopupMessage={setPopupMessage}
   setShowPopup={setShowPopup}
+  handlePopupToggle={handlePopupToggle}
 />
 ))}
 
@@ -171,6 +175,14 @@ export default function Home() {
 </Link> 
 </div>
 </div>
+{isOverlayVisible && <div className="overlay"></div>}
+      {isPopupOpen && (
+        <div className="popuplog">
+          <Login
+            
+          />
+        </div>
+      )}
   <Link to="/Dashboard">Dashboard</Link>
    
     </>

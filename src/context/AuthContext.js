@@ -6,6 +6,8 @@ const AuthContext = createContext()
 const AuthProvider = ({ children }) => { 
        const [ currentUser , setCurrentUser]= useState()
        const [ loading , setLoading]= useState(true)
+       const [isPopupOpen, setIsPopupOpen] = useState(false);
+       const [isOverlayVisible, setIsOverlayVisible] = useState(false);
        const logout = () =>{
       return  signOut(auth)
        }
@@ -15,6 +17,10 @@ const AuthProvider = ({ children }) => {
         const signup = (email,password) =>{
              return   createUserWithEmailAndPassword(auth,email,password)
         }
+        const handlePopupToggle = () => {
+          setIsPopupOpen(!isPopupOpen);
+          setIsOverlayVisible(!isOverlayVisible);
+        };
         useEffect(()=>{
           const unsubcribe =  onAuthStateChanged(auth,(user)=>{
                 setCurrentUser(user)
@@ -25,7 +31,7 @@ const AuthProvider = ({ children }) => {
             }
         },[])
   return (
-    <AuthContext.Provider value={{currentUser, signup, logout, login}}>
+    <AuthContext.Provider value={{currentUser,handlePopupToggle, isPopupOpen,isOverlayVisible , signup, logout, login}}>
         {!loading && children}
     </AuthContext.Provider>
   )
