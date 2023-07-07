@@ -7,7 +7,7 @@ import { useEffect } from "react";
 export default function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
-  const { login ,currentUser } = useAuth();
+  const { login, currentUser } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -34,10 +34,11 @@ export default function Login() {
 
   return (
     <>
-           <div className='d-flex align-items-center justify-content-center ' style={{minHeight:"100vh"}}>
-
-<div className='w-100' style={{maxWidth:"400px"}}>
-
+      <div
+        className="d-flex align-items-center justify-content-center "
+        style={{ minHeight: "100vh" }}
+      >
+        <div className="w-100" style={{ maxWidth: "400px" }}>
           <h2 className="text-center mb-4">Log In</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
@@ -61,11 +62,11 @@ export default function Login() {
           <div className="w-100 text-center mt-3">
             <Link to="/forgot-password">Forgot Password?</Link>
           </div>
-        
-      <div className="w-100 text-center mt-2">
-        Need an account? <Link to="/Singup">Sign Up</Link>
-      </div>
-      </div>
+
+          <div className="w-100 text-center mt-2">
+            Need an account? <Link to="/Singup">Sign Up</Link>
+          </div>
+        </div>
       </div>
     </>
   );
