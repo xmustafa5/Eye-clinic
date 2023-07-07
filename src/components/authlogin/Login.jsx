@@ -123,12 +123,12 @@ export default function Login() {
               Register
             </Button>
             <Typography color="gray" className="mt-4 text-center font-normal">
-              Already have an account?{" "}
+            Need an account? {" "}       
               <Link
-                href="#"
+                to="/Singup"
                 className="font-medium text-blue-500 transition-colors hover:text-blue-700"
               >
-                Sign In
+                Sign up
               </Link>
             </Typography>
           </form>
