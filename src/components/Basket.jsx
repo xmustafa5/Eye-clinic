@@ -127,7 +127,11 @@ const Basket = () => {
       console.error("Error adding data to requests collection:", error);
     }
   };
- 
+  if(isPopupOpen) {
+    document.body.classList.add('active-modal')
+  } else {
+    document.body.classList.remove('active-modal')
+  }
   return (
     <section className='pro'>
       <div className="fex titles">
