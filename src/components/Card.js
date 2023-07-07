@@ -28,9 +28,9 @@ const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket,
     const handleAddToBasket = () => {
       // handlePopupToggle()
       
-  if(currentUser){
-    handlePopupToggle()
-}
+//   if(currentUser){
+//     handlePopupToggle()
+// }
       const item = {
         title,
         imageUrl: selectedOption === "option1" ? imageUrl1 : imageUrl2,
@@ -115,9 +115,9 @@ const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket,
               <button className="button-29" onClick={handleAddToBasket}>
                 Add to Basket
               </button>
-              <button className="button-29" onClick={handlePopupToggle}>
+              {/* <button className="button-29" onClick={handlePopupToggle}>
                 Add to Basket
-              </button>
+              </button> */}
             </div>
            
           </div>

@@ -15,9 +15,9 @@ const ProductDetails = ({
         <div className="modal-content">
           <div className="flex">
           <div className="flex flex-col w-96 mt-4 mb-4 items-start gap-8">
-      <Input size="lg" label="name" />
-      <Input size="lg" label="location" />
-      <Input size="lg" label="phone number" />
+      <Input size="lg" label="name" onChange={handleInput1Change} />
+      <Input size="lg" label="location" onChange={handleInput2Change} />
+      <Input size="lg" label="phone number" onChange={handleInput3Change} />
       <div className="flex items-center ">
         <div className=" ffff">
            <a href="#buttons-with-link">
