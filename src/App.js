@@ -6,6 +6,9 @@ import Baskett from './pages/Baskett';
 import Requests from './components/Requests';
 import Dashboard from './components/Dashboard';
 import LoginPage from './components/LoginPage';
+import Login from './components/authlogin/Login';
+import Singup from './components/authlogin/Singup';
+import ForgotPassword from './components/authlogin/ForgotPassword'
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
           <Route  path="/requests" element={<Requests/>} />
           <Route  path="/Dashboard" element={<Dashboard/>} />
           <Route  path="/LoginPage" element={<LoginPage />} />
+          <Route  path="/login" element={<Login/>} />
+          <Route path='/forgot-password' element={<ForgotPassword />} />
+          <Route path='/Singup' element={<Singup />} />
 
         </Routes>
       </Layout>
