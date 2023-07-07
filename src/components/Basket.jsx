@@ -4,6 +4,8 @@ import { db } from "../components/firebase";
 import ProductDetails from "../ProductDetalis";
 import { Link } from "react-router-dom";
 import Loading from "./Loading";
+import { useAuth } from "../context/AuthContext";
+
 const Basket = () => {
   const [basketItems, setBasketItems] = useState([]);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -14,10 +16,16 @@ const Basket = () => {
   const [inputValue3, setInputValue3] = useState("");
   const [popupMessage, setPopupMessage] = useState('');
   const [showPopup, setShowPopup] = useState(false);
+  const { currentUser } = useAuth();
   useEffect(() => {
     const fetchBasketItems = async () => {
       try {
-        const snapshot = await db.collection("basket").get();
+        const basketRef = db
+          .collection("users")
+          .doc(currentUser.uid)
+          .collection("basket");
+
+        const snapshot = await basketRef.get();
         const items = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
@@ -29,9 +37,11 @@ const Basket = () => {
         console.error("Error fetching basket items:", error);
       }
     };
-    
-    fetchBasketItems();
-  }, []);
+
+    if (currentUser) {
+      fetchBasketItems();
+    }
+  }, [currentUser]);
   useEffect(() => {
     if (showPopup) {
       const timer = setTimeout(() => {

@@ -63,7 +63,7 @@ export default function Login() {
           </div>
         
       <div className="w-100 text-center mt-2">
-        Need an account? <Link to="/signup">Sign Up</Link>
+        Need an account? <Link to="/Singup">Sign Up</Link>
       </div>
       </div>
       </div>

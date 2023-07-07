@@ -14,9 +14,9 @@ import RequireAuth from './context/RequirAuth';
 import Dashboardd from './components/authlogin/Dashboardd';
 function App() {
   return (
-    <>
+    <>        <AuthProvider>
+
       <Layout>
-        <AuthProvider>
         <Routes>
           <Route path='/' element={<RequireAuth><Home/></RequireAuth>} />
           <Route path='/Baskett' element={<RequireAuth><Baskett /></RequireAuth>} />
@@ -29,8 +29,8 @@ function App() {
           <Route path='/Singup' element={<Singup />} />
           <Route path='/Dashboardd' element={<RequireAuth><Dashboardd /></RequireAuth>} />
         </Routes>
-        </AuthProvider>
-      </Layout>
+      </Layout>        </AuthProvider>
+
     </>
   );
 }
