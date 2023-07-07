@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./Card.css";
 import "../Modal.css";
 import { db } from "./firebase";
-
+import { useAuth } from "../context/AuthContext";
 
 const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket, basketItems, setPopupMessage, setShowPopup }) => {
   const [selectedOption, setSelectedOption] = useState("option1");
   const [imageSource, setImageSource] = useState(imageUrl1);
+  const { currentUser } = useAuth();
 
   useEffect(() => {
     if (selectedOption === "option1") {
@@ -22,43 +23,44 @@ const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket,
 
 
 
-  const handleAddToBasket = () => {
-    const item = {
-      title,
-      imageUrl: selectedOption === "option1" ? imageUrl1 : imageUrl2,
-      color: selectedOption === "option1" ? color1 : color2,
-      price,
+ 
+  
+    const handleAddToBasket = () => {
+      const item = {
+        title,
+        imageUrl: selectedOption === "option1" ? imageUrl1 : imageUrl2,
+        color: selectedOption === "option1" ? color1 : color2,
+        price,
+      };
+    
+      // Check if the item already exists in the 'basket' collection in Firestore
+      db.collection("basket")
+        .where("userId", "==", currentUser.uid) // Add the user's ID as a filter
+        .where("title", "==", item.title)
+        .where("color", "==", item.color)
+        .where("imageUrl", "==", item.imageUrl)
+        .get()
+        .then((querySnapshot) => {
+          if (querySnapshot.size > 0) {
+            setPopupMessage("Item already in the basket");
+            setShowPopup(true);
+          } else {
+            addToBasket({ ...item, userId: currentUser.uid }); // Add the selected item with userId to the basket
+    
+            // Add item to the 'basket' collection in Firestore
+            db.collection("basket")
+              .add({ ...item, userId: currentUser.uid }) // Add userId to the basket item
+              .then(() => {
+                setPopupMessage("Item added to the basket!");
+                setShowPopup(true);
+              })
+              .catch((error) => {
+                setPopupMessage("Failed to add item to the basket.");
+                setShowPopup(true);
+              });
+          }
+        });
     };
-  
-    // Check if the item already exists in the 'basket' collection in Firestore
-    db.collection("basket")
-      .where("title", "==", item.title)
-      .where("color", "==", item.color)
-      .where("imageUrl", "==", item.imageUrl)
-      .get()
-      .then((querySnapshot) => {
-        if (querySnapshot.size > 0) {
-          setPopupMessage("Item already in the basket");
-          setShowPopup(true);
-        } else {
-          addToBasket(item); // Add the selected item to the basket
-  
-          // Add item to the 'basket' collection in Firestore
-          db.collection("basket")
-            .add(item)
-            .then(() => {
-              setPopupMessage("Item added to the basket!");
-              setShowPopup(true);
-            })
-            .catch((error) => {
-              setPopupMessage("Failed to add item to the basket.");
-              setShowPopup(true);
-            });
-        }
-      })
-      
-  };
-  
  
   
   

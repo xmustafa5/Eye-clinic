@@ -5,7 +5,6 @@ import ProductDetails from "../ProductDetalis";
 import { Link } from "react-router-dom";
 import Loading from "./Loading";
 import { useAuth } from "../context/AuthContext";
-
 const Basket = () => {
   const [basketItems, setBasketItems] = useState([]);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -17,31 +16,23 @@ const Basket = () => {
   const [popupMessage, setPopupMessage] = useState('');
   const [showPopup, setShowPopup] = useState(false);
   const { currentUser } = useAuth();
-  useEffect(() => {
-    const fetchBasketItems = async () => {
-      try {
-        const basketRef = db
-          .collection("users")
-          .doc(currentUser.uid)
-          .collection("basket");
 
-        const snapshot = await basketRef.get();
-        const items = snapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        setBasketItems(items);
-
-        setIsLoading(false);
-      } catch (error) {
-        console.error("Error fetching basket items:", error);
-      }
-    };
-
-    if (currentUser) {
-      fetchBasketItems();
+  const fetchBasketItems = async () => {
+    try {
+      const snapshot = await db
+        .collection("basket")
+        .where("userId", "==", currentUser.uid) // Add the user's ID as a filter
+        .get();
+      const items = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setBasketItems(items);
+      setIsLoading(false);
+    } catch (error) {
+      console.error("Error fetching basket items:", error);
     }
-  }, [currentUser]);
+  };
   useEffect(() => {
     if (showPopup) {
       const timer = setTimeout(() => {
