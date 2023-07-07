@@ -21,6 +21,7 @@ const Singup = () => {
         }catch{
             setError("Failed to create an account");
         }
+        setLoading(false)
     }
 
   return (
@@ -53,7 +54,7 @@ const Singup = () => {
                 ref={passwordConfirmRef}
               />
             </Form.Group>
-            <Button  className="w-100 mt-3" type="submit">
+            <Button  className="w-100 mt-3" type="submit" disabled={loading}>
               Sign Up
             </Button>
           </Form>
