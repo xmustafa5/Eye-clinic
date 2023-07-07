@@ -28,7 +28,7 @@ const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket,
     const handleAddToBasket = () => {
       // handlePopupToggle()
       
-  if(!currentUser){
+  if(currentUser){
     handlePopupToggle()
 }
       const item = {
