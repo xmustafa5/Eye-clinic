@@ -1,41 +1,39 @@
-import { useState } from "react";
-import { createContext } from "react";
+import { createUserWithEmailAndPassword,onAuthStateChanged,signInWithEmailAndPassword, signOut } from "firebase/auth";
+import {  createContext, useContext, useEffect, useState } from "react";
 import { auth } from "../components/firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { useEffect } from "react";
-import { useContext } from "react";
 
 const AuthContext = createContext()
-
-
-const Authprovider = ({children})=>{
-    const [currentUser ,setCurrentUser]=useState()
-    const [loading,setLoadin]=useState()
-
-    const signup = (email,password)=>{
-        return   createUserWithEmailAndPassword(auth,email,password)
-    }
-
-    // useEffect(()=>{
-    //     const unsubcribe =  onAuthStateChanged(auth,(user)=>{
-    //           setCurrentUser(user)
-    //           setLoading(false)
-    //       })
-    //       return()=>{
-    //           unsubcribe()
-    //       }
-    //   },[])
-return(
-    <AuthContext.Provider value={{currentUser,signup}} >
-            {!loading && children}
-
+const AuthProvider = ({ children }) => { 
+       const [ currentUser , setCurrentUser]= useState()
+       const [ loading , setLoading]= useState(true)
+       const logout = () =>{
+      return  signOut(auth)
+       }
+       const login = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
+  };
+        const signup = (email,password) =>{
+             return   createUserWithEmailAndPassword(auth,email,password)
+        }
+        useEffect(()=>{
+          const unsubcribe =  onAuthStateChanged(auth,(user)=>{
+                setCurrentUser(user)
+                setLoading(false)
+            })
+            return()=>{
+                unsubcribe()
+            }
+        },[])
+  return (
+    <AuthContext.Provider value={{currentUser, signup, logout, login}}>
+        {!loading && children}
     </AuthContext.Provider>
-)
+  )
 }
 
-export default Authprovider
+export default AuthProvider
 
-export const useAuth=()=>{
+
+export const useAuth =() =>{
     return useContext(AuthContext)
-
 }

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Card.css";
 import "../Modal.css";
+import { db } from "./firebase";
 
-import { db } from '../components/firebase';
 
 const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket, basketItems, setPopupMessage, setShowPopup }) => {
   const [selectedOption, setSelectedOption] = useState("option1");
