@@ -34,6 +34,8 @@ const Singup = () => {
 <div className='w-100' style={{maxWidth:"400px"}}>
 
           <h2 className="text-center mb-4">Sign Up</h2>
+          {error && <Alert variant="danger">{error}</Alert>}
+
           <Form onSubmit={handleSubmit}>
             <Form.Group>
               <Form.Label htmlFor="email">Email</Form.Label>
