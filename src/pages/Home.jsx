@@ -1,5 +1,4 @@
 import React from 'react';
-import { Input } from "@material-tailwind/react";
 
 import Card from '../components/Card';
 import { useState } from 'react';
@@ -123,11 +122,7 @@ export default function Home() {
     <>
     <div className="app">
     <Homepg/>
-    <div className="flex flex-col w-72 gap-6">
-      <Input variant="static" label="Static" placeholder="Static" />
-      <Input variant="standard" label="Standard" />
-      <Input variant="outlined" label="Outlined" />
-    </div>
+    
       <section className='pro'>
     <div className='fex titles'> <h2>shapping</h2></div> 
       <div className='r'>

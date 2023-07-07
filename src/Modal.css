@@ -1,4 +1,4 @@
-body.active-modal {
+.active-modal {
     overflow-y: hidden;
 }
 
@@ -20,7 +20,7 @@ body.active-modal {
 }
 
 .overlay {
-    background: rgba(49,49,49,0.8);
+    background: rgba(49, 49, 49, 0.503);
 }
 .modal-content {
     position: absolute;

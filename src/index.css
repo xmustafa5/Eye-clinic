@@ -156,11 +156,7 @@ section {
   
 }
 
-.popuplog{
-  height: 100vh;
-  display: grid;
-  place-items: center;
-}
+
 .popup{
  justify-content: center;
  align-items: center;
@@ -193,8 +189,14 @@ section {
   justify-content: center;
   align-items: center;
 }
-
-
+.fix{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.ffff{
+  width: 100vw;
+}
 .contt{
   position: fixed;
 top: 300px;
