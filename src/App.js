@@ -14,15 +14,15 @@ import RequireAuth from './context/RequirAuth';
 import Dashboardd from './components/authlogin/Dashboardd';
 function App() {
   return (
-    <>        <AuthProvider>
-
+    <>   
+         <AuthProvider>
       <Layout>
         <Routes>
           <Route path='/' element={<RequireAuth><Home/></RequireAuth>} />
           <Route path='/Baskett' element={<RequireAuth><Baskett /></RequireAuth>} />
           <Route path='/Loading' element={<Loading />} />
           <Route  path="/requests" element={<Requests/>} />
-          <Route  path="/Dashboard" element={<Dashboard/>} />
+          <Route  path="/Dashboard" element={ <Dashboard/>} />
           <Route  path="/LoginPage" element={<LoginPage />} />
           <Route  path="/login" element={<Login/>} />
           <Route path='/forgot-password' element={<ForgotPassword />} />
