@@ -248,6 +248,13 @@ const Basket = () => {
             handleInput1Change={handleInput1Change}
             handleInput2Change={handleInput2Change}
             handleInput3Change={handleInput3Change}
+            handleInput4Change={handleInput4Change}
+            handleInput5Change={handleInput5Change}
+            handleInput6Change={handleInput6Change}
+            handleInput7Change={handleInput7Change}
+            handleInput8Change={handleInput8Change}
+            handleInput9Change={handleInput9Change}
+            handleLensTypeChange={handleLensTypeChange}
             handleByNowClick={handleByNowClick}
             showPopup={showPopup}
           />
