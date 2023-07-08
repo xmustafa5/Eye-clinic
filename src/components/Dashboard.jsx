@@ -106,7 +106,7 @@ const Dashboard = () => {
 
   return (
     <div>
-      <h1>Dashboard</h1>
+      <h1 className="title">Dashboard</h1>
       <form onSubmit={handleSubmit}>
         <label>Image 1:</label>
         <input type="file" onChange={(e) => handleImageChange(e, setImageFile1)} />
