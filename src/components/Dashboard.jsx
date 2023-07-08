@@ -1,6 +1,6 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { db, storage } from "../components/firebase";
-import Items from './authlogin/Items';
+import Items from "./authlogin/Items";
 
 const Dashboard = () => {
   const [imageFile1, setImageFile1] = useState(null);
@@ -20,14 +20,18 @@ const Dashboard = () => {
     e.preventDefault();
 
     const uploadTasks = [];
-   
+
     if (imageFile1) {
-      const uploadTask1 = storage.ref(`images/${imageFile1.name}`).put(imageFile1);
+      const uploadTask1 = storage
+        .ref(`images/${imageFile1.name}`)
+        .put(imageFile1);
       uploadTasks.push(uploadTask1);
     }
 
     if (imageFile2) {
-      const uploadTask2 = storage.ref(`images/${imageFile2.name}`).put(imageFile2);
+      const uploadTask2 = storage
+        .ref(`images/${imageFile2.name}`)
+        .put(imageFile2);
       uploadTasks.push(uploadTask2);
     }
 
@@ -64,8 +68,6 @@ const Dashboard = () => {
         };
 
         return db.collection("products").add(item);
-
-        
       })
       .then(() => {
         console.log("Item added successfully!");
@@ -106,50 +108,124 @@ const Dashboard = () => {
   };
 
   return (
-    <section className='pro'>
-    <h1 className="fex titles">Dashboard</h1>
+    <section className="pro">
+      <h1 className="fex titles">Add Item</h1>
       <form onSubmit={handleSubmit}>
-        
-      <div>
-            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-200 dark:text-white">title</label>
-            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" />
+        <div>
+          <label
+            for="first_name"
+            class="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
+          >
+            title
+          </label>
+          <input
+            type="text"
+            id="first_name"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="John"
+          />
         </div>
-      
-        <label class="block mb-2 text-sm font-medium text-gray-200 dark:text-white" for="file_input">glass 2</label>
-        <input  onChange={(e) => handleImageChange(e, setImageFile2)}  class="block w-64 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file"/>
+
+       
+    
+        <div className="flexxx">
+       
+          <div className="flexinputs">
 
           
-    <div class="grid gap-6 mb-6 md:grid-cols-2">
-          <div className="flexinput">
-
-         
-        <label class="block mb-2 text-sm font-medium text-gray-200 dark:text-white" for="file_input">glass 1</label>
-        <input  onChange={(e) => handleImageChange(e, setImageFile1)} class="block w-64   mb-5 text-lg text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file"/>
-     </div>
+        <div class="inputsss">
+          <div>
+            <label
+              class="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
+              for="file_input"
+            >
+              glass 1
+            </label>
+            <input
+              onChange={(e) => handleImageChange(e, setImageFile1)}
+              class="block w-64 align-Items-center flex   mb-5 text-lg text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+              id="file_input"
+              type="file"
+            />
+          </div>
+          <div>
+            <label
+              for="last_name"
+              class="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
+            >
+              color 1
+            </label>
+            <input
+              type="text"
+              id="last_name"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Doe"
+            />
+          </div>
+        </div>
+        <div class="inputsss">
+          <div>
+            <label
+              class="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
+              for="file_input"
+            >
+              glass 1
+            </label>
+            <input
+              onChange={(e) => handleImageChange(e, setImageFile2)}
+              class="block w-64 align-Items-center    mb-5 text-lg text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+              id="file_input"
+              type="file"
+            />
+          </div>
+          <div>
+            <label
+              for="last_name"
+              class="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
+            >
+              color 1
+            </label>
+            <input
+              type="text"
+              id="last_name"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Doe"
+            />
+          </div>
+            <div>
+              
+            </div>
+        </div>
         <div>
-            <label for="last_name" class="block mb-2 text-sm font-medium text-gray-200 dark:text-white">color 1</label>
-            <input type="text" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Doe" />
+          
+        </div>
+          
         </div>
        
+        <div>
+            <label
+              for="last_name"
+              class="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
+            >
+              color 1
+            </label>
+            <input
+              type="text"
+              id="last_name"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Doe"
+            />
+          </div>
+        </div>
       
-        
-       
-    </div>
-   
-<label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="small_size">Small file input</label>
-<input class="block w-full mb-5 text-xs text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="small_size" type="file"/>
+      
 
-<label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="default_size">Default size</label>
-<input class="block w-full mb-5 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="default_size" type="file"/>
-
-<label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="large_size">Large file input</label>
-<input class="block w-full text-lg text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="large_size" type="file"/>
-
-  
-   
-   
-    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-64 sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
-
+        <button
+          type="submit"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-64 sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Submit
+        </button>
 
         <label>Title:</label>
         <input
@@ -178,27 +254,25 @@ const Dashboard = () => {
           value={price}
           onChange={(e) => setPrice(e.target.value)}
         />
-          
-            
 
         <button type="submit">Submit</button>
       </form>
       <div>
-      <h1>Dashboard</h1>
-      <h2>Products:</h2>
-      {products.map((product) => (
-        <div key={product.id}>
-          <h3>{product.title}</h3>
-          { product.color1 &&<p>Color 1: {product.color1}</p>}
-        { product.color2 && <p>Color 2: {product.color2}</p>} 
-          <p>Price: {product.price}</p>
-          <button onClick={() => handleRemoveProduct(product.id)}>
-            Remove Product
-          </button>
-          <hr />
-        </div>
-      ))}
-    </div>
+        <h1>Dashboard</h1>
+        <h2>Products:</h2>
+        {products.map((product) => (
+          <div key={product.id}>
+            <h3>{product.title}</h3>
+            {product.color1 && <p>Color 1: {product.color1}</p>}
+            {product.color2 && <p>Color 2: {product.color2}</p>}
+            <p>Price: {product.price}</p>
+            <button onClick={() => handleRemoveProduct(product.id)}>
+              Remove Product
+            </button>
+            <hr />
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

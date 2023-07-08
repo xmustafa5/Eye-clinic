@@ -477,4 +477,25 @@ flex-direction: column;
   font-size: 23px;
   color: var(--blcolor);
   margin-bottom: 30px;
+  
+}
+.inputsss{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+}
+.flexinputs{
+  display: flex;
+  justify-content: center;
+  align-items: center;  gap: 10px;
+
+}
+.flexxx{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
