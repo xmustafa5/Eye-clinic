@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { db, storage } from "../components/firebase";
 import Items from "./authlogin/Items";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   const [imageFile1, setImageFile1] = useState(null);
@@ -108,107 +109,98 @@ const Dashboard = () => {
   };
 
   return (
-    <section className="pro">
+    <div className="pro">
       <h1 className="fex titles">Add Item</h1>
       <form onSubmit={handleSubmit}>
         <div className="flex justify-center mt-4 mb-3">
-            <div>
-          <label
-            for="first_name"
-            className="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
-          >
-            Title
-          </label>
-          <input
-            type="text"
-            id="first_name"  value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="John"
-          />
+          <div>
+            <label
+              for="first_name"
+              className="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
+            >
+              Title
+            </label>
+            <input
+              type="text"
+              id="first_name"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="John"
+            />
+          </div>
         </div>
-        </div>
-      
 
-       
-    
         <div className="flexxx">
-       
           <div className="flexinputs">
-
-          
-        <div class="inputsss">
-          <div>
-            <label
-              class="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
-              for="file_input"
-            >
-              glass 1
-            </label>
-            <input
-              onChange={(e) => handleImageChange(e, setImageFile1)}
-              class="block w-64 align-Items-center    mb-5 text-lg text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-              id="file_input"
-              type="file"
-            />
-          </div>
-          <div>
-            <label
-              for="last_name" 
-              class="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
-            >
-              color 1
-            </label>
-            <input
-              type="text"
-              id="last_name" value={color1}
-              onChange={(e) => setColor1(e.target.value)}
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="Doe"
-            />
-          </div>
-        </div>
-        <div class="inputsss">
-          <div>
-            <label
-              class="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
-              for="file_input"
-            >
-              glass 2
-            </label>
-            <input
-              onChange={(e) => handleImageChange(e, setImageFile2)}
-              class="block w-64 align-Items-center    mb-5 text-lg text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-              id="file_input"
-              type="file"
-            />
-          </div>
-          <div>
-            <label
-              for="last_name" 
-              class="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
-            >
-              color 2
-            </label>
-            <input
-              type="text"
-              id="last_name"  value={color2}
-              onChange={(e) => setColor2(e.target.value)}
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="Doe"
-            />
-          </div>
-            <div>
-              
+            <div class="inputsss">
+              <div>
+                <label
+                  class="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
+                  for="file_input"
+                >
+                  glass 1
+                </label>
+                <input
+                  onChange={(e) => handleImageChange(e, setImageFile1)}
+                  class="block w-64 align-Items-center    mb-5 text-lg text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                  id="file_input"
+                  type="file"
+                />
+              </div>
+              <div>
+                <label
+                  for="last_name"
+                  class="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
+                >
+                  color 1
+                </label>
+                <input
+                  type="text"
+                  id="last_name"
+                  value={color1}
+                  onChange={(e) => setColor1(e.target.value)}
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Doe"
+                />
+              </div>
             </div>
-        </div>
-        <div>
-          
-        </div>
-          
-        </div>
-       
-        <div>
+            <div class="inputsss">
+              <div>
+                <label
+                  class="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
+                  for="file_input"
+                >
+                  glass 2
+                </label>
+                <input
+                  onChange={(e) => handleImageChange(e, setImageFile2)}
+                  class="block w-64 align-Items-center    mb-5 text-lg text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                  id="file_input"
+                  type="file"
+                />
+              </div>
+              <div>
+                <label
+                  for="last_name"
+                  class="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
+                >
+                  color 2
+                </label>
+                <input
+                  type="text"
+                  id="last_name"
+                  value={color2}
+                  onChange={(e) => setColor2(e.target.value)}
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Doe"
+                />
+              </div>
+              <div></div>
+            </div>
+            <div></div>
+          </div>
+          <div>
             <label
               for="last_name"
               class="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
@@ -217,49 +209,80 @@ const Dashboard = () => {
             </label>
             <input
               type="text"
-              id="last_name" value={price}
+              id="last_name"
+              value={price}
               onChange={(e) => setPrice(e.target.value)}
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Doe"
             />
-          </div> <button
-          type="submit"
-          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-64 sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          Submit
-        </button>
+          </div>{" "}
+          <button
+            type="submit"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-64 sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Submit
+          </button>
         </div>
-      
-      
-
-       
-
-      
-
-       
-
-       
-
-      
-
       </form>
       <div>
-        <h1>Dashboard</h1>
-        <h2>Products:</h2>
+      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+              <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                  <th scope="col" class="px-6 py-3">
+                    Product name
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                    Color
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                    Category
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                    Price
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                    Action
+                  </th>
+                </tr>
+              </thead>
+        <h1 className="fex mt-10 text-lg titles">items</h1>
         {products.map((product) => (
-          <div key={product.id}>
-            <h3>{product.title}</h3>
-            {product.color1 && <p>Color 1: {product.color1}</p>}
-            {product.color2 && <p>Color 2: {product.color2}</p>}
-            <p>Price: {product.price}</p>
-            <button onClick={() => handleRemoveProduct(product.id)}>
-              Remove Product
-            </button>
-            <hr />
+          // <div key={product.id}>
+          //   <h3>{product.title}</h3>
+          //   {product.color1 && <p>Color 1: {product.color1}</p>}
+          //   {product.color2 && <p>Color 2: {product.color2}</p>}
+          //   <p>Price: {product.price}</p>
+          //   <button onClick={() => handleRemoveProduct(product.id)}>
+          //     Remove Product
+          //   </button>
+          //   <hr />
+          // </div>
+
+         
+              <tbody key={product.id} >
+                <tr>
+                  <th
+                    scope="row"
+                    class="px-6 py-4 font-medium text-gray-200 whitespace-nowrap dark:text-white"
+                  >
+                    {product.title}
+                  </th>
+                  <td class="px-6 py-4">Red</td>
+                  <td class="px-6 py-4">Wearables</td>
+                  <td class="px-6 py-4">$999</td>
+                  <td class="px-6 py-4">
+                    <Link class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                      Edit
+                    </Link>
+                  </td>
+                </tr>
+              </tbody>
+            
+        ))}</table>
           </div>
-        ))}
       </div>
-    </section>
+    </div>
   );
 };
 
