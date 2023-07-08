@@ -105,8 +105,8 @@ const Dashboard = () => {
   };
 
   return (
-    <div>
-      <h1 className="title">Dashboard</h1>
+    <section className='pro'>
+    <h1 className="fex titles">Dashboard</h1>
       <form onSubmit={handleSubmit}>
         <label>Image 1:</label>
         <input type="file" onChange={(e) => handleImageChange(e, setImageFile1)} />
@@ -162,7 +162,7 @@ const Dashboard = () => {
         </div>
       ))}
     </div>
-    </div>
+    </section>
   );
 };
 
