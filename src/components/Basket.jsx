@@ -13,6 +13,12 @@ const Basket = () => {
   const [inputValue1, setInputValue1] = useState("");
   const [inputValue2, setInputValue2] = useState("");
   const [inputValue3, setInputValue3] = useState("");
+  const [inputValue4, setInputValue4] = useState("");
+  const [inputValue5, setInputValue5] = useState("");
+  const [inputValue6, setInputValue6] = useState("");
+  const [inputValue7, setInputValue7] = useState("");
+  const [inputValue8, setInputValue8] = useState("");
+  const [inputValue9, setInputValue9] = useState("");
   const [popupMessage, setPopupMessage] = useState('');
   const [showPopup, setShowPopup] = useState(false);
   const { currentUser } = useAuth();
