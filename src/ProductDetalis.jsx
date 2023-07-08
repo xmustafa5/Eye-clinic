@@ -1,4 +1,4 @@
-import { Input, Button, Select,Option  } from "@material-tailwind/react";
+import { Input, Button, Select, Option } from "@material-tailwind/react";
 import React from "react";
 const ProductDetails = ({
   handlePopupToggle,
@@ -8,6 +8,9 @@ const ProductDetails = ({
   handleInput4Change,
   handleInput5Change,
   handleInput6Change,
+  handleInput7Change,
+  handleInput8Change,
+  handleInput9Change,
   handleLensTypeChange,
   handleByNowClick,
 }) => {
@@ -25,12 +28,76 @@ const ProductDetails = ({
                 label="phone number"
                 onChange={handleInput3Change}
               />
+              {/* <div class="grid gap-5 mb-3 md:grid-cols-3">
+        <div>
+            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First name</label>
+            <input  type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-14 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" />
+        </div>
+        <div>
+            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First name</label>
+            <input  type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-14 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" />
+        </div>
+        <div>
+            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First name</label>
+            <input  type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-14 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" />
+        </div>
+        </div> */}
               <div className="downselect">
-                
-              
-              <Input size="lg" label="Input 4" onChange={handleInput4Change} />
-              <Input size="lg" label="Input 5" onChange={handleInput5Change} />
-              <Input size="lg" label="Input 6" onChange={handleInput6Change} />
+                <div className="w-20 mr-2 ">
+                  
+                  <Input
+                    size="md"
+                    className="w-20 "
+                    label="Input 4"
+                    onChange={handleInput4Change}
+                  />
+                </div>
+                <div className="w-20 mr-2 min-w-13 ">
+                  
+                  <Input
+                    size="md"
+                    className="w-20 focus:outline-none outline-none "
+                    label="Input 5"
+                    onChange={handleInput5Change}
+                  />
+                </div>
+                <div className="w-20  mr-2 ">
+                  <Input
+                    size="md"
+                    className="w-20 min-w-[100px] "
+                    label="Input 6"
+                    onChange={handleInput6Change}
+                  />
+                </div>
+              </div>
+              <div className="downselect">
+                <div className="w-20 mr-2 ">
+                  
+                  <Input
+                    size="md"
+                    className="w-20 "
+                    label="Input 7"
+                    onChange={handleInput4Change}
+                  />
+                </div>
+                <div className="w-20 mr-2 min-w-13 ">
+                  
+                  <Input
+                    size="md"
+                    className="w-20 focus:outline-none outline-none "
+                    label="Input 8"
+                    onChange={handleInput5Change}
+                  />
+                </div>
+                <div className="w-20  mr-2 ">
+                  <Input
+                    size="md"
+                    className="w-20 min-w-[100px] "
+                    label="Input 9"
+                    onChange={handleInput6Change}
+                  />
+                </div>
+              </div>
               <Select label="Lens Type" onChange={handleLensTypeChange}>
                 <Option> M.C </Option>
                 <Option> B.C </Option>
@@ -39,9 +106,8 @@ const ProductDetails = ({
                 <Option> Biofca M.C" </Option>
                 <Option> Biofca B.C" </Option>
                 <Option> Biofca Ph.MC " </Option>
-                <Option> Biofca Ph.BC  </Option>
+                <Option> Biofca Ph.BC </Option>
               </Select>
-              </div>
               <div className="flex items-center ">
                 <div className=" ffff">
                   <a href="#buttons-with-link">

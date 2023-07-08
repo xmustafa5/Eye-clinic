@@ -441,5 +441,5 @@ font-size: 20px;
 align-items: center;}
 
 .downselect{
-  
+  display: flex;
 }
