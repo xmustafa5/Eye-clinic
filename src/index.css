@@ -441,5 +441,20 @@ font-size: 20px;
 align-items: center;}
 
 .downselect{
+  width: 100%;
   display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+.downselec{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+.inp{
+  width: 60px !important;
+}
+.inputsr{
+width: 70px !important;
 }
