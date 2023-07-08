@@ -266,7 +266,9 @@ const Dashboard = () => {
                     scope="row"
                     class="px-6 py-4 font-medium text-gray-200 whitespace-nowrap dark:text-white"
                   >
-                    {product.title}
+                    {product.title.length >0  ? (product.title) : (
+                      <h2>no title</h2>
+                    )  }
                   </th>
                   <td class="px-6 py-4">Red</td>
                   <td class="px-6 py-4">Wearables</td>
