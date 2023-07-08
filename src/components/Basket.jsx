@@ -90,6 +90,34 @@ const Basket = () => {
   const handleInput3Change = (e) => {
     setInputValue3(e.target.value);
   };
+
+  const handleInput4Change = (e) => {
+    setInputValue4(e.target.value);
+  };
+
+  const handleInput5Change = (e) => {
+    setInputValue5(e.target.value);
+  };
+
+  const handleInput6Change = (e) => {
+    setInputValue6(e.target.value);
+  };
+
+  const handleInput7Change = (e) => {
+    setInputValue7(e.target.value);
+  };
+
+  const handleInput8Change = (e) => {
+    setInputValue8(e.target.value);
+  };
+
+  const handleInput9Change = (e) => {
+    setInputValue9(e.target.value);
+  };
+
+  const handleLensTypeChange = (e) => {
+    setSelectedLensType(e.target.value);
+  };
   const handleByNowClick = async () => {
     // Check if the data already exists in the requests collection
     const existingRequestsSnapshot = await db
