@@ -110,9 +110,9 @@ const Dashboard = () => {
 
   return (
     <div className="pro">
-      <h1 className="fex titles">Add Item</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="flex justify-center mt-4 mb-3">
+      <form onSubmit={handleSubmit} className="">
+         <div className="fleox">   <h1 className="fex titles pt-8">Add Item</h1></div>
+  <div className="flex justify-center mt-4 mb-3">
           <div>
             <label
               for="first_name"
@@ -224,7 +224,7 @@ const Dashboard = () => {
           </button>
         </div>
       </form>
-      <div>        <h1 className="fex mt-10 text-lg titles">items</h1>
+      <div className="proo" >        <h1 className="fex mt-10 text-lg mb-6 titles">items</h1>
 
       <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -271,11 +271,11 @@ const Dashboard = () => {
                     )  }
                   </th>
                   <td class="px-6 py-4">{product.color1}</td>
-                  <td class="px-6 py-4">{product.color2}}</td>
+                  <td class="px-6 py-4">{product.color2}</td>
                   <td class="px-6 py-4">{product.price}</td>
                   <td class="px-6 py-4">
-                    <Link class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                      Edit
+                    <Link onClick={() => handleRemoveProduct(product.id)} class="font-medium text-blue-300 dark:text-blue-200 hover:underline">
+                      remove
                     </Link>
                   </td>
                 </tr>

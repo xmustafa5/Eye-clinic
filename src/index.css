@@ -499,3 +499,18 @@ flex-direction: column;
   flex-direction: column;
   gap: 10px;
 }
+
+.proo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 100px;
+
+}
+.fleox{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
