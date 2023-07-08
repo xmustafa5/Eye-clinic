@@ -458,3 +458,7 @@ align-items: center;}
 .inputsr{
 width: 70px !important;
 }
+
+  .search{
+    height: 40vh;
+  }

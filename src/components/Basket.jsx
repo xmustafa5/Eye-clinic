@@ -190,7 +190,7 @@ const Basket = () => {
             //   <img src={item.imageUrl} alt="" width={300} />
             //   <button onClick={() => removeFromBasket(item.id)}>Remove</button>
             // </li>
-            <li>
+            <li >
             <div className="projcard">
               <div className="projimg" style={  {  backgroundImage: `url(${item.imageUrl})`}}> 
                 {/* <img src={imageSource} alt="Selected Option"  /> */}

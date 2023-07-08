@@ -1,4 +1,5 @@
 import React from 'react';
+import FilterSize from '../components/FilterSize'; 
 
 import Card from '../components/Card';
 import { useState } from 'react';
@@ -10,7 +11,6 @@ import Homepg from '../components/Homepg';
 import { useAuth } from '../context/AuthContext';
 import ProductDetails from "../components/ProductDetalis";
 import Login from '../components/authlogin/Login';
-import FilterSize from '../components/FilterSize'; 
 export default function Home() {
   const [basketItems, setBasketItems] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
