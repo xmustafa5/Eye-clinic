@@ -461,4 +461,8 @@ width: 70px !important;
 
   .search{
     height: 40vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--scolor);
   }
