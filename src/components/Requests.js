@@ -91,6 +91,8 @@ const Requests = () => {
                 <p className="pcolor">name: {request.input1}</p>
                 <p>location: {request.input2}</p>
                 <p>number: {request.input3}</p>
+                <p>number: {request.input7}</p>
+                <p>lensType: {request.lensType}</p>
                 <p>products:</p>
               </div>
 

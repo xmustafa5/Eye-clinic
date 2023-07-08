@@ -19,9 +19,18 @@ const ProductDetails = ({
 }) => {
   const options = [
     { value: "", text: "Lens Type" },
-    { value: "apple", text: "Apple 🍏" },
-    { value: "banana", text: "Banana 🍌" },
-    { value: "kiwi", text: "Kiwi 🥝" },
+    { value: "M.C", text: "M.C" },
+    { value: "B.C", text: "B.C" },
+    { value: "PH.MC", text: "PH.MC" },
+    { value: "PH.BC", text: "PH.BC" },
+    { value: "Biofca M.C", text: "Biofca M.C" },
+    { value: "Biofca B.C", text: "Biofca B.C" },
+    { value: "Biofca PH.MC", text: "Biofca PH.MC" },
+    { value: "Biofca PH.BC", text: "Biofca PH.BC" },
+    { value: "Progressive M.C", text: "Progressive M.C" },
+    { value: "Progressive B.C", text: "Progressive B.C" },
+    { value: "Progressive PH.MC", text: "Progressive PH.MC" },
+    { value: "Progressive PH.BC", text: "Progressive PH.BC" },
   ];
 
   const [selected, setSelected] = useState(options[0].value);

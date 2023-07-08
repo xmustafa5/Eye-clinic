@@ -10,7 +10,7 @@ import Homepg from '../components/Homepg';
 import { useAuth } from '../context/AuthContext';
 import ProductDetails from "../components/ProductDetalis";
 import Login from '../components/authlogin/Login';
-
+import FilterSize from '../components/FilterSize'; 
 export default function Home() {
   const [basketItems, setBasketItems] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
@@ -125,7 +125,7 @@ export default function Home() {
     <>
     <div className="app">
     <Homepg/>
-    
+    <FilterSize/>
       <section className='pro'>
     <div className='fex titles'> <h2>shapping</h2></div> 
       <div className='r'>
