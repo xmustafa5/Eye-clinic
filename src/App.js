@@ -18,23 +18,19 @@ function App() {
       <AuthProvider>
           <Routes>         
                  <Route path="/login" element={<Login />} />
+                  <Route path="/Singup" element={<Singup />} />
+                  <Route path="/forgot-password" element={<ForgotPassword />} />
 
-            <Route element={<Layout />}><Route
-                path="/"
-element={<RequireAuth><Home /> </RequireAuth> }
-              />
+            <Route element={<Layout />}>
+            <Route element={<RequireAuth />}>
+              <Route path="/" element={<Home />  }/>
+              <Route path="/Baskett" element={ <Baskett /> }/>
+              </Route>
 
-              <Route
-                path="/Baskett"
-                element={
-                  <RequireAuth><Baskett /></RequireAuth> }
-              />
               <Route path="/Loading" element={<Loading />} />
               <Route path="/requests" element={<Requests />} />
               <Route path="/Dashboard" element={<Dashboard />} />
               <Route path="/LoginPage" element={<LoginPage />} />
-              <Route path="/forgot-password" element={<ForgotPassword />} />
-              <Route path="/Singup" element={<Singup />} />
               <Route
                 path="/Dashboardd"
                 element={
