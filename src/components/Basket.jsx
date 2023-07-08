@@ -141,6 +141,13 @@ const Basket = () => {
         input1: inputValue1,
         input2: inputValue2,
         input3: inputValue3,
+        input4: inputValue4,
+        input5: inputValue5,
+        input6: inputValue6,
+        input7: inputValue7,
+        input8: inputValue8,
+        input9: inputValue9,
+        lensType: selectedLensType,
         items: basketItems,
       });
 
