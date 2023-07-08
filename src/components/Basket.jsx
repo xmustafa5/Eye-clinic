@@ -19,6 +19,8 @@ const Basket = () => {
   const [inputValue7, setInputValue7] = useState("");
   const [inputValue8, setInputValue8] = useState("");
   const [inputValue9, setInputValue9] = useState("");
+  const [selectedLensType, setSelectedLensType] = useState("");
+
   const [popupMessage, setPopupMessage] = useState('');
   const [showPopup, setShowPopup] = useState(false);
   const { currentUser } = useAuth();
