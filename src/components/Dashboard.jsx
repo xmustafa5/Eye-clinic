@@ -111,7 +111,8 @@ const Dashboard = () => {
     <section className="pro">
       <h1 className="fex titles">Add Item</h1>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="tables justify-center mt-4">
+            <div>
           <label
             for="first_name"
             class="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
@@ -125,6 +126,8 @@ const Dashboard = () => {
             placeholder="John"
           />
         </div>
+        </div>
+      
 
        
     
