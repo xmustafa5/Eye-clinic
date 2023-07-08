@@ -8,7 +8,7 @@ import { db } from '../components/firebase';
 import cart from '../img/cart1.png'
 import Homepg from '../components/Homepg';
 import { useAuth } from '../context/AuthContext';
-import ProductDetails from "../ProductDetalis";
+import ProductDetails from "../components/ProductDetalis";
 import Login from '../components/authlogin/Login';
 
 export default function Home() {

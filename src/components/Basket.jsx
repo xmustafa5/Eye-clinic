@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../components/firebase";
 
-import ProductDetails from "../ProductDetalis";
+import ProductDetails from "./ProductDetalis";
 import { Link } from "react-router-dom";
 import Loading from "./Loading";
 import { useAuth } from "../context/AuthContext";
@@ -108,6 +108,7 @@ const Basket = () => {
   const handleInput7Change = (e) => {
     setInputValue7(e.target.value);
   };
+  
 
   const handleInput8Change = (e) => {
     setInputValue8(e.target.value);
@@ -256,6 +257,8 @@ const Basket = () => {
             handleInput9Change={handleInput9Change}
             handleLensTypeChange={handleLensTypeChange}
             handleByNowClick={handleByNowClick}
+            selectedLensType={selectedLensType} // Pass selectedLensType as a prop
+            setSelectedLensType={setSelectedLensType}
             showPopup={showPopup}
           />
         </div>
