@@ -224,7 +224,8 @@ const Dashboard = () => {
           </button>
         </div>
       </form>
-      <div>
+      <div>        <h1 className="fex mt-10 text-lg titles">items</h1>
+
       <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
               <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -233,10 +234,10 @@ const Dashboard = () => {
                     Product name
                   </th>
                   <th scope="col" class="px-6 py-3">
-                    Color
+                    Color1
                   </th>
                   <th scope="col" class="px-6 py-3">
-                    Category
+                    color2
                   </th>
                   <th scope="col" class="px-6 py-3">
                     Price
@@ -246,7 +247,6 @@ const Dashboard = () => {
                   </th>
                 </tr>
               </thead>
-        <h1 className="fex mt-10 text-lg titles">items</h1>
         {products.map((product) => (
           // <div key={product.id}>
           //   <h3>{product.title}</h3>
@@ -270,9 +270,9 @@ const Dashboard = () => {
                       <h2>no title</h2>
                     )  }
                   </th>
-                  <td class="px-6 py-4">Red</td>
-                  <td class="px-6 py-4">Wearables</td>
-                  <td class="px-6 py-4">$999</td>
+                  <td class="px-6 py-4">{product.color1}</td>
+                  <td class="px-6 py-4">{product.color2}}</td>
+                  <td class="px-6 py-4">{product.price}</td>
                   <td class="px-6 py-4">
                     <Link class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                       Edit
@@ -281,7 +281,8 @@ const Dashboard = () => {
                 </tr>
               </tbody>
             
-        ))}</table>
+        ))}
+        </table>
           </div>
       </div>
     </div>
