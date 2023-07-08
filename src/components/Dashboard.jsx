@@ -111,17 +111,18 @@ const Dashboard = () => {
     <section className="pro">
       <h1 className="fex titles">Add Item</h1>
       <form onSubmit={handleSubmit}>
-        <div className="tables justify-center mt-4">
+        <div className="flex justify-center mt-4 mb-3">
             <div>
           <label
             for="first_name"
-            class="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
+            className="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
           >
-            title
+            Title
           </label>
           <input
             type="text"
-            id="first_name"
+            id="first_name"  value={title}
+            onChange={(e) => setTitle(e.target.value)}
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="John"
           />
@@ -146,21 +147,22 @@ const Dashboard = () => {
             </label>
             <input
               onChange={(e) => handleImageChange(e, setImageFile1)}
-              class="block w-64 align-Items-center flex   mb-5 text-lg text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+              class="block w-64 align-Items-center    mb-5 text-lg text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
               id="file_input"
               type="file"
             />
           </div>
           <div>
             <label
-              for="last_name"
+              for="last_name" 
               class="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
             >
               color 1
             </label>
             <input
               type="text"
-              id="last_name"
+              id="last_name" value={color1}
+              onChange={(e) => setColor1(e.target.value)}
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Doe"
             />
@@ -172,7 +174,7 @@ const Dashboard = () => {
               class="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
               for="file_input"
             >
-              glass 1
+              glass 2
             </label>
             <input
               onChange={(e) => handleImageChange(e, setImageFile2)}
@@ -183,14 +185,15 @@ const Dashboard = () => {
           </div>
           <div>
             <label
-              for="last_name"
+              for="last_name" 
               class="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
             >
-              color 1
+              color 2
             </label>
             <input
               type="text"
-              id="last_name"
+              id="last_name"  value={color2}
+              onChange={(e) => setColor2(e.target.value)}
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Doe"
             />
@@ -210,55 +213,35 @@ const Dashboard = () => {
               for="last_name"
               class="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
             >
-              color 1
+              price
             </label>
             <input
               type="text"
-              id="last_name"
+              id="last_name" value={price}
+              onChange={(e) => setPrice(e.target.value)}
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Doe"
             />
-          </div>
-        </div>
-      
-      
-
-        <button
+          </div> <button
           type="submit"
           class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-64 sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Submit
         </button>
+        </div>
+      
+      
 
-        <label>Title:</label>
-        <input
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
+       
 
-        <label>Color 1:</label>
-        <input
-          type="text"
-          value={color1}
-          onChange={(e) => setColor1(e.target.value)}
-        />
+      
 
-        <label>Color 2:</label>
-        <input
-          type="text"
-          value={color2}
-          onChange={(e) => setColor2(e.target.value)}
-        />
+       
 
-        <label>Price:</label>
-        <input
-          type="text"
-          value={price}
-          onChange={(e) => setPrice(e.target.value)}
-        />
+       
 
-        <button type="submit">Submit</button>
+      
+
       </form>
       <div>
         <h1>Dashboard</h1>
