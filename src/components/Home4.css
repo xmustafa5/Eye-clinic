@@ -372,30 +372,26 @@ top: 200px;
     position: absolute;
     top: 170px;
     left: -340px;
-   height: 30px;
-   width: 140px;
+   
   }
    .icon2{ animation: icon2 5s linear infinite;
-        position: absolute;  
-        top: 400px;
-        right: 100px;
-        height: 30px;
-   width: 150px;
+    position: absolute;
+    top: -100px;
+    left: 10px;
+       
 
       }
    .icon3 {  animation: icon3 4s linear infinite;  
         position: absolute;
         top: 250px;
         right: 10px;
-        height: 30px;
-   width: 130px;
+        
     }
   .icon4 {  animation:   drop 2.5s infinite; 
          position: absolute;
          top: 66px;
           left: -101px;
-          height: 80px;
-   width: 40px;
+        
    
   }
 
@@ -441,15 +437,12 @@ top: 200px;
     position: absolute;
     top: 170px;
     left: -440px;
-   height: 50px;
-   width: 170px;
+   
   }
    .icon2{ animation: icon2 5s linear infinite;
-        position: absolute;  
-        top: 400px;
-        right: 100px;
-        height: 30px;
-   width: 170px;
+    position: absolute;
+    top: -100px;
+    left: 10px;
       }
    .icon3 { animation: icon3 4s linear infinite;  
         position: absolute;
@@ -526,24 +519,48 @@ top: 200px;
 
 
     position: relative;
-       z-index: 9;
+       z-index: 119;
      }
-      .icon1 {  animation: icon1 5s linear infinite; 
-       position: absolute;
-       top: 100px;
-       left: -600px;
-       
+      .icon11 {   
+       position: relative;
+       top: -100px;
+       left: 10px;
      }
      
-   .icomimg1{
+   .icomimg1{ animation: icon1 5s linear infinite;
     height: 60px !important;
-       width: 291px;
+       width: 181px 
+       !important
+       ;        
+
    }
-      
+   .icomimg2{ animation: icon2 5s linear infinite;
+    height: 50px !important;
+    width: 151px !important; 
+     position: absolute;
+    top: -210px;
+    left: 350px;
+   }
+   .icomimg3{ animation: icon3 4s linear infinite;
+    height: 50px !important;
+    width: 151px !important; 
+     position: absolute;
+    top: 110px;
+    left: 350px;
+   }
+   .icomimg4{ animation:   drop 2.5s infinite; 
+    height: 50px !important;
+    width: 51px !important; 
+     position: absolute;
+    top: -310px;
+    left: 150px;
+   }
       .icon2{   animation: icon2 5s linear infinite;
-          position: absolute;  
-       top: 500px;
-       right: -100px; }
+        position: absolute;
+        top: -100px;
+        left: 10px;
+      
+      }
       .icon3 {  animation: icon3 4s linear infinite;    position: absolute;
        top: 250px;
        right: -190px;

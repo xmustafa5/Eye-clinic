@@ -155,32 +155,29 @@ const Homepg = () => {
             />
             </div>
             <div className={"icon"}>
-              <div className={"icon1"}>
+              <div className={"icon11"}>
                 <img
                   src={banneralimenticon1}
                   alt=""
                   className='icomimg1'
-                />
-              </div>
-              <div className={"icon2"}>
-                <img
+                /><img
                   src={banneralimenticon2}
                   alt=""
-                  width={212}
-                  height={55}
-                />
-              </div>
-              <div className={"icon3"}>
-                <img
+                  className='icomimg2'
+
+                /> <img
                   src={banneralimenticon3}
                   alt=""
-                  width={192}
-                  height={55}
+                  className='icomimg3'
+
                 />
+               
+            
+               <img src={banneralimenticon4} alt=""                   className='icomimg4'
+ />
+              
               </div>
-              <div className={"icon4"}>
-                <img src={banneralimenticon4} alt="" />
-              </div>
+              
             </div>   
               </div>
             <div className='sertc'>
