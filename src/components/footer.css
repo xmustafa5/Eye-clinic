@@ -478,7 +478,7 @@ transform: scale(1.1);
   .contactsssss {   position: relative; z-index: 120; background-color: rgb(255, 247, 0);   }
   .contactsssss .contactcard {
     display: flex !important;
-    top:  13%;
+    top:  30%;
   left: 50%;
   width: calc(100% - 68px);
 
