@@ -85,6 +85,9 @@ const Filter = () => {
       </div> 
        </div>
        <div className="flexo ">
+       {filteredItems.length > 0 ? (
+            <div>
+              {filteredItems.map((item, index) => (
        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                   <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -108,24 +111,38 @@ const Filter = () => {
                   </thead>
                   <tbody>
                     <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-                      <th
-                        scope="row"
-                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                      >
-                        Lift Eye
-                      </th>
-                      <td class="px-6 py-4">ffffff</td>
-                      <td class="px-6 py-4">ffffff</td>
-                      <td class="px-6 py-4">ffffff</td>
-                      <td class="px-6 py-4">ffffff</td>
-                    </tr>
-                  
+                    <th
+                          scope="row"
+                          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                        >
+                          Lift Eye
+                        </th>
+                        <td class="px-6 py-4">{item.l_e_sph}</td>
+                        <td class="px-6 py-4">{item.l_e_cyl}</td>
+                        <td class="px-6 py-4">{item.l_e_axis}</td>
+                        <td class="px-6 py-4">{item.lenstype}</td>
+                      </tr>
+                      <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                        <th
+                          scope="row"
+                          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                        >
+                          Right Eye
+                        </th>
+                        <td class="px-6 py-4">{item.r_e_sph}</td>
+                        <td class="px-6 py-4">{item.r_e_cyl}</td>
+                        <td class="px-6 py-4">{item.r_e_axis}</td>
+                        <td class="px-6 py-4"></td>
+                      </tr>
                   </tbody>
                 </table>
               </div>
-       </div>
-               
-
+     ))}   </div>
+      
+     ) : (
+      <></>
+      )}
+      </div>
       </div>
      
     </section>
