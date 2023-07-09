@@ -66,6 +66,7 @@ const Homepg = () => {
 
     fetchFilteredItems();
   }, [searchInput]);
+  const contactcardnone = filteredItems.length > 0 ? "section-with-items" : "";
 
   return (
     <div className='home pt-10 '>
@@ -195,7 +196,7 @@ const Homepg = () => {
           </div>
          
       </div> 
-      <div className={"er"}  >
+      <div  className={`contactsssss ${contactcardnone}`}  >
 
       <section className={"contactsssss"}>
         <div className={"contactcard"} >
@@ -206,7 +207,8 @@ const Homepg = () => {
             <div class={"griditem"}>
           <h2 className={"contactcardh2"} >Start Your Best Online Classes With Us</h2>
           <div class={"wrapperrr"} data-aos="fade-left" data-aos-duration="900">
-            <input type="text"   placeholder="Email Address"  className={"input"} />
+            <input type="text" value={searchInput}
+            onChange={handleSearchInputChange}  placeholder="Email Address"  className={"input"} />
            
             </div>
         </div> 

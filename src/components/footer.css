@@ -6,7 +6,10 @@
   --thcolor: #12d0c5;
   --blcolor: #30a3e6;
 }
-
+.contactcardnone{
+  top:  100%;
+  left: 50%;
+}
 .contactsssss {  position: relative; z-index: 120; background-color: var(--fcolor);   }
 .contactsssss .contactcard {
   
@@ -476,13 +479,18 @@ transform: scale(1.1);
     display: flex !important;
     top:  30%;
   left: 50%;
-  width: calc(100% - 68px);
+  width: calc(100% - 50px);
 
+  }.flexo{ 
+    display: grid;
+    place-items: center;
+  }.flexo div{  /*mabye dalet*/
+    width: calc(100% - 20px);  
   }
 }
 /* Styles for devices with a width of 1024px or larger */
 @media (min-width: 1095px) and (max-width: 1600px)  {
-  .contactsssss {   position: relative; z-index: 120;   }
+  .contactsssss {   position: relative; z-index: 120;    }
   .contactsssss .contactcard {
     display: flex !important;
     top:  30%;
@@ -494,14 +502,14 @@ transform: scale(1.1);
   }.contactcardh2{
     font-size: 24px !important;
   }
-  .flexo{
+ .flexo{ 
     display: grid;
     place-items: center;
   }
   .prth{
     font-size: 14px;  
   }.flexo div{  /*mabye dalet*/
-    width: calc(100% - 78px);  
+    width: calc(100% - 10px);  
   }
 
 }
@@ -526,7 +534,9 @@ transform: scale(1.1);
   .flexo{
     display: grid;
     place-items: center;
-  }
+   }/*.block{ 
+    width: calc(100% + 100px);
+  } */
   .prth{
     font-size: 8px; padding: 10px !important;
   }.flexo div{  /*mabye dalet*/
