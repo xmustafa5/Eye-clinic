@@ -472,6 +472,13 @@ transform: scale(1.1);
   .contactcardh2{
     font-size: 20px !important;
   }
+  .contactsssss .contactcard {
+    display: flex !important;
+    top:  30%;
+  left: 50%;
+  width: calc(100% - 68px);
+
+  }
 }
 /* Styles for devices with a width of 1024px or larger */
 @media (min-width: 1095px) and (max-width: 1600px)  {
