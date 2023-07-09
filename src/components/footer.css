@@ -72,6 +72,10 @@
   justify-content: center;
   
 }
+.flexo{
+  display: flex;
+  align-items: center;
+}
 .sociallink2 a{
   margin-left: 10px;
   
