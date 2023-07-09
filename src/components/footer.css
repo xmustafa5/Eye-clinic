@@ -1,0 +1,378 @@
+.contactsssss {  position: relative; z-index: 120;   }
+.contactsssss .contactcard {
+  
+  position: absolute;
+  top:  40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #003D99;
+  width: calc(100% - 68px);
+  padding: 20px 20px;
+  display: grid;
+  grid-template-columns: fr;
+  gap: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+}
+
+.contactcardbg {
+  
+  position: absolute;
+  width: auto;
+  max-width: 100%;
+  top:  -2px;
+  left: -2px;
+}
+.contactcardh2 {
+  position: relative;
+  font-size: 24px !important;
+  color: #FFFFFF;
+  font-weight: 400;
+  text-align: center;
+}
+.btnprimary { justify-self: center; }
+.footer {  background-color: #0A0A33; }
+.footergrid {background-color: #0A0A33;   margin-top:80px;
+
+  padding: 120px 15px 60px;
+}
+.footerlogo { display: flex; justify-content: center; margin-bottom: 25px; }
+.footertext {
+  display: flex; justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #F2F3F7;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+.socialink {
+  display: flex; justify-content: center;
+  display:     flex;
+  align-items: center;
+  gap: 20px;
+}
+.sociallink a  {
+  color: #FFFFFF;
+  background: #7230c9;
+  width:  45px;
+  height: 45px;
+  display:         flex;
+  justify-content: center;
+  align-items:     center;
+  border-radius: 4px;
+  transition: 0.25s ease;
+}
+.sociallink{
+  display: flex;
+  justify-content: center;
+}
+.sociallink2{
+  display: flex;
+  justify-content: center;
+  
+}
+.sociallink2 a{
+  margin-left: 10px;
+  
+}
+.sociallink2 a:hover { background: #8b45d2; }
+.sociallink .Icon {
+  font-size: 20px;
+  color: #ffffff;
+}
+.griditem .item-heading {
+  font-size: 22px;
+  color: #FFFFFF;
+  margin-bottom: 25px;
+}
+.griditem .wrapperrr {
+  margin-top: 15px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.input {
+  width: 100%;
+  padding: 20px 30px;
+  padding-right: 70px;
+  color: #0A0A33;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  border: none;
+  outline: none;
+}
+.sendbtn {
+  position: absolute;
+  top:   0;
+  right: 0;
+  width:  62px;
+  height: 62px;
+  background: #8b45d2;
+  display:         flex;
+  justify-content: center;
+  align-items:     center;
+  transition: 0.25s ease;
+}
+.Icon {
+  font-size: 25px;
+  color: #FFFFFF;
+}
+.sendbtn:hover { background: #003D99; }
+.copyright {
+  background: hsl(231, 90%, 8%);
+  text-align: center;
+  color: #003D99;
+  font-size: 15px;
+  font-family: "Roboto" sans-serif;
+  padding: 15px 15px;
+  line-height: 1.7;
+}
+.copyright a {
+  display: inline-block;
+  color: #8b45d2;
+  transition: 0.25s ease;
+}
+.copyright a:hover { color: #003D99; }
+
+
+
+.sectiontext {
+  max-width: 500px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 30px;
+
+}
+
+.sectiontitle {
+  font-size: 35px;
+  font-weight: 800;
+  color: #0A0A33;
+  line-height: 1.3;
+}
+
+.sectionsubtitle {
+  color: #003D99;
+  font-size: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center; /**/
+  margin-bottom: 25px;
+  margin-left: 40px;
+
+}
+
+.btntext {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+  color: #FFFFFF;
+  padding: 20px 45px;
+  text-transform: uppercase;
+  overflow: hidden;
+   
+}
+ .btntext {
+  position: relative;
+  z-index: 5;
+}
+
+
+ .btntext { background: #8b45d2; transition: 0.7s ease; }
+ .btntext:hover{
+background-color: #0A0A33;
+transform: scale(1.1);
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 375px) {
+
+  .sectionsubtitle { font-size: 15px }
+   .icon1 { width: 300px; height: 10px; }
+  .icon2 {
+    display: block;
+    top:  530px;
+    right: 50px;
+  }
+   .icon3 {
+    display: block;
+    top: 150px;
+    left:  100;
+  }
+  .icon4 {
+    width: 60px;
+    top:  150px;
+    right: 550px;
+  }
+  .aboutleft .icon1 { top: 150px; }
+
+  .aboutleft .icon2 {
+    display: block;
+    
+    right: 0;
+  }
+}
+
+@media (min-width: 575px) {
+
+   .shape1 img { width: 100px; }
+   .shape3 img { width: 250px; }
+  .aboutleft .icon1 { top: 200px; }
+  .aboutleft .icon2 { top: 350px; }
+.contact{
+  margin-top: 40px;
+}
+  .contact h2 { font-size: 37px; }
+}
+@media (min-width: 767px) {
+
+  .category .courseitemgroup,.coursegrid,.instructorgrid,.footergrid { grid-template-columns: 1fr 1fr; }
+
+}
+
+
+
+
+@media (min-width: 992px) {
+ 
+  .contactcard {
+    display: flex;
+    justify-content: center;
+  }
+  .navbar { padding: 20px 15px }
+  .navbar_nav {
+    background: transparent;
+    position: static;
+    box-shadow: none;
+    padding: 0;
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: all;
+    display:     flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .nav_item:not(:last-child) a { border-bottom: none; }
+  .nav-toggle-btn { display: none; }
+  .navbar .btn { display: block; } 
+ 
+  .homeleft { margin-top: 54;    z-index: 11;   }
+  .imgbox {
+    display: flex;
+    justify-content: center;
+    
+    width: auto;
+    max-width: 100%;
+  }
+ 
+  .home22::after { top:0    ; }
+ 
+
+  /* .home22 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* align-items: center; */ /*after
+  }
+  .home22::before {
+    top:  -100px;
+    left: -300px;
+  }
+  .home22::after { top:0    ; }
+  .homeleft { margin-top: 54; height: 90vh;   z-index: 11;   }
+  .homeright   { position: absolute; }
+  .imgbox{
+    position: relative;
+    top: 14%;
+    left: 14%;
+    z-index: 3;
+  } */
+ 
+ 
+
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    gap: 40px;
+  } 
+  .aboutleft { margin-left: -70px; }
+  .aboutleft img { max-width: unset; }
+  .aboutright { padding-top: 0; }
+  .course { position: relative; }
+  .course .sectionsubtitle,
+  .course .sectiontitle { max-width: 600px; }
+  .course-grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 0;
+  } 
+  .course .btnprimary {
+    position: absolute;
+    top: 130px;
+    right: 80px;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .featuresright { height: auto; }
+ 
+   .testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+}
+@media (min-width: 1200px) {
+
+
+  .homeleft { padding-bottom: 80px }
+  .sectiontext { font-size: 18px; }
+
+  .category .courseitemgroup { grid-template-columns: repeat(3, 1fr); }
+  .instructorgrid { grid-template-columns: repeat(4, 1fr); }
+  .contactcardh2 { 
+  font-weight: 200; }
+
+}
+@media (min-width: 460px){
+  .contact{
+    margin-top: 30px;
+  }
+}
+@media (min-width: 300px){
+  .contact{
+    margin-top: 30px;
+  }
+}

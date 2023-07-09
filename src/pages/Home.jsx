@@ -125,7 +125,7 @@ export default function Home() {
     <>
     <div className="app">
     <Homepg/>
-    <FilterSize/>
+    {/* <FilterSize/> */}
       <section className='pro'>
     <div className='fex titles'> <h2>shapping</h2></div> 
       <div className='r'>

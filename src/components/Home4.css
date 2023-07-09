@@ -63,7 +63,7 @@
   .home22::before { 
     content: '';
     position: absolute;
-    top:  -200px;
+    bottom:  -200px;
     left: -400px;
     width:  1000px;
     height: 1000px;
