@@ -399,7 +399,7 @@ transform: scale(1.1);
 }
 
 @media (min-width: 111px ) and (max-width: 370px) {
-  .contactsssss {   position: relative; z-index: 120;  background-color: #F2F3F7;  }
+  .contactsssss {   position: relative; z-index: 120;   }
   .contactsssss .contactcard {
     top: 40%; 
     display: block !important;
@@ -439,7 +439,7 @@ transform: scale(1.1);
 
 /* Styles for devices with a width between 321px and 767px */
 @media (min-width: 570px) and (max-width: 767px) {
-  .contactsssss {   position: relative; z-index: 120; background-color: black;  }
+  .contactsssss {   position: relative; z-index: 120;  }
   .contactsssss .contactcard {
     top: 68%; 
     display: block;
@@ -470,7 +470,7 @@ transform: scale(1.1);
 
 /* Styles for devices with a width between 768px and 1023px */
 @media (min-width: 768px) and (max-width: 992px) {
-  .contactsssss {   position: relative; z-index: 120; background-color: aqua;  }
+  .contactsssss {   position: relative; z-index: 120;   }
   .contactsssss .contactcard {
     top: 64%; 
     display: block;
@@ -495,7 +495,7 @@ transform: scale(1.1);
 
 }
 @media (min-width: 992px) and (max-width: 1095px)  {
-  .contactsssss {   position: relative; z-index: 120;  background-color: #7230c9;  }
+  .contactsssss {   position: relative; z-index: 120;  }
 
   .contactcardh2{
     font-size: 20px !important;
@@ -522,7 +522,7 @@ transform: scale(1.1);
 }
 /* Styles for devices with a width of 1024px or larger */
 @media (min-width: 1095px) and (max-width: 1600px)  {
-  .contactsssss {   position: relative; z-index: 120;  background-color: #647d7c;  }
+  .contactsssss {   position: relative; z-index: 120;   }
   .contactsssss .contactcard {
     display: flex !important;
   left: 50%;
@@ -554,7 +554,7 @@ transform: scale(1.1);
 
 /* outmedit */
 @media ( min-width: 366px) and (max-width: 570px) {
-  .contactsssss {   position: relative; z-index: 120;   background-color: #003D99;  }
+  .contactsssss {   position: relative; z-index: 120;    }
   .contactsssss .contactcard {
     top: 80%; 
     display: block;
