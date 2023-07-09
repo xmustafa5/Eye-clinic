@@ -248,18 +248,7 @@ const Homepg = () => {
                         <td class="px-6 py-4">ffffff</td>
                         <td class="px-6 py-4">ffffff</td>
                       </tr>
-                      <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-                        <th
-                          scope="row"
-                          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                        >
-                          Right Eye
-                        </th>
-                        <td class="px-6 py-4">grg</td>
-                        <td class="px-6 py-4">vfgvgfvgf</td>
-                        <td class="px-6 py-4">vfgvgfvg</td>
-                        <td class="px-6 py-4"></td>
-                      </tr>
+                    
                     </tbody>
                   </table>
                 </div>
