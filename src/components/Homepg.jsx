@@ -10,6 +10,7 @@ import shape3 from "../assets/images/shape-3.png";
 import shape1 from "../assets/images/shape-1.png";
 import shape2 from "../assets/images/shape-2.png";
 import shape4 from "../assets/images/shape-4.png";
+import cta from "../assets/images/cta-bg-img.png";
 import "./Home4.css"
 import "./footer.css"
 import { Link } from 'react-router-dom';
@@ -204,7 +205,7 @@ const Homepg = () => {
           <div className='block'>
 
           
-            <div className={"contactcardbg"}><img src={"cta"} alt="jk" /></div>
+            <div className={"contactcardbg"}><img src={cta} alt="jk" /></div>
             <div class={"griditem"}>
           <h2 className={"contactcardh2"} >Start Your Best Online Classes With Us</h2>
           <div class={"wrapperrr"} data-aos="fade-left" data-aos-duration="900">
