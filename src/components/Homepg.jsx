@@ -42,24 +42,27 @@ const Homepg = () => {
             data-aos="fade-right"
             data-aos-duration="900"
           >
-            Get Your Glasses 
+            Get Your Glasses
            
-            {/* <span className={"underlineimg"}>
-              Instructor
-              <span> */}
+            <span className={"underlineimg"}>
+            
+              <span>
                 <img
                   src={bannerline}
                   alt="line"
                   width="302px"
                   height="auto"
+                  className='bannerline'
                 />
               </span>
             </span>
           </h1>
           <p className={"sectiontext"}>
-            Integer in magna in est ultrices bibendum eget enim et dui
-            imperdiet faucibus. Fusce eu tristique felis.
-          </p>
+         
+              At our Vision Eye Clinic <br/> 
+               we take the time to get to know you, <br/>your eye care history <br/> 
+               and your vision needs. 
+            </p>
           <div className={"homebtngroup"}>
             <Link href="/courses">
               <button

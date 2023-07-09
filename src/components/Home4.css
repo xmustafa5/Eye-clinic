@@ -1,6 +1,7 @@
 :root {
   --fcolor: #17212b;
   --scolor: #242f3d;
+  --hcolor: #344153;
   --thcolor: #12d0c5;
   --blcolor: #30a3e6;
 }
@@ -72,12 +73,13 @@
    .home22::after {
     content: '';
     position: absolute;
+    z-index: 100 ;
     top:    100px;
     right: -400px;
     width:  800px;
     height: 800px;
     border-radius: 50%;
-    background: radial-gradient(ellipse at center, hsla(313, 47%, 22%, 0.3), transparent 70%);
+    background: radial-gradient(ellipse at center, hsla(175, 100%, 49%, 0.3), transparent 70%);
   }
   .shape1,.shape2 ,.shape6
   ,.shape3,.shape5 ,.shape7,.shape8
@@ -198,7 +200,7 @@
   
     display: flex;
     justify-content: center;
-    color: #0066ff;
+    color: var(--blcolor);
     font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
@@ -207,10 +209,14 @@
     margin-left: 40px;
 
   }
-  
+  .mainheading span{
+    display: flex; 
+    justify-content: center;
+  }
   .mainheading {
+    display: block;
     
-    color: #0A0A33;
+    color: var(--blcolor);
     font-size: 27px;
     font-weight: 900;
     line-height: 1.2;
@@ -225,7 +231,10 @@
 
   }
   .sectiontext {
-    
+    margin-top: 1.5rem;
+  font-size: 19px;
+  line-height: 28px;
+  color: #fff;
     max-width: 500px;
     text-align: center;
     margin: auto;
@@ -259,10 +268,9 @@
   }
   
   
-   .btntext { background: #8b45d2; transition: 0.7s ease; }
+   .btntext { background: var(--hcolor); transition: 0.7s ease; color: #fff; }
    .btntext:hover{
- background-color: #0A0A33;
- transform: scale(1.1);
+ background-color: var(--scolor);
    }
   
   /**/
@@ -300,7 +308,10 @@ top: 200px;
   width: auto !important;
 }
   .square { background: #0A0A33; }
-  
+  .bannerline{
+    width: 302;
+    height: auto;
+  }
   
    /* .icon {
 
@@ -369,6 +380,7 @@ top: 200px;
         right: 100px;
         height: 30px;
    width: 150px;
+
       }
    .icon3 {  animation: icon3 4s linear infinite;  
         position: absolute;
