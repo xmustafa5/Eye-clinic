@@ -68,18 +68,18 @@
     width:  1000px;
     height: 1000px;
     border-radius: 80%;
-    background: radial-gradient(ellipse at center, hsla(217, 100%,50%, 0.5), transparent 70%);
+    background: radial-gradient(ellipse at center, hsla(217, 76%, 49%, 0.5), transparent 70%);
   }
    .home22::after {
     content: '';
     position: absolute;
-    z-index: 100 ;
+    z-index: 100 !important ;
     top:    100px;
     right: -400px;
     width:  800px;
     height: 800px;
     border-radius: 50%;
-    background: radial-gradient(ellipse at center, hsla(175, 100%, 49%, 0.3), transparent 70%);
+    background: radial-gradient(ellipse at center, hsla(175, 82%, 46%, 0.3), transparent 70%);
   }
   .shape1,.shape2 ,.shape6
   ,.shape3,.shape5 ,.shape7,.shape8
