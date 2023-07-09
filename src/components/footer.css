@@ -90,7 +90,7 @@
 
 }
 .flexo div{  /*mabye dalet*/
-  width: calc(100% - 68px);
+  width: calc(100% - 1px);
 
 }
 .sociallink2 a{
@@ -509,7 +509,7 @@ transform: scale(1.1);
   .contactsssss {   position: relative; z-index: 120;  background-color: #12d0c5;  }
   .contactsssss .contactcard {
     display: flex !important;
-    top:  30%;
+    top:  17% !important;
   left: 50%;
   width: calc(100% - 68px);
 
