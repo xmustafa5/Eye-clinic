@@ -353,6 +353,7 @@ top: 200px;
   
 @media (min-width: 375px) {
   .home22{
+    background-color: blue;
     display: block;
   }
   .mainheading { font-size: 30;
@@ -415,6 +416,7 @@ top: 200px;
 
 @media (min-width: 575px) {
   .home22{
+    background-color: #30a3e6;
     display: block;
   }
   .mainheading{
@@ -433,32 +435,41 @@ top: 200px;
     right: 601px;
   }
 
-   .icon1 {   animation: icon1 5s linear infinite; 
-    position: absolute;
-    top: 170px;
-    left: -440px;
-   
-  }
-   .icon2{ animation: icon2 5s linear infinite;
-    position: absolute;
+  .icon11 {   
+    position: relative;
     top: -100px;
     left: 10px;
-      }
-   .icon3 { animation: icon3 4s linear infinite;  
-        position: absolute;
-        top: 250px;
-        right: -90px;
-        height: 30px;
-   width: 140px;
-    }
-  .icon4 {  animation:   drop 2.5s infinite; 
-         position: absolute;
-         top: 66px;
-          left: -101px;
-          height: 80px;
-   width: 50px;
-   
   }
+  
+.icomimg1{ animation: icon1 5s linear infinite;
+ height: 60px !important;
+    width: 181px 
+    !important
+    ;        
+
+}
+.icomimg2{ animation: icon2 5s linear infinite;
+ height: 50px !important;
+ width: 151px !important; 
+  position: absolute;
+ top: -210px;
+ left: 350px;
+}
+.icomimg3{ animation: icon3 4s linear infinite;
+ height: 50px !important;
+ width: 151px !important; 
+  position: absolute;
+ top: 40px;
+ left: 350px;
+}
+.icomimg4{ animation:   drop 2.5s infinite; 
+ height: 50px !important;
+ width: 51px !important; 
+  position: absolute;
+ top: -310px;
+ left: 150px;
+}
+  
 
 
 
@@ -503,6 +514,7 @@ top: 200px;
 
 @media (min-width: 992px) {
   .home22{
+    background-color: #12d0c5;
     display: flex;
   }
   .mainheading{
@@ -545,7 +557,7 @@ top: 200px;
     height: 50px !important;
     width: 151px !important; 
      position: absolute;
-    top: 110px;
+    top: 40px;
     left: 350px;
    }
    .icomimg4{ animation:   drop 2.5s infinite; 
@@ -648,6 +660,7 @@ top: 200px;
 @media (min-width: 1200px) {
     
   .home22{
+    background-color: brown;
     display: flex;
   }
 

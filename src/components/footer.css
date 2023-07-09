@@ -11,7 +11,7 @@
 .contactsssss .contactcard {
   
   position: absolute;
-  top:  40%;
+  top:  10%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: var(--hcolor);
@@ -22,7 +22,7 @@
   gap: 30px;
   border-radius: 8px;
   overflow: hidden;
-  display: flex;
+  display: flex; 
 }
 
 .contactcardbg {
@@ -393,4 +393,27 @@ transform: scale(1.1);
   .contact{
     margin-top: 30px;
   }
+}
+
+@media (min-width: 320px) {
+  /* CSS rules for smaller devices */
+}
+
+/* Styles for devices with a width between 321px and 767px */
+@media (min-width: 321px) and (max-width: 767px) {
+  /* CSS rules for medium-sized devices */
+}
+
+/* Styles for devices with a width between 768px and 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* CSS rules for larger devices */
+}
+
+/* Styles for devices with a width of 1024px or larger */
+@media (min-width: 991px) and (max-width: 1083px)  {
+  .contactsssss {   position: relative; z-index: 120; background-color: red;   }
+  .contactsssss .contactcard {
+
+  }
+
 }
