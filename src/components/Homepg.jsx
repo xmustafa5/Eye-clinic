@@ -196,10 +196,10 @@ const Homepg = () => {
           </div>
          
       </div> 
-      <div  className={`contactsssss ${contactcardnone}`}  >
+      <div className={"er"}   >
 
       <section className={"contactsssss"}>
-        <div className={"contactcard"} >
+        <div className={`contactcard  ${contactcardnone} `} >
           <div className='block'>
 
           
