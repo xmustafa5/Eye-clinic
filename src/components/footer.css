@@ -396,7 +396,7 @@ transform: scale(1.1);
 }
 
 @media (min-width: 111px ) and (max-width: 370px) {
-  .contactsssss {   position: relative; z-index: 120; background-color: rgb(4, 222, 226);   }
+  .contactsssss {   position: relative; z-index: 120;    }
   .contactsssss .contactcard {
     top: 13%; 
     display: block !important;
@@ -425,7 +425,7 @@ transform: scale(1.1);
 
 /* Styles for devices with a width between 321px and 767px */
 @media (min-width: 570px) and (max-width: 767px) {
-  .contactsssss {   position: relative; z-index: 120; background-color: rgb(45, 0, 178);   }
+  .contactsssss {   position: relative; z-index: 120;    }
   .contactsssss .contactcard {
     top: 70%; 
     display: block;
@@ -449,7 +449,7 @@ transform: scale(1.1);
 
 /* Styles for devices with a width between 768px and 1023px */
 @media (min-width: 768px) and (max-width: 992px) {
-  .contactsssss {   position: relative; z-index: 120; background-color: rgb(0, 255, 17);   }
+  .contactsssss {   position: relative; z-index: 120;   }
   .contactsssss .contactcard {
     top: 60%; 
     display: block;
@@ -467,7 +467,7 @@ transform: scale(1.1);
   
 }
 @media (min-width: 992px) and (max-width: 1095px)  {
-  .contactsssss {   position: relative; z-index: 120; background-color: rgb(183, 0, 255);   }
+  .contactsssss {   position: relative; z-index: 120;  }
 
   .contactcardh2{
     font-size: 20px !important;
@@ -475,7 +475,7 @@ transform: scale(1.1);
 }
 /* Styles for devices with a width of 1024px or larger */
 @media (min-width: 1095px) and (max-width: 1600px)  {
-  .contactsssss {   position: relative; z-index: 120; background-color: rgb(255, 247, 0);   }
+  .contactsssss {   position: relative; z-index: 120;   }
   .contactsssss .contactcard {
     display: flex !important;
     top:  13%;
@@ -501,7 +501,7 @@ transform: scale(1.1);
 
 /* outmedit */
 @media ( min-width: 366px) and (max-width: 570px) {
-  .contactsssss {   position: relative; z-index: 120; background-color: rgb(115, 85, 0);   }
+  .contactsssss {   position: relative; z-index: 120;   }
   .contactsssss .contactcard {
     top: 76%; 
     display: block;
