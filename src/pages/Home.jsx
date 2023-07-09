@@ -1,6 +1,5 @@
 import React from 'react';
 import FilterSize from '../components/FilterSize'; 
-import Filter from '../components/Filter';
 
 import Card from '../components/Card';
 import { useState } from 'react';
@@ -12,7 +11,6 @@ import Homepg from '../components/Homepg';
 import { useAuth } from '../context/AuthContext';
 import ProductDetails from "../components/ProductDetalis";
 import Login from '../components/authlogin/Login';
-
 export default function Home() {
   const [basketItems, setBasketItems] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
@@ -126,15 +124,12 @@ export default function Home() {
   return (
     <>
     <div className="app">
-      <div className='zz '>
+      <div className='z-100 '>
 
       
     <Homepg/>
     </div>
-    <div className="zz">
-
-    
-      </div>
+    {/* <FilterSize/> */}
       <section className='pro'>
     <div className='fex titles'> <h2>shapping</h2></div> 
       <div className='r'>

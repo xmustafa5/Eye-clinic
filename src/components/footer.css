@@ -1,11 +1,20 @@
-.contactsssss {  position: relative;    }
+
+:root {
+  --fcolor: #17212b;
+  --scolor: #242f3d;
+  --hcolor: #1d2b3c;
+  --thcolor: #12d0c5;
+  --blcolor: #30a3e6;
+}
+
+.contactsssss {  position: relative; z-index: 120; background-color: var(--fcolor);   }
 .contactsssss .contactcard {
   
   position: absolute;
   top:  40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #003D99;
+  background: var(--hcolor);
   width: calc(100% - 68px);
   padding: 20px 20px;
   display: grid;
