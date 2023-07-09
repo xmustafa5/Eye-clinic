@@ -159,8 +159,8 @@
  
 }
 .icomimg1{
-  height: 60px !important;
-     width: 291px;
+  height: 24px !important;
+     width: 91px !important;
  }
  .icon2{  animation: icon2 5s linear infinite;
       position: absolute;  
@@ -305,7 +305,7 @@ top: 200px;
 .bannerimg{
   
   z-index: 10;
-  height: 480px !important;
+  height: 300px !important;
   width: auto !important;
 }
   .square { background: #0A0A33; }
@@ -374,34 +374,44 @@ top: 200px;
     top: -100px;
     left: 10px;
   }
-  
+  .icon11 img:nth-child(1) {
+    height: 40px !important;
+    width: 111px !important;  
+  }
+  .icon11 img:nth-child(3) {
+    height: 40px !important;
+    width: 101px !important;  
+  }
+  .icon11 img:nth-child(4) {
+    height: 40px !important;
+    width: 41px !important;  
+  }
 .icomimg1{ animation: icon1 5s linear infinite;
  height: 60px !important;
-    width: 181px 
-    !important
-    ;        
+    width: 101px !important;        
 
 }
 .icomimg2{ animation: icon2 5s linear infinite;
  height: 50px !important;
- width: 151px !important; 
-  position: absolute;
- top: -210px;
- left: 350px;
+ width: 108px !important;
+ position: absolute;
+  height: 22px !important;
+  top: -145px;
+  display: none;
 }
 .icomimg3{ animation: icon3 4s linear infinite;
- height: 50px !important;
- width: 151px !important; 
+ height: 20px !important;
+ width: 101px !important; 
   position: absolute;
- top: 40px;
- left: 350px;
+ top: -140px !important;
+ left: 250px !important;
 }
 .icomimg4{ animation:   drop 2.5s infinite; 
  height: 50px !important;
  width: 51px !important; 
   position: absolute;
- top: -310px;
- left: 150px;
+ top: -210px !important;
+ left: 70px !important;
 }
  
   .imgbox {
@@ -413,18 +423,28 @@ top: 200px;
   }
   .imgbox img {
     
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
 }
-    
+    .bannerimg{
+      height: 340px !important; 
+    }
   }
-  
+  .btntext{
+    padding: 11px 35px !important;
+    font-size: 14px !important;
+  }
    /****************55555555555555555555**************/
 
 @media (min-width: 575px) {
   .home22{
-    background-color: #30a3e6;
+    background-color: #01cb9c;
     display: block;
+  }.bannerimg{
+  
+    z-index: 10;
+    height: 480px !important;
+    width: auto !important;
   }
   .mainheading{
     font-size: 35px;
@@ -449,10 +469,6 @@ top: 200px;
   }
   
 .icomimg1{ animation: icon1 5s linear infinite;
- height: 60px !important;
-    width: 181px 
-    !important
-    ;        
 
 }
 .icomimg2{ animation: icon2 5s linear infinite;
@@ -475,6 +491,29 @@ top: 200px;
   position: absolute;
  top: -310px;
  left: 150px;
+}
+.icon11 img:nth-child(1) {
+  height: 140px !important;
+  width: 351px !important;  
+}
+.icon11 img:nth-child(3) {
+  height: 40px !important;
+  width: 101px !important;  
+}
+.icon11 img:nth-child(4) {
+  height: 40px !important;
+  width: 41px !important;  
+}.icon11 img:nth-child(1) {
+  height: 40px !important;
+  width: 111px !important;  
+}
+.icon11 img:nth-child(3) {
+  height: 40px !important;
+  width: 101px !important;  
+}
+.icon11 img:nth-child(4) {
+  height: 40px !important;
+  width: 41px !important;  
 }
   
 
@@ -521,8 +560,13 @@ top: 200px;
 
 @media (min-width: 992px) {
   .home22{
-    background-color: #12d0c5;
+    background-color: #750000;
     display: flex;
+  }.bannerimg{
+  
+    z-index: 10;
+    height: 460px !important;
+    width: auto !important;
   }
   .mainheading{
     font-size: 38px;
@@ -670,7 +714,12 @@ top: 200px;
     background-color: brown;
     display: flex;
   }
-
+  .bannerimg{
+  
+    z-index: 10;
+    height: 480px !important;
+    width: auto !important;
+  }
   .homeleft { padding-bottom: 80px }
   .sectiontext { font-size: 18px; }
 
@@ -695,9 +744,8 @@ top: 200px;
   }
   
 .icomimg1{ animation: icon1 5s linear infinite;
- height: 60px !important;
+ height: 60px ! ;
     width: 181px 
-    !important
     ;        
 
 }

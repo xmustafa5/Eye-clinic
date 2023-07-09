@@ -535,7 +535,7 @@ flex-direction: column;
 /* Styles for devices with a width between 321px and 767px */
 @media (min-width: 321px) and (max-width: 767px) {
   section{
-    padding: 110px 90px !important;
+    padding: 50px 90px !important;
   }
 }
 
