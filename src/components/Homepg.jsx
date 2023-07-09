@@ -66,7 +66,7 @@ const Homepg = () => {
 
     fetchFilteredItems();
   }, [searchInput]);
-  const contactcardnone = filteredItems.length > 0 ? "section-with-items" : "";
+  const contactcardnone = filteredItems.length > 0 ? "" : "section-with-items";
 
   return (
     <div className='home pt-10 '>

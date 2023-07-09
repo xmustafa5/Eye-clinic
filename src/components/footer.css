@@ -512,15 +512,14 @@ transform: scale(1.1);
     width: calc(100% - 10px);  
   }
   .section-with-items{
-    top:  10%;
+    top:  10% !important;
     left: 50%;
-    width: calc(100% - 308px);
   }
 }
 
 /* outmedit */
 @media ( min-width: 366px) and (max-width: 570px) {
-  .contactsssss {   position: relative; z-index: 120;    }
+  .contactsssss {   position: relative; z-index: 120;     }
   .contactsssss .contactcard {
     top: 80%; 
     display: block;
