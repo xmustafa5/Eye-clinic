@@ -427,7 +427,7 @@ transform: scale(1.1);
 @media (min-width: 570px) and (max-width: 767px) {
   .contactsssss {   position: relative; z-index: 120; background-color: rgb(45, 0, 178);   }
   .contactsssss .contactcard {
-    top: 70%; 
+    top: 68%; 
     display: block;
     margin-top: 10;
   }.wrapperrr{
