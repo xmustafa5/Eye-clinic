@@ -405,15 +405,22 @@ transform: scale(1.1);
 }
 
 /* Styles for devices with a width between 768px and 1023px */
-@media (min-width: 768px) and (max-width: 1023px) {
-  /* CSS rules for larger devices */
+@media (min-width: 768px) and (max-width: 992px) {
+  .contactsssss {   position: relative; z-index: 120; background-color: rgb(0, 255, 17);   }
+  .contactsssss .contactcard {
+    top: 20%; 
+    display: block;
+    margin-top: 10;
+  }.wrapperrr{
+    margin-bottom: 5PX;
+  }
 }
 
 /* Styles for devices with a width of 1024px or larger */
 @media (min-width: 991px) and (max-width: 1083px)  {
   .contactsssss {   position: relative; z-index: 120; background-color: red;   }
   .contactsssss .contactcard {
-
+    top: 20%;
   }
 
 }
