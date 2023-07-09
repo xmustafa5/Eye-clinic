@@ -210,25 +210,53 @@
   position: relative;
   z-index: 88;
 }
-.icon1 {
+.icon11 {
   animation: icon1 5s linear infinite;
-  display: flex;
   position: relative;
-  z-index: 88;
-  position: absolute;
-  top: 170px;
-  left: -400px;
+  top: -100px !important;
+  left: 10px;
 }
+
+
+
+
 .icomimg1 {
-  height: 24px !important;
-  width: 91px !important;
+  animation: icon1 5s linear infinite;
+  height: 20px !important;
+  width: 111px !important
+     ;
+}
+.icomimg2 {
+  animation: icon2 5s linear infinite;
+  height: 20px !important;
+  width: 81px !important;
+  display: block;
+  position: absolute;
+  top: -160px !important;
+  left: 200px !important;
+}
+.icomimg3 {
+  animation: icon3 4s linear infinite;
+  height: 20px !important;
+  width: 70px !important;    position: absolute;
+  top: 20px;
+  left: 230px;
+}
+.icomimg4 {
+  animation: drop 2.5s infinite;
+  height: 20px !important;
+  width: 20px !important;
+  display: block;
+  position: absolute;
+  top: -110px;
+  left: 100px;
 }
 .icon2 {
   animation: icon2 5s linear infinite;
   position: absolute;
   top: 400px;
   right: 100px;
-  height: 30px;
+  height: 30px !;
   width: 170px;
 }
 .icon3 {
@@ -383,30 +411,7 @@
   top: -100px;
   left: 10px;
 }
-.icon11 img:nth-child(1) {
-  height: 40px !important;
-  width: 111px !important;
-  top: -100px;
-  left: 10px;
-}
-.icon11 img:nth-child(2) {
-  height: 40px !important;
-  width: 111px !important;
-  display: none;
-  top: -145px;
-}
-.icon11 img:nth-child(3) {
-  height: 40px !important;
-  width: 101px !important;
-  top: -140px !important;
-  left: 250px !important;
-}
-.icon11 img:nth-child(4) {
-  height: 40px !important;
-  width: 41px !important;
-  top: -210px !important;
-  left: 70px !important;
-}
+
 /* .icon {
 
 
@@ -445,7 +450,7 @@
 
 @media (min-width: 375px) {
   .home22 {
-    background-color: rgb(5, 252, 18);
+    background-color: rgb(0, 236, 12);
     display: block;
   }
   .mainheading {
@@ -467,7 +472,7 @@
   .icon11 {
     animation: icon1 5s linear infinite;
     position: relative;
-    top: -100px;
+    top: -80px;
     left: 10px;
   }
  
@@ -476,8 +481,8 @@
 
   .icomimg1 {
     animation: icon1 5s linear infinite;
-    height: 60px !important;
-    width: 181px !important
+    height: 40px !important;
+    width: 111px !important
        ;
   }
   .icomimg2 {
@@ -486,24 +491,24 @@
     width: 101px !important;
     display: block;
     position: absolute;
-    top: -710px;
-    left: -850px;
+    top: -160px !important;
+    left: 250px !important;
   }
   .icomimg3 {
     animation: icon3 4s linear infinite;
     height: 40px !important;
     width: 101px !important;    position: absolute;
-    top: 40px;
-    left: 350px;
+    top: 20px;
+    left: 230px;
   }
   .icomimg4 {
     animation: drop 2.5s infinite;
     height: 40px !important;
-    width: 101px !important;
+    width: 40px !important;
     display: block;
     position: absolute;
-    top: -310px;
-    left: 150px;
+    top: -140px;
+    left: 110px;
   }
 
   .imgbox {
@@ -527,7 +532,7 @@
 
 @media (min-width: 575px) {
   .home22 {
-    background-color: #01cb9c;
+    background-color: #606555;
     display: block;
   }
   .bannerimg {
@@ -561,6 +566,8 @@
 
   .icomimg1 {
     animation: icon1 5s linear infinite;
+    height: 60px !important;
+    width: 181px !important
   }
   .icomimg2 {
     animation: icon2 5s linear infinite;
@@ -568,12 +575,13 @@
     width: 151px !important;
     position: absolute;
     top: -210px;
-    left: 350px;
+    left: -250px !important ;
   }
   .icomimg3 {
     animation: icon3 4s linear infinite;
     height: 50px !important;
     width: 151px !important;
+    display: flex;
     position: absolute;
     top: 40px;
     left: 350px;
@@ -586,30 +594,7 @@
     top: -310px;
     left: 150px;
   }
-  .icon11 img:nth-child(1) {
-    height: 140px !important;
-    width: 351px !important;
-  }
-  .icon11 img:nth-child(3) {
-    height: 40px !important;
-    width: 101px !important;
-  }
-  .icon11 img:nth-child(4) {
-    height: 40px !important;
-    width: 41px !important;
-  }
-  .icon11 img:nth-child(1) {
-    height: 40px !important;
-    width: 111px !important;
-  }
-  .icon11 img:nth-child(3) {
-    height: 40px !important;
-    width: 101px !important;
-  }
-  .icon11 img:nth-child(4) {
-    height: 40px !important;
-    width: 41px !important;
-  }
+
 
   .imgbox {
     display: flex;
@@ -647,7 +632,7 @@
 
 @media (min-width: 992px) {
   .home22 {
-    background-color: #750000;
+    background-color: #043b07;
     display: flex;
   }
   .bannerimg {
@@ -684,21 +669,24 @@
   }
   .icomimg2 {
     animation: icon2 5s linear infinite;
-    
+    height: 50px !important;
+    width: 121px !important;
     position: absolute;
     top: -210px;
     left: 350px;
   }
   .icomimg3 {
-    animation: icon3 4s linear infinite;
-    
+    animation: icon3 4s linear infinite !important;
+    height: 50px !important;
+    width: 121px !important;
     position: absolute;
     top: 40px;
     left: 350px;
   }
   .icomimg4 {
     animation: drop 2.5s infinite;
-    
+    height: 50px !important;
+    width: 50px !important;
     position: absolute;
     top: -310px;
     left: 150px;
@@ -786,7 +774,7 @@
 }
 @media (min-width: 1200px) {
   .home22 {
-    background-color: rgb(43, 0, 117);
+    background-color: rgb(109, 72, 174);
     display: flex;
   }
   .bannerimg {
@@ -817,44 +805,33 @@
     top: -100px;
     left: 10px;
   }
-  .icon11 img:nth-child(1) {
-    height: 60px !important;
-    width: 211px !important;
-  }
-  .icon11 img:nth-child(3) {
-    height: 40px !important;
-    width: 101px !important;
-  }
-  .icon11 img:nth-child(2) {
-    height: 50px !important;
-    width: 181px !important;
-    display: block;
-  }
-  .icon11 img:nth-child(4) {
-    height: 40px !important;
-    width: 41px !important;
-  }
+ 
   .icomimg1 {
     animation: icon1 5s linear infinite;
-
+    height: 60px !important;
+    width: 181px !important
   }
   .icomimg2 {
     animation: icon2 5s linear infinite;
-    
+    height: 40px !important;
+    width: 121px !important;
     position: absolute;
     top: -210px;
     left: 350px;
   }
   .icomimg3 {
     animation: icon3 4s linear infinite !important;
-    
+    height: 60px !important;
+    width: 121px !important;
+    display: flex !important;
     position: absolute;
     top: 140px;
     left: 350px;
   }
   .icomimg4 {
     animation: drop 2.5s infinite;
-    
+    height: 50px !important;
+    width: 50px !important;
     position: absolute;
     top: -310px;
     left: 150px;
