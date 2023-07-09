@@ -313,7 +313,42 @@ top: 200px;
     width: 302;
     height: auto;
   }
-  
+   .imgbox img {
+    
+    height: 300px;
+    width: 300px;
+}
+  .icon11 {    animation: icon1 5s linear infinite;
+    position: relative;
+    top: -100px;
+    left: 10px;
+  }
+  .icon11 img:nth-child(1) {
+    height: 40px !important;
+    width: 111px !important;
+    top: -100px;
+    left: 10px;
+     
+  }
+  .icon11 img:nth-child(2) {
+    height: 40px !important;
+    width: 111px !important;  
+    display: none;
+    top: -145px;
+
+  }
+  .icon11 img:nth-child(3) {
+    height: 40px !important;
+    width: 101px !important;  
+    top: -140px !important;
+    left: 250px !important;
+  }
+  .icon11 img:nth-child(4) {
+    height: 40px !important;
+    width: 41px !important;  
+    top: -210px !important;
+    left: 70px !important;
+  }
    /* .icon {
 
 
@@ -382,37 +417,17 @@ top: 200px;
     height: 40px !important;
     width: 101px !important;  
   }
+  .icon11 img:nth-child(2) {
+    height: 40px !important;
+    width: 101px !important;  
+    display: block;
+  }
   .icon11 img:nth-child(4) {
     height: 40px !important;
     width: 41px !important;  
   }
-.icomimg1{ animation: icon1 5s linear infinite;
- height: 60px !important;
-    width: 101px !important;        
 
-}
-.icomimg2{ animation: icon2 5s linear infinite;
- height: 50px !important;
- width: 108px !important;
- position: absolute;
-  height: 22px !important;
-  top: -145px;
-  display: none;
-}
-.icomimg3{ animation: icon3 4s linear infinite;
- height: 20px !important;
- width: 101px !important; 
-  position: absolute;
- top: -140px !important;
- left: 250px !important;
-}
-.icomimg4{ animation:   drop 2.5s infinite; 
- height: 50px !important;
- width: 51px !important; 
-  position: absolute;
- top: -210px !important;
- left: 70px !important;
-}
+
  
   .imgbox {
     
@@ -423,8 +438,8 @@ top: 200px;
   }
   .imgbox img {
     
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
 }
     .bannerimg{
       height: 340px !important; 
@@ -495,6 +510,7 @@ top: 200px;
 .icon11 img:nth-child(1) {
   height: 140px !important;
   width: 351px !important;  
+  
 }
 .icon11 img:nth-child(3) {
   height: 40px !important;
@@ -720,6 +736,7 @@ top: 200px;
     height: 480px !important;
     width: auto !important;
   }
+  
   .homeleft { padding-bottom: 80px }
   .sectiontext { font-size: 18px; }
 
