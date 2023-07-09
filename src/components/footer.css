@@ -474,7 +474,7 @@ transform: scale(1.1);
   }
 }
 /* Styles for devices with a width of 1024px or larger */
-@media (min-width: 1095px) and (max-width: 1400px)  {
+@media (min-width: 1095px) and (max-width: 1600px)  {
   .contactsssss {   position: relative; z-index: 120; background-color: rgb(255, 247, 0);   }
   .contactsssss .contactcard {
     display: flex !important;
