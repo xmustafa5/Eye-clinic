@@ -84,6 +84,11 @@
 .flexo{
   display: flex;
   align-items: center;
+
+}
+.flexo div{  /*mabye dalet*/
+  width: calc(100% - 68px);
+
 }
 .sociallink2 a{
   margin-left: 10px;
