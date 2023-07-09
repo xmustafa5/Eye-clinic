@@ -531,7 +531,14 @@ flex-direction: column;
     font-size: 14px;
   }
 }
-
+@media (min-width: 111px) and (max-width: 321px) {
+  section{
+    padding-top: 120px   !important;
+    padding-left: 10px   !important;
+    padding-right: 10px   !important;
+    background-color: #089797 !important;
+  }
+}
 /* Styles for devices with a width between 321px and 767px */
 @media (min-width: 321px) and (max-width: 767px) {
   section{
