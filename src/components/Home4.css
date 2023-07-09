@@ -1,0 +1,643 @@
+:root {
+  --fcolor: #17212b;
+  --scolor: #242f3d;
+  --thcolor: #12d0c5;
+  --blcolor: #30a3e6;
+}
+
+.drop-anim { animation: drop 2.5s infinite; }
+
+@keyframes drop {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% { transform: translateY(0); }
+  40%  { transform: translateY(-30px); }
+  60%  { transform: translateY(-15px); }
+}
+.smoothzigzaganim1 { animation: icon1 5s linear infinite; }
+@keyframes icon1 {
+  0%,
+  100% { transform: translate(0); }
+  25%  { transform: translate(10px, 10px); }
+  50%  { transform: translate( 5px,  5px); }
+  75%  { transform: translate(10px, -5px); }
+}
+
+.smoothzigzaganim2 { animation: icon2 5s linear infinite; }
+@keyframes icon2 {
+
+  0%,
+  100% { transform: translate(0); }
+  25%  { transform: translate(-10px, -10px); }
+  50%  { transform: translate( -5px,  -5px); }
+  75%  { transform: translate(-10px,   5px); }
+}
+.smoothzigzag-anim3 { animation: icon3 5s linear infinite; }
+@keyframes icon3 {
+  0%,
+  100% { transform: translate(0); }
+  25%  { transform: translate( -7px,  -7px); }
+  50%  { transform: translate(-14px, -14px); }
+  75%  { transform: translate( -7px,  -7px); }
+}
+.pulse-anim { animation: pulse 3s linear infinite; }
+@keyframes pulse {
+  0%,
+  70%  { box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 1); }
+  100% { box-shadow: 0 0 0 15px transparent; }
+}
+.home{
+  background-color: var(--scolor);
+}
+.home22 { 
+      margin: auto;
+    overflow: hidden;
+    position: relative;
+    padding-top: 70px;
+    padding: 50px 15px 0 ;
+    display: block;
+  }
+  .home22::before { 
+    content: '';
+    position: absolute;
+    top:  -200px;
+    left: -400px;
+    width:  1000px;
+    height: 1000px;
+    border-radius: 80%;
+    background: radial-gradient(ellipse at center, hsla(217, 100%,50%, 0.5), transparent 70%);
+  }
+   .home22::after {
+    content: '';
+    position: absolute;
+    top:    100px;
+    right: -400px;
+    width:  800px;
+    height: 800px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, hsla(313, 47%, 22%, 0.3), transparent 70%);
+  }
+  .shape1,.shape2 ,.shape6
+  ,.shape3,.shape5 ,.shape7,.shape8
+  ,.shape4{ position: absolute;   
+    
+}
+    .shape1 { animation: icon3 6s linear infinite;
+    top: 1%;
+    left: 36%;
+
+  }
+ .shape2 { animation: icon1 4s linear infinite;
+    top: 400px;
+    right: 280px;
+  }
+  .shape3 { animation: icon1 10s linear infinite;
+    
+    top: 555px;
+    right: 0;
+   
+   
+  }
+  
+   .shape4 {  position: absolute;   
+    top:   470px;
+    right: 1010px;
+  }
+  .shape5 {   z-index: 4;  animation: icon1 6s linear infinite;
+    top:   100px;
+    right: 1210px;
+  }
+  .shape6{   animation: icon2 5s linear infinite;
+    z-index: 5;
+    top:   100px;
+    right: 1210px;
+  }
+  .shape7{  animation: icon2 7s linear infinite;
+    z-index: 3;
+    top:   130px;
+    right: 1210px;
+  }
+  .shape8{ 
+    z-index: 6;
+    top:   200px;
+    right: 1280px;
+  }
+
+  /**/ .homeleft {
+    position: relative;
+    z-index: 2;
+   
+    width: 100%;
+     } 
+  
+ .homeright {
+
+   position: relative;
+   z-index: 2;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 100%;
+   margin: 0;
+ }
+ .icon{
+  position: relative;
+  z-index: 88;
+ }
+ .icon1 { animation: icon1 5s linear infinite; 
+  display: flex;  position: relative;
+  z-index: 88;
+  position: absolute;
+  top: 170px;
+  left: -400px;
+ 
+}
+.icomimg1{
+  height: 60px !important;
+     width: 291px;
+ }
+ .icon2{  animation: icon2 5s linear infinite;
+      position: absolute;  
+      top: 400px;
+      right: 100px;
+      height: 30px;
+ width: 170px;
+    }
+ .icon3 { animation: icon3 4s linear infinite;  
+      position: absolute;
+      top: 250px;
+      right: -90px;
+      height: 30px;
+ width: 140px;
+  }
+.icon4 {  animation:   drop 2.5s infinite; 
+       position: absolute;
+       top: 66px;
+        left: -101px;
+        height: 80px;
+ width: 70px;
+ 
+}
+
+.stitle {
+
+  text-align: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: var(--thcolor);
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+ .sectionsubtitle {
+  
+    display: flex;
+    justify-content: center;
+    color: #0066ff;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+    margin-bottom: 25px;
+    margin-left: 40px;
+
+  }
+  
+  .mainheading {
+    
+    color: #0A0A33;
+    font-size: 27px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .underlineimgimg {
+    position: absolute;
+    top: -10px;
+    left:    10;
+
+  }
+  .sectiontext {
+    
+    max-width: 500px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 30px;
+
+  }
+  .homebtngroup {
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
+    flex-wrap:       wrap;
+    gap: 30px;
+
+  }
+  
+  .btntext {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    color: #FFFFFF;
+    padding: 20px 45px;
+    text-transform: uppercase;
+    overflow: hidden;
+     
+  }
+   .btntext {
+    position: relative;
+    z-index: 5;
+  }
+  
+  
+   .btntext { background: #8b45d2; transition: 0.7s ease; }
+   .btntext:hover{
+ background-color: #0A0A33;
+ transform: scale(1.1);
+   }
+  
+  /**/
+  .sertc{
+position: absolute;  
+}
+.sert{
+  width: 100%; /*problem*/
+  position: absolute;
+  position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+.backgroundshape{
+position: absolute;
+top: 200px;
+    width: auto;
+    max-width: 100%;
+    top: 30;
+    z-index: 1;
+}
+.rrr{
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+.re{
+  z-index: 20;
+}
+.bannerimg{
+  
+  z-index: 10;
+  height: 480px !important;
+  width: auto !important;
+}
+  .square { background: #0A0A33; }
+  
+  
+   /* .icon {
+
+
+ position: relative;
+    z-index: 5;
+  }
+   .icon1 {  animation: icon1 5s linear infinite; 
+    position: absolute;
+    top: 170px;
+    left: -600px;
+   
+  }
+  
+
+   
+   .icon2{   animation: icon2 5s linear infinite;
+       position: absolute;  
+    top: 500px;
+    right: -200px; }
+   .icon3 {  animation: icon3 4s linear infinite;    position: absolute;
+    top: 250px;
+    right: -290px;
+    }
+  .icon4 { animation:   drop 2.5s infinite; 
+    position: absolute;
+    top: 66px;
+    left: -101px;
+    filter: drop-shadow(0 8px 30px hsla(350, 100%, 68%, 0.5));
+  }
+  .icon1, .icon2, .icon3, .icon4 {
+    filter: drop-shadow(0 10px 20px hsla(0, 0%, 0%, 0.2));
+    z-index: 5;
+  }    */
+
+ /************3333333333333***************/
+ 
+  
+@media (min-width: 375px) {
+  .home22{
+    display: block;
+  }
+  .mainheading { font-size: 30;
+  }
+  .stitle{
+    font-size: 17px;
+  }
+  .shape2 { animation: icon1 4s linear infinite;
+    top: 390px;
+    right: 280px;
+  }
+  .shape4 {  position: absolute;   
+    top:   470px;
+    right: 440px;
+  }
+  .icon1 {   animation: icon1 5s linear infinite; 
+    position: absolute;
+    top: 170px;
+    left: -340px;
+   height: 30px;
+   width: 140px;
+  }
+   .icon2{ animation: icon2 5s linear infinite;
+        position: absolute;  
+        top: 400px;
+        right: 100px;
+        height: 30px;
+   width: 150px;
+      }
+   .icon3 {  animation: icon3 4s linear infinite;  
+        position: absolute;
+        top: 250px;
+        right: 10px;
+        height: 30px;
+   width: 130px;
+    }
+  .icon4 {  animation:   drop 2.5s infinite; 
+         position: absolute;
+         top: 66px;
+          left: -101px;
+          height: 80px;
+   width: 40px;
+   
+  }
+
+ 
+  .imgbox {
+    
+    display: flex;
+    justify-content: center;
+    width: auto;
+    
+  }
+  .imgbox img {
+    
+    height: 400px;
+    width: 400px;
+}
+    
+  }
+  
+   /****************55555555555555555555**************/
+
+@media (min-width: 575px) {
+  .home22{
+    display: block;
+  }
+  .mainheading{
+    font-size: 35px;
+  }
+  .stitle{
+    font-size: 20px;
+  }
+
+  .shape2 { animation: icon1 4s linear infinite;
+    top: 340px;
+    right: 441px;
+  }
+  .shape4 {  position: absolute;   
+    top:   470px;
+    right: 601px;
+  }
+
+   .icon1 {   animation: icon1 5s linear infinite; 
+    position: absolute;
+    top: 170px;
+    left: -440px;
+   height: 50px;
+   width: 170px;
+  }
+   .icon2{ animation: icon2 5s linear infinite;
+        position: absolute;  
+        top: 400px;
+        right: 100px;
+        height: 30px;
+   width: 170px;
+      }
+   .icon3 { animation: icon3 4s linear infinite;  
+        position: absolute;
+        top: 250px;
+        right: -90px;
+        height: 30px;
+   width: 140px;
+    }
+  .icon4 {  animation:   drop 2.5s infinite; 
+         position: absolute;
+         top: 66px;
+          left: -101px;
+          height: 80px;
+   width: 50px;
+   
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .imgbox {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    
+  }
+
+   .shape1 img { width: 100px; }
+   .shape3 img { width: 250px; }
+  
+.contact{
+  margin-top: 40px;
+}
+  .contact h2 { font-size: 37px; }
+}
+@media (min-width: 767px) {
+  
+  .category .courseitemgroup,.coursegrid,.instructorgrid,.footergrid { grid-template-columns: 1fr 1fr; }
+  .contactcard { padding: 40px 60px; }
+}
+
+
+   /****************9999999999999999999999999**************/
+
+@media (min-width: 992px) {
+  .home22{
+    display: flex;
+  }
+  .mainheading{
+    font-size: 38px;
+  }
+  .stitle{
+    font-size: 24px;
+  }
+  .shape2 { animation: icon1 4s linear infinite;
+    top: 340px;
+    right: 700px;
+  }
+  .icon {
+
+
+    position: relative;
+       z-index: 9;
+     }
+      .icon1 {  animation: icon1 5s linear infinite; 
+       position: absolute;
+       top: 100px;
+       left: -600px;
+       
+     }
+     
+   .icomimg1{
+    height: 60px !important;
+       width: 291px;
+   }
+      
+      .icon2{   animation: icon2 5s linear infinite;
+          position: absolute;  
+       top: 500px;
+       right: -100px; }
+      .icon3 {  animation: icon3 4s linear infinite;    position: absolute;
+       top: 250px;
+       right: -190px;
+       width: 161px;
+       }
+     .icon4 { animation:   drop 2.5s infinite; 
+       position: absolute;
+       top: 66px;
+       left: -101px;
+       filter: drop-shadow(0 8px 30px hsla(350, 100%, 68%, 0.5));
+     }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .navbar { padding: 20px 15px }
+ 
+  
+ 
+  .imgbox {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    
+  }
+  .home22::before {
+    top:  00px;
+    left: -450px;
+  }
+  .home22::after { top:0    ; }
+ 
+
+ 
+
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    gap: 40px;
+  } 
+  .aboutleft { margin-left: -70px; }
+  .aboutleft img { max-width: unset; }
+  .aboutright { padding-top: 0; }
+  .course { position: relative; }
+  
+  .course-grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 0;
+  } 
+  .course .btnprimary {
+    position: absolute;
+    top: 130px;
+    right: 80px;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .featuresright { height: auto; }
+ 
+   .testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+}
+@media (min-width: 1200px) {
+    
+  .home22{
+    display: flex;
+  }
+
+  .homeleft { padding-bottom: 80px }
+  .sectiontext { font-size: 18px; }
+
+  .category .courseitemgroup { grid-template-columns: repeat(3, 1fr); }
+  .instructorgrid { grid-template-columns: repeat(4, 1fr); }
+  .contactcard h2 { font-size: 45px; }
+
+}
+@media (min-width: 460px){
+  .contact{
+    margin-top: 30px;
+  }
+}
+@media (min-width: 300px){
+  .contact{
+    margin-top: 30px;
+  }
+}
+
+
