@@ -510,7 +510,7 @@ transform: scale(1.1);
 @media ( min-width: 366px) and (max-width: 570px) {
   .contactsssss {   position: relative; z-index: 120; background-color: rgb(115, 85, 0);   }
   .contactsssss .contactcard {
-    top: 76%; 
+    top: 80%; 
     display: block;
     margin-top: 10;
     width: calc(100% - 18px);
