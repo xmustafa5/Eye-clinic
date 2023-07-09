@@ -398,7 +398,7 @@ transform: scale(1.1);
 @media (min-width: 111px ) and (max-width: 370px) {
   .contactsssss {   position: relative; z-index: 120;    }
   .contactsssss .contactcard {
-    top: 90%; 
+    top: 40%; 
     display: block !important;
     margin-top: 10;
     width: calc(100% - 8px);
