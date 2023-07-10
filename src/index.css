@@ -127,6 +127,9 @@ section {
   flex-direction: row;
   flex-wrap: wrap; /*ينزل الكروت بالرسبومسف*/
 }
+.ccc{
+  height: 100vh;
+}
 /* @media screen and (min-width: 968px) {
   .r {
     height: 100vh;

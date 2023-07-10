@@ -1,0 +1,39 @@
+
+:root {
+    --fcolor: #17212b;
+    --scolor: #242f3d;
+    --hcolor: #30a3e6;
+    --thcolor: #12d0c5;
+    --blcolor: #30a3e6;
+  }
+.homebtngroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+.btntext {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 20px 45px;
+    text-transform: uppercase;
+    overflow: hidden;
+  }
+  .btntext {
+    position: relative;
+    z-index: 5;
+  }
+  
+  .btntext {
+    background: var(--hcolor);
+    transition: 0.3s ease;
+    color: #fff;
+  }
+  .btntext:hover {
+    background-color: var(--scolor);
+  }

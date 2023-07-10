@@ -5,7 +5,7 @@ import Loading from './components/Loading';
 import Baskett from './pages/Baskett';
 import Requests from './components/Requests';
 import Dashboard from './components/Dashboard';
-import LoginPage from './components/LoginPage';
+import Logadmin from './pages/Logadmin';
 import Login from './components/authlogin/Login';
 import Singup from './components/authlogin/Singup';
 import ForgotPassword from './components/authlogin/ForgotPassword'
@@ -25,7 +25,7 @@ function App() {
           <Route  path="/requests" element={<Requests/>} />
           <Route  path="/Dashboard" element={ <Dashboard/>} />
           <Route  path="/Admin" element={ <Admin/>} />
-          <Route  path="/LoginPage" element={<LoginPage />} />
+          <Route  path="/Logadmin" element={<Logadmin />} />
           <Route  path="/login" element={<Login/>} />
           <Route path='/forgot-password' element={<ForgotPassword />} />
           <Route path='/Singup' element={<Singup />} />
