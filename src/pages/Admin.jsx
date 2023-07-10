@@ -1,8 +1,6 @@
 import React from "react";
-import Requests from "./../components/Requests";
 import { Link } from "react-router-dom";
 import "./Admin.css"
-import Dashboard from './../components/Dashboard';
 const Admin = () => {
     const handleLogout = () => {
         // Clear the authentication status in localStorage
@@ -11,13 +9,27 @@ const Admin = () => {
         window.location.href = '/logadmin';
       };
   return (
-    <section className="pro ">
+    <section className="pro "> 
+    
+   <div className="w-full flex justify-end ">
+    <div >
+    {/* <h1 className="text-lg m-5 text-whit " >Welcome to the Admin Page</h1> */}
+    <div className="w-full flex justify-center mr-10">
+
+   
+      <button
+                className={"btnbtnprimary"}
+                data-aos="zoom-in"
+                data-aos-duration="1400"
+              >
+                <p className={"btntext"}>Logout</p>
+                <span className={"square"}></span>
+              </button> </div> </div> </div>
       <div className="r ccc">
       <div className={"homebtngroup"}>
       <div>
-      <h1>Welcome to the Admin Page</h1>
-      <button onClick={handleLogout}>Logout</button>
-    </div>
+     
+                 </div>
             <Link to="/requests">
               <button
                 className={"btnbtnprimary"}

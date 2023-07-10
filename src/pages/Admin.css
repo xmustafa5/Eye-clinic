@@ -1,10 +1,8 @@
 
 :root {
-    --fcolor: #17212b;
     --scolor: #242f3d;
-    --hcolor: #30a3e6;
-    --thcolor: #12d0c5;
-    --blcolor: #30a3e6;
+ 
+    --hhcolor: #30a3e6;
   }
 .homebtngroup {
     display: flex;
@@ -30,8 +28,8 @@
   }
   
   .btntext {
-    background: var(--hcolor);
-    transition: 0.3s ease;
+    background: var(--hhcolor);
+    transition: 0.7s ease;
     color: #fff;
   }
   .btntext:hover {
