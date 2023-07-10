@@ -227,7 +227,7 @@
      ;
 }
 .icomimg2 {
-  animation: icon2 5s linear infinite;
+  animation: icon2 5s linear infinite !important;
   height: 20px !important;
   width: 81px !important;
   display: block;
@@ -485,10 +485,9 @@
        ;
   }
   .icomimg2 {
-    animation: icon2 5s linear infinite;
+    animation: icon2 5s linear infinite !important;
     height: 40px !important;
     width: 101px !important;
-    display: block;
     position: absolute;
     top: -160px !important;
     left: 250px !important;
@@ -568,7 +567,7 @@
     width: 181px !important
   }
   .icomimg2 {
-    animation: icon2 5s linear infinite;
+    animation: icon2 5s linear infinite !important;
     height: 50px !important;
     width: 151px !important;
     position: absolute;
@@ -665,7 +664,7 @@
        ;
   }
   .icomimg2 {
-    animation: icon2 5s linear infinite;
+    animation: icon2 5s linear infinite !important;
     height: 50px !important;
     width: 121px !important;
     position: absolute;
@@ -808,7 +807,7 @@
     width: 181px !important
   }
   .icomimg2 {
-    animation: icon2 5s linear infinite;
+    animation: icon2 4s linear infinite !important;
     height: 40px !important;
     width: 121px !important;
     position: absolute;
