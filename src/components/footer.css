@@ -429,6 +429,7 @@ transform: scale(1.1);
   
   }.section-with-items{
     top:  61% !important;
+    
 
   }
   .section-with-no-items{
@@ -556,7 +557,8 @@ transform: scale(1.1);
 
 /* outmedit */
 @media ( min-width: 366px) and (max-width: 570px) {
-  .contactsssss {   position: relative; z-index: 120; background-color: #348de7;   }
+  .contactsssss {     
+  position: relative; z-index: 120; background-color: #348de7;   }
   .contactsssss .contactcard {
     top: 80%; 
     display: block;

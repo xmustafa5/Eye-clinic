@@ -517,15 +517,13 @@ flex-direction: column;
 
 
 
-@media (min-width: 100px) and (max-width: 320px) {
- 
-}
 
 /* Styles for devices with a width between 321px and 767px */
 @media (min-width: 111px ) and (max-width: 370px) {
-section{
+section{ background-color: #3c0000 !important;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 10px;
 }
 .projcard{
   width: 16rem;
@@ -540,13 +538,40 @@ section{
 /* outmedit */
 
 @media ( min-width: 370px) and (max-width: 570px) {
- 
-}
+  section{
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #30a3e6 !important;
+  }
+  .projcard{
+    width: 19rem;
+  }
+  .radio-button{
+    font-size: 14px !important;
+  }
+  .titlecard{
+    font-size: 14px;
+  }
+  }
+
 
 /* Styles for devices with a width between 321px and 767px */
 @media (min-width: 570px) and (max-width: 770px) {
- 
-}
+  section{
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #3c0000 !important;
+  }
+  .projcard{
+    width: 19rem;
+  }
+  .radio-button{
+    font-size: 14px !important;
+  }
+  .titlecard{
+    font-size: 14px;
+  }
+  }
 
 /* Styles for devices with a width between 768px and 1023px */
 @media (min-width: 770px) and (max-width: 992px) {
