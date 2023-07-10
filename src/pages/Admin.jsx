@@ -9,27 +9,13 @@ const Admin = () => {
         window.location.href = '/logadmin';
       };
   return (
-    <section className="pro "> 
-    
-   <div className="w-full flex justify-end ">
-    <div >
-    {/* <h1 className="text-lg m-5 text-whit " >Welcome to the Admin Page</h1> */}
-    <div className="w-full flex justify-center mr-10">
-
-   
-      <button
-                className={"btnbtnprimary"}
-                data-aos="zoom-in"
-                data-aos-duration="1400"
-              >
-                <p className={"btntext"}>Logout</p>
-                <span className={"square"}></span>
-              </button> </div> </div> </div>
+    <section className="pro ">
       <div className="r ccc">
       <div className={"homebtngroup"}>
       <div>
-     
-                 </div>
+      <h1>Welcome to the Admin Page</h1>
+      <button onClick={handleLogout}>Logout</button>
+    </div>
             <Link to="/requests">
               <button
                 className={"btnbtnprimary"}

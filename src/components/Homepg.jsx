@@ -90,7 +90,7 @@ const Homepg = () => {
         
         </div>
         <div className={"homeleft"}>
-          <p className={"stitle"}>Welcome To Eye Clinic</p>
+          <p className={"stitle"}>Welcome to our Clinic</p>
 
           <h1
             className={"mainheading"}
