@@ -10,7 +10,7 @@ import shape3 from "../assets/images/shape-3.png";
 import shape1 from "../assets/images/shape-11.png";
 import shape2 from "../assets/images/shape-2.png";
 import shape4 from "../assets/images/shape-4.png";
-import cta from "../assets/images/cta-bg-img.png";
+import cta from "../assets/images/cta-bg-img1.png";
 import "./Home4.css"
 import "./footer.css"
 import { Link } from 'react-router-dom';
