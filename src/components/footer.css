@@ -499,6 +499,11 @@
     display: grid;
     place-items: center;
   }
+  .vvv {
+    padding: 7px !important;
+    padding-left: 10px !important;
+    font-size: 13px;
+  }
   .prth {
     font-size: 10px;
     padding: 8px 20px !important;
@@ -653,7 +658,7 @@
   }
   .prth {
     font-size: 8px !important;
-    padding: 14px !important;
+    padding: 11px !important;
   }
   .flexo div {
     /*mabye dalet*/
@@ -661,7 +666,7 @@
     border-radius: 10px;
   }
   .section-with-items{
-    top: 40% !important;
+    top: 39% !important;
   }
   .section-with {
     padding-bottom: 190px;
@@ -670,6 +675,6 @@
     padding-bottom: 69px !important ;
   }
   .section-with-no-items {
-    top: 30% !important;
+    top: 31% !important;
   }
 }
