@@ -158,7 +158,6 @@
 }
 .shape3 {
   animation: icon1 10s linear infinite;
-
   top: 555px;
   right: 0;
 }
@@ -470,9 +469,17 @@
   }
   .shape2 {
     animation: icon1 4s linear infinite;
-    top: 23%;
-  left: 27%;
+    top: 20%;
+  left: 20%;
   width: 100%;
+  }
+  .shape3{
+    animation: none;
+    top: 30%;
+    z-index: 1;
+  }
+  .shape3 img{
+    width: 300px !important;
   }
   .shape4 {
     position: absolute;
@@ -565,6 +572,16 @@
     animation: icon1 4s linear infinite;
     top: 38%;
   left: 53%;
+  }
+  .shape3{
+    animation: none;
+    top: 30%;
+    z-index: 1;
+    left: 0%;
+  }
+  .shape3 img{
+    width: 300px !important;
+    transform: scaleX(-1);
   }
   .shape4 {
     position: absolute;
@@ -669,6 +686,14 @@
     top: 65%;
   left: 40%;
   
+  }
+  .shape3{
+    animation: none;
+    top: 10%;
+    z-index: 1;
+  }
+  .shape3 img{
+    width: 200px !important;
   }
   .icon {
     position: relative;
@@ -801,6 +826,14 @@
   .shape2{
     top: 60%;
   left: 37%;
+  }
+  .shape3{
+    animation: none;
+    top: 10%;
+    z-index: 1;
+  }
+  .shape3 img{
+    width: 300px !important;
   }
   .bannerimg {
     z-index: 10;
