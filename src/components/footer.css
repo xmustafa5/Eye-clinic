@@ -464,16 +464,16 @@
     border-radius: 10px;
   }
   .section-with-items {
-    top: 61% !important;
+    top: 45% !important;
   }
   .section-with {
-    
+    padding-bottom: 180px;
   }
   .section-with-not {
-    padding-bottom: 80px;
+    padding-bottom: 90px ;
   }
   .section-with-no-items {
-    top: 30% !important;
+    top: 42% !important;
   }
 }
 
