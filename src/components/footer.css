@@ -563,15 +563,13 @@
   .contactsssss {
     position: relative;
     z-index: 120;
-    background-color: #12d0c5;
+    background-color: #12d055;
   }
 
   .contactcardh2 {
     font-size: 20px !important;
   }
-  .section-with-items {
-    top: 34% !important;
-  }
+
   .contactsssss .contactcard {
     display: flex !important;
     top: 30%;
@@ -585,9 +583,17 @@
   .flexo div {
     /*mabye dalet*/
     width: calc(100% - 20px);
+  }  .section-with-items {
+    top: 30% !important;
+  }
+  .section-with {
+    padding-bottom: 161px;
+  }
+  .section-with-not {
+    padding-bottom: 80px !important ;
   }
   .section-with-no-items {
-    top: 8% !important;
+    top: 17% !important;
   }
 }
 /* Styles for devices with a width of 1024px or larger */

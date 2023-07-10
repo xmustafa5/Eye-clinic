@@ -592,10 +592,36 @@ section{
 
 }
 @media (min-width: 992px) and (max-width: 1095px)  {
- 
+  section{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+  .projcard{
+    width: 24rem;
+  }
+  .radio-button{
+    font-size: 14px !important;
+  }
+  .titlecard{
+    font-size: 14px;
+  }
 }
 /* Styles for devices with a width of 1024px or larger */
 @media (min-width: 1095px) and (max-width: 1600px)  {
-  
+  section{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+  .projcard{
+    width: 24rem;
+  }
+  .radio-button{
+    font-size: 14px !important;
+  }
+  .titlecard{
+    font-size: 14px;
+  }
 }
 
