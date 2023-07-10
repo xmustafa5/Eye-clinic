@@ -598,23 +598,7 @@
 }
 /* Styles for devices with a width of 1024px or larger */
 @media (min-width: 1095px) and (max-width: 1600px) {
-  .transition {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .transform-effect {
-    transform: translateX(0);
-    transition: transform 0.9s ease-in-out;
-  }
-  
-  .visible {
-    opacity: 1;
-  }
-  
-  .visible .transform-effect {
-    transform: translateX(-20px);
-  }
+ 
   .contactsssss {
     position: relative;
     z-index: 120;
@@ -659,6 +643,23 @@
   .section-with-no-items {
     top: 19% !important;
     left: 50%;
+  }
+  .transition {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .transform-effect {
+    transform: translateX(0);
+    transition: transform 0.9s ease-in-out;
+  }
+  
+  .visible {
+    opacity: 1;
+  }
+  
+  .visible .transform-effect {
+    transform: translateX(-20px);
   }
 }
 
@@ -714,5 +715,22 @@
   }
   .section-with-no-items {
     top: 31% !important;
+  }
+  .transition {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .transform-effect {
+    transform: translateY(0);
+    transition: transform 0.9s ease-in-out;
+  }
+  
+  .visible {
+    opacity: 1;
+  }
+  
+  .visible .transform-effect {
+    transform: translateY(8px);
   }
 }
