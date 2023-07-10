@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useHistory, useNavigate } from "react-router-dom";
 import { Card, Button, Typography } from "@material-tailwind/react";
 import { replace } from "formik";
+import { useEffect } from "react";
 
 export default function Logadmin() {
     const navigate = useNavigate();
@@ -14,13 +15,27 @@ export default function Logadmin() {
     // Check if email and password match the required values
     if (email === "mustafa" && password === "admin") {
       // Redirect to the Admin page
-      navigate("/admin" , {replace : true});
+      navigate("/admin", { replace: true });
     } else {
       // Display an error message or take any other appropriate action
       console.log("Invalid credentials");
     }
   };
 
+  // Check if the user is already logged in and redirect to Admin page
+  useEffect(() => {
+    if (isLoggedIn()) {
+      navigate("/admin", { replace: true });
+    }
+  }, []);
+  const isLoggedIn = () => {
+    // Implement your authentication logic to check if the user is logged in
+    // Return true if the user is logged in, false otherwise
+    // Example:
+    // const user = getLoggedInUser();
+    // return !!user;
+    return false;
+  };
   return (
     <>
       <div className="fix signup">

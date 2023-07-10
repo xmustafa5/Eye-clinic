@@ -23,7 +23,7 @@ function App() {
           <Route path='/Baskett' element={<RequireAuth><Baskett /></RequireAuth>} />
           <Route path='/Loading' element={<Loading />} />
           <Route  path="/requests" element={<Requests/>} />
-          <Route  path="/Dashboard" element={ <Dashboard/>} />
+          <Route  path="/Dashboard" element={  <Dashboard/>} />
           <Route  path="/Admin" element={ <Admin/>} />
           <Route  path="/Logadmin" element={<Logadmin />} />
           <Route  path="/login" element={<Login/>} />
