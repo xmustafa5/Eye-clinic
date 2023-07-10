@@ -67,6 +67,7 @@ const Homepg = () => {
     fetchFilteredItems();
   }, [searchInput]);
   const contactcardnone = filteredItems.length > 0 ? "section-with-items" : "section-with-no-items";
+  const contactcardn = filteredItems.length > 0 ? "section-with" : "section-with-not";
 
   return (
     <div className='home pt-10 '>
@@ -198,7 +199,7 @@ const Homepg = () => {
       </div> 
       <div className={"er"}   >
 
-      <section className={"contactsssss"}>
+      <section className={`contactsssss  ${contactcardn} ` } >
         <div className={`contactcard  ${contactcardnone} `} >
           <div className='block'>
 
