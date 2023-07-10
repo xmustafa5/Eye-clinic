@@ -95,9 +95,7 @@
 .home {
   background-color: var(--scolor);
 }
-.shape1{
-  background-color: bisque;
-}
+
 .home22 {
   margin: auto;
   overflow: hidden;
@@ -149,7 +147,6 @@
   animation: icon3 6s linear infinite;
   top: 3%;
   left: 77%;
-  background-color: transparent;
 }
 .shape2 {
   animation: icon1 4s linear infinite;
@@ -457,7 +454,6 @@
   }
  
   .shape1{
-    background-color: rgb(188, 126, 173);
     top: 3%;
     left: 69%;
   }
@@ -557,7 +553,6 @@
     width: 400px;
   }
   .shape1{
-    background-color: rgb(91, 0, 9);
     top: 3%;
     left: 66%;
     
@@ -676,7 +671,6 @@
     width: 400px;
   }
   .shape1{
-    background-color: rgb(125, 0, 235);
     top: 3%;
     left: 40%;
   }
@@ -837,9 +831,7 @@
     height: 450px;
     width: 450px;
   }
-  .shape1{
-    background-color: rgb(220, 121, 0);
-  }
+
   .shape2{
     top: 60%;
   left: 37%;

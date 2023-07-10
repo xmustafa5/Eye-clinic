@@ -12,6 +12,7 @@ import ForgotPassword from './components/authlogin/ForgotPassword'
 import AuthProvider from './context/AuthContext';
 import RequireAuth from './context/RequirAuth';
 import Dashboardd from './components/authlogin/Dashboardd';
+import Admin from './pages/Admin';
 function App() {
   return (
     <>   
@@ -23,6 +24,7 @@ function App() {
           <Route path='/Loading' element={<Loading />} />
           <Route  path="/requests" element={<Requests/>} />
           <Route  path="/Dashboard" element={ <Dashboard/>} />
+          <Route  path="/Admin" element={ <Admin/>} />
           <Route  path="/LoginPage" element={<LoginPage />} />
           <Route  path="/login" element={<Login/>} />
           <Route path='/forgot-password' element={<ForgotPassword />} />
