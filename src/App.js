@@ -13,6 +13,7 @@ import AuthProvider from './context/AuthContext';
 import RequireAuth from './context/RequirAuth';
 import Dashboardd from './components/authlogin/Dashboardd';
 import Admin from './pages/Admin';
+
 function App() {
   return (
     <>   
@@ -22,9 +23,9 @@ function App() {
           <Route path='/' element={<RequireAuth><Home/></RequireAuth>} />
           <Route path='/Baskett' element={<RequireAuth><Baskett /></RequireAuth>} />
           <Route path='/Loading' element={<Loading />} />
-          <Route  path="/requests" element={<Requests/>} />
-          <Route  path="/Dashboard" element={  <Dashboard/>} />
-          <Route  path="/Admin" element={ <Admin/>} />
+          <Route path="/requests" element={<RequireAuth><Requests/></RequireAuth>} />
+          <Route  path="/Dashboard" element={ <RequireAuth><Dashboard/></RequireAuth> } />
+          <Route path="/admin" element={<RequireAuth><Admin/></RequireAuth>} />
           <Route  path="/Logadmin" element={<Logadmin />} />
           <Route  path="/login" element={<Login/>} />
           <Route path='/forgot-password' element={<ForgotPassword />} />

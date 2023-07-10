@@ -11,9 +11,11 @@ export default function Logadmin() {
 
   const handleRegister = (e) => {
     e.preventDefault();
-
+  
     // Check if email and password match the required values
     if (email === "mustafa" && password === "admin") {
+      // Set the authentication flag in local storage
+      localStorage.setItem("isLoggedIn", true);
       // Redirect to the Admin page
       navigate("/admin", { replace: true });
     } else {
@@ -21,21 +23,17 @@ export default function Logadmin() {
       console.log("Invalid credentials");
     }
   };
-
-  // Check if the user is already logged in and redirect to Admin page
+  const isLoggedIn = () => {
+    // Retrieve the authentication flag from local storage
+    const authStatus = localStorage.getItem("isLoggedIn");
+    // Return true if the user is logged in, false otherwise
+    return authStatus === "true";
+  };
   useEffect(() => {
     if (isLoggedIn()) {
       navigate("/admin", { replace: true });
     }
   }, []);
-  const isLoggedIn = () => {
-    // Implement your authentication logic to check if the user is logged in
-    // Return true if the user is logged in, false otherwise
-    // Example:
-    // const user = getLoggedInUser();
-    // return !!user;
-    return false;
-  };
   return (
     <>
       <div className="fix signup">

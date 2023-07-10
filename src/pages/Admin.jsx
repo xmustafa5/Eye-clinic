@@ -4,10 +4,20 @@ import { Link } from "react-router-dom";
 import "./Admin.css"
 import Dashboard from './../components/Dashboard';
 const Admin = () => {
+    const handleLogout = () => {
+        // Clear the authentication status in localStorage
+        localStorage.removeItem('isLoggedIn');
+        // Redirect to the login page
+        window.location.href = '/logadmin';
+      };
   return (
     <section className="pro ">
       <div className="r ccc">
       <div className={"homebtngroup"}>
+      <div>
+      <h1>Welcome to the Admin Page</h1>
+      <button onClick={handleLogout}>Logout</button>
+    </div>
             <Link to="/requests">
               <button
                 className={"btnbtnprimary"}
