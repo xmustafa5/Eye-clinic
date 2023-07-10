@@ -74,21 +74,29 @@ position: relative;  transition: all 0.3s ease-out;
   box-shadow: rgba(11, 130, 122, 0.222) 0px 10px 15px -3px,
   rgba(0, 137, 168, 0.1) 0px 4px 6px -2px;
 }
-.projcard:hover .projimg {
-  opacity: 0.9;
-}
-.projimg img {
-  transition: 0.7s ease;
-  /*يخلي الصوره ثابته من انسوي سكرول داون*/
-}
+
+
 .projimg {
   width: 100%; /* Adjust the width and height as per your requirement */
   height: 200px;
+  margin: 20px;
   background-size: cover; /*غلمود تتعدل*/
   background-position: center; /*غلمود تتعدل*/
   overflow: hidden; /* Hide any overflow of the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.ssss{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
 
+}
+.imgglasses{
+  width: 100px !important;
+}
 .projinfo {
   padding: 0.7em;
 }

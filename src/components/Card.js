@@ -4,7 +4,7 @@ import "../Modal.css";
 import { db } from "./firebase";
 import { useAuth } from "../context/AuthContext";
 import ProductDetails from "./ProductDetalis";
-import "./buttoncss.css"
+import "./buttoncss.css";
 const Card = ({
   title,
   color1,
@@ -84,14 +84,17 @@ const Card = ({
     <>
       <ul className="content">
         <li className="">
-          <div className="projcard boxs">
-            <div className="projimg" style={myStyle}>
+          <div className="projcard boxs"><div   className="ssss">
+            <div className="projimg" >
+              
+            <img src={imageSource} alt="Selected Option"  />
+              </div>
               {/* <img src={imageSource} alt="Selected Option"  /> */}
             </div>
             <div className="projinfo">
               <strong className="projtitle">
                 <span className="titlecard">{title}</span>
-              <div>
+                <div>
                   {color1 && (
                     <button
                       className={`radio-button ${
@@ -99,7 +102,7 @@ const Card = ({
                       }`}
                       onClick={() => handleOptionClick("option1")}
                     >
-                     <p className="btntext2"> {color1}</p>
+                      <p className="btntext2"> {color1}</p>
                     </button>
                   )}
                   {color2 && (
@@ -109,11 +112,10 @@ const Card = ({
                       }`}
                       onClick={() => handleOptionClick("option2")}
                     >
-                     <p className="btntext2"> {color2}</p>
+                      <p className="btntext2"> {color2}</p>
                     </button>
-                    
                   )}
-                </div> 
+                </div>
               </strong>
               <div className="prices">
                 <p className="iopp">{price}$</p>
