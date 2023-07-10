@@ -401,7 +401,6 @@ transform: scale(1.1);
 @media (min-width: 111px ) and (max-width: 370px) {
   .contactsssss {   position: relative; z-index: 120;   }
   .contactsssss .contactcard {
-    top: 40%; 
     display: block !important;
     margin-top: 10;
     width: calc(100% - 8px);
@@ -412,8 +411,9 @@ transform: scale(1.1);
     font-size: 14px !important;
   }
   .flexo{
-    display: grid;
-    place-items: start;
+    display: flex;
+    justify-content: center ;
+    width: 100%;
   }.input{
     height: 34px;
   }.vvv{
@@ -424,10 +424,11 @@ transform: scale(1.1);
   .prth {
     font-size: 8px !important; 
   }.flexo div{  /*mabye dalet*/
-    width: calc(100% - 10px);
+    width: calc(100% - 8px);
+    border-radius: 10px ;
   
   }.section-with-items{
-    top:  74% !important;
+    top:  61% !important;
 
   }
   .section-with-no-items{
@@ -437,9 +438,10 @@ transform: scale(1.1);
 }
 
 
+
 /* Styles for devices with a width between 321px and 767px */
-@media (min-width: 570px) and (max-width: 767px) {
-  .contactsssss {   position: relative; z-index: 120;  }
+@media (min-width: 570px) and (max-width: 770px) {
+  .contactsssss {   position: relative; z-index: 120; background-color: #0A0A33;  }
   .contactsssss .contactcard {
     top: 68%; 
     display: block;
@@ -459,17 +461,17 @@ transform: scale(1.1);
     width: calc(100% - 20px);
   
   }.section-with-items{
-    top:  103% !important;
+    top:  60% !important;
 
   }
   .section-with-no-items{
-    top:  16% !important;
+    top:  10% !important;
 
   }
 }
 
 /* Styles for devices with a width between 768px and 1023px */
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 770px) and (max-width: 992px) {
   .contactsssss {   position: relative; z-index: 120;   }
   .contactsssss .contactcard {
     top: 64%; 
