@@ -216,8 +216,6 @@ the best quality  - <br/>  At our Vision Eye Clinic <br />
       <section className={`contactsssss  ${contactcardn} ` } >
         <div className={`contactcard   ${contactcardnone} `} >
           <div className='block'>
-
-          
             <div className={"contactcardbg"}><img src={cta} alt="jk" /></div>
             <div class={"griditem"}>
           <h2 className={"contactcardh2"} >Start Your Best Online Classes With Us</h2>
@@ -229,8 +227,6 @@ the best quality  - <br/>  At our Vision Eye Clinic <br />
         </div> 
          </div>
          <div className={` ${flexoClass} `} id="vsi">
-
-         
          <div className={`flexo ${transformClass}`}>
   {filteredItems.length > 0 ? (
     <div>

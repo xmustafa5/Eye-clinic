@@ -584,7 +584,7 @@ section{
     padding-top: 10px;
   }
   .projcard{
-    width: 24rem;
+    width: 20rem;
   }
   .radio-button{
     font-size: 14px !important;
@@ -599,9 +599,10 @@ section{
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
+    
   }
   .projcard{
-    width: 24rem;
+    width: 22rem;
   }
   .radio-button{
     font-size: 14px !important;
@@ -618,7 +619,7 @@ section{
     padding-top: 10px;
   }
   .projcard{
-    width: 24rem;
+    width: 22rem;
   }
   .radio-button{
     font-size: 14px !important;
