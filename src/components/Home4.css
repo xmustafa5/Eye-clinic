@@ -505,12 +505,12 @@
        ;
   }
   .icomimg2 {
-    animation: icon2 5s linear infinite !important;
-    height: 40px !important;
-    width: 101px !important;
+    animation: icon2 4s linear infinite !important;
+    height: 30px !important;
+    width: 91px !important;
     position: absolute;
     top: -160px !important;
-    left: 250px !important;
+    left: 245px !important;
   }
   .icomimg3 {
     animation: icon3 4s linear infinite;
@@ -583,11 +583,9 @@
     animation: none;
     top: 30%;
     z-index: 1;
-    left: 0%;
   }
   .shape3 img{
     width: 300px !important;
-    transform: scaleX(-1);
   }
   .shape4 {
     position: absolute;
@@ -607,7 +605,7 @@
     width: 181px !important
   }
   .icomimg2 {
-    animation: icon2 5s linear infinite !important;
+    animation: icon2 4s linear infinite !important;
     height: 50px !important;
     width: 151px !important;
     position: absolute;
@@ -640,10 +638,12 @@
   }
 
   .shape1 img {
-    width: 100px;
+    width: 100px; 
   }
   .shape3 img {
     width: 250px;
+   
+
   }
 
   .contact {
@@ -701,9 +701,12 @@
     animation: none;
     top: 10%;
     z-index: 1;
+    right:  0 !important;
+    
   }
   .shape3 img{
     width: 200px !important;
+    transform: none;
   }
   .icon {
     position: relative;
@@ -722,7 +725,7 @@
        ;
   }
   .icomimg2 {
-    animation: icon2 5s linear infinite !important;
+    animation: icon2 4s linear infinite !important;
     height: 50px !important;
     width: 121px !important;
     position: absolute;
@@ -848,6 +851,8 @@
   }
   .shape3 img{
     width: 300px !important;
+   
+    transform: none;
   }
   .bannerimg {
     z-index: 10;
