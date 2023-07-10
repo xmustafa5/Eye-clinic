@@ -9,7 +9,7 @@ const Admin = () => {
         window.location.href = '/logadmin';
       };
   return (
-    <section className="pro ">
+    <section className="pro " >
       <div className="r ccc">
       <div className={"homebtngroup"}>
       <div>

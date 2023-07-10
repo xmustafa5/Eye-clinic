@@ -70,7 +70,18 @@ const Homepg = () => {
   const flexoClass = filteredItems.length > 0 ? "flexo items-visible transition visible" : "flexo transition";
   const transformClass = filteredItems.length > 0 ? "transform-effect" : "";
     const contactcardn = filteredItems.length > 0 ? "section-with " : "section-with-not" ;
-  
+    const handleButtonClick = () => {
+      const section = document.getElementById("shop");
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+    const handleButton1Click = () => {
+      const sectionn = document.getElementById("v");
+      if (sectionn) {
+        sectionn.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
   return (
     <div className='home pt-10 '>
     <div className={"home22"}>
@@ -97,7 +108,7 @@ const Homepg = () => {
             data-aos="fade-right"
             data-aos-duration="900"
           >
-            Get Your Glasses
+            Get Your Glasses 
            
             <span className={"underlineimg"}>
             
@@ -114,28 +125,29 @@ const Homepg = () => {
           </h1>
           <p className={"sectiontext"}>
          
-              At our Vision Eye Clinic <br/> 
+        -  with
+the best quality  - <br/>  At our Vision Eye Clinic <br />
                we take the time to get to know you, <br/>your eye care history <br/> 
                and your vision needs. 
             </p>
           <div className={"homebtngroup"}>
-            <Link href="/courses">
-              <button
+            <Link to="/#shop">
+              <button onClick={handleButtonClick}
                 className={"btnbtnprimary"}
                 data-aos="zoom-in"
                 data-aos-duration="1400"
               >
-                <p className={"btntext"}>Explore Courses</p>
+                <p className={"btntext"} >Discover eyeglasses</p>
                 <span className={"square"}></span>
               </button>
             </Link>
             <Link href="/aboutus">
-              <button
+              <button onClick={handleButton1Click}
                 className={"btnbtnsecondary"}
                 data-aos="zoom-in"
                 data-aos-duration="1400"
               >
-                <p className={"btntext"}>Contact Us</p>
+                <p className={"btntext"}>Discover your current vision</p>
                 <span className={"square"}></span>
               </button>
             </Link>
@@ -216,7 +228,7 @@ const Homepg = () => {
             </div>
         </div> 
          </div>
-         <div className={` ${flexoClass} `}>
+         <div className={` ${flexoClass} `} id="vsi">
 
          
          <div className={`flexo ${transformClass}`}>

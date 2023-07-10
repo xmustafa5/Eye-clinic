@@ -130,7 +130,7 @@ export default function Home() {
     <Homepg/>
     </div>
     {/* <FilterSize/> */}
-      <section className='pro'>
+      <section className='pro' id=''>
     <div className='fex titles'> <h2>shapping</h2></div> 
       <div className='r'>
       {products.map((product) => (

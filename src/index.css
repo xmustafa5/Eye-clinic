@@ -70,7 +70,7 @@ nav a:hover {
     right: -200px;
     padding: 0;
     list-style: none;
-    background-color: #089797;
+    background-color: var(--blcolor);
     max-width: 300px;
     transform: translateX(410px);
     transition: 500ms ease;
