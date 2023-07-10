@@ -533,7 +533,6 @@
     background-color: #616c7c;
   }
   .contactsssss .contactcard {
-    top: 64%;
     display: block;
     margin-top: 10;
   }
@@ -548,10 +547,16 @@
     place-items: center;
   }
   .section-with-items {
-    top: 67% !important;
+    top: 37% !important;
+  }
+  .section-with {
+    padding-bottom: 244px;
+  }
+  .section-with-not {
+    padding-bottom: 90px  !important ;
   }
   .section-with-no-items {
-    top: 15% !important;
+    top: 21% !important;
   }
 }
 @media (min-width: 992px) and (max-width: 1095px) {

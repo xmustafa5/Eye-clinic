@@ -575,7 +575,20 @@ section{
 
 /* Styles for devices with a width between 768px and 1023px */
 @media (min-width: 770px) and (max-width: 992px) {
- 
+  section{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+  .projcard{
+    width: 24rem;
+  }
+  .radio-button{
+    font-size: 14px !important;
+  }
+  .titlecard{
+    font-size: 14px;
+  }
 
 }
 @media (min-width: 992px) and (max-width: 1095px)  {
