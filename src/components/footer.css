@@ -603,8 +603,17 @@
     transition: opacity 0.5s ease-in-out;
   }
   
-  .transition.visible {
+  .transform-effect {
+    transform: translateX(0);
+    transition: transform 0.9s ease-in-out;
+  }
+  
+  .visible {
     opacity: 1;
+  }
+  
+  .visible .transform-effect {
+    transform: translateX(-20px);
   }
   .contactsssss {
     position: relative;
