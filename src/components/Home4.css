@@ -211,7 +211,6 @@
   z-index: 88;
 }
 .icon11 {
-  animation: icon1 5s linear infinite;
   position: relative;
   top: -100px !important;
   left: 10px;
@@ -409,7 +408,6 @@
   width: 300px;
 }
 .icon11 {
-  animation: icon1 5s linear infinite;
   position: relative;
   top: -100px;
   left: 10px;
@@ -488,7 +486,6 @@
     right: 440px;
   }
   .icon11 {
-    animation: icon1 5s linear infinite;
     position: relative;
     top: -80px;
     left: 10px;
@@ -872,7 +869,6 @@
     font-size: 45px;
   }
   .icon11 {
-    animation: icon1 5s linear infinite;
     position: relative;
     top: -100px;
     left: 10px;
