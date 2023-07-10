@@ -510,6 +510,12 @@
   .section-with-items {
     top: 60% !important;
   }
+  .section-with {
+    padding-bottom: 180px;
+  }
+  .section-with-not {
+    padding-bottom: 10px !important ;
+  }
   .section-with-no-items {
     top: 10% !important;
   }
@@ -614,14 +620,13 @@
 }
 
 /* outmedit */
-@media (min-width: 366px) and (max-width: 570px) {
+@media (min-width: 370px) and (max-width: 570px) {
   .contactsssss {
     position: relative;
     z-index: 120;
     background-color: #348de7;
   }
   .contactsssss .contactcard {
-    top: 80%;
     display: block;
     margin-top: 10;
     width: calc(100% - 18px);
@@ -637,20 +642,34 @@
     font-size: 14px !important;
   }
   .flexo {
+    width: 100%;
     display: grid;
     place-items: center;
-  } /*.block{ 
-    width: calc(100% + 100px);
-  } */
+  } 
+  .vvv {
+    padding: 7px !important;
+    padding-left: 10px !important;
+    font-size: 13px;
+  }
   .prth {
-    font-size: 8px;
-    padding: 10px !important;
+    font-size: 8px !important;
+    padding: 14px !important;
   }
   .flexo div {
     /*mabye dalet*/
-    width: calc(100% + 10px);
+    width: calc(100% - 5px);
+    border-radius: 10px;
+  }
+  .section-with-items{
+    top: 40% !important;
+  }
+  .section-with {
+    padding-bottom: 190px;
+  }
+  .section-with-not {
+    padding-bottom: 69px !important ;
   }
   .section-with-no-items {
-    top: 20% !important;
+    top: 30% !important;
   }
 }
