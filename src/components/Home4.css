@@ -455,11 +455,13 @@
   .home22 {
     display: block;
   }
+ 
   .shape1{
     background-color: rgb(188, 126, 173);
     top: 3%;
     left: 69%;
   }
+
   .mainheading {
     font-size: 30;
   }
@@ -533,8 +535,8 @@
     width: auto;
   }
   .imgbox img {
-    height: 400px;
-    width: 400px;
+    height: 330px;
+    width: 330px;
   }
   .bannerimg {
     height: 340px !important;
@@ -549,6 +551,10 @@
 @media (min-width: 575px) {
   .home22 {
     display: block;
+  }
+  .imgbox img {
+    height: 400px;
+    width: 400px;
   }
   .shape1{
     background-color: rgb(91, 0, 9);
@@ -664,6 +670,10 @@
 @media (min-width: 992px) {
   .home22 {
     display: flex;
+  }
+  .imgbox img {
+    height: 400px;
+    width: 400px;
   }
   .shape1{
     background-color: rgb(125, 0, 235);
@@ -819,6 +829,10 @@
 @media (min-width: 1200px) {
   .home22 {
     display: flex;
+  }
+  .imgbox img {
+    height: 450px;
+    width: 450px;
   }
   .shape1{
     background-color: rgb(220, 121, 0);
