@@ -1,7 +1,6 @@
 import { createUserWithEmailAndPassword,onAuthStateChanged,signInWithEmailAndPassword, signOut } from "firebase/auth";
 import {  createContext, useContext, useEffect, useState } from "react";
 import { auth } from "../components/firebase";
-import { authA } from "../components/firebaseAdmin";
 
 const AuthContext = createContext()
 const AuthProvider = ({ children }) => { 
@@ -15,7 +14,6 @@ const AuthProvider = ({ children }) => {
        const login = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
-  
         const signup = (email,password) =>{
              return   createUserWithEmailAndPassword(auth,email,password)
         }
@@ -32,11 +30,8 @@ const AuthProvider = ({ children }) => {
                 unsubcribe()
             }
         },[])
-        const loginA = (email, password) => {
-    return signInWithEmailAndPassword(authA, email, password);
-  };
   return (
-    <AuthContext.Provider value={{currentUser,handlePopupToggle, isPopupOpen,isOverlayVisible , signup, logout, login,loginA}}>
+    <AuthContext.Provider value={{currentUser,handlePopupToggle, isPopupOpen,isOverlayVisible , signup, logout, login}}>
         {!loading && children}
     </AuthContext.Provider>
   )
