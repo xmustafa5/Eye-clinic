@@ -11,7 +11,7 @@ export default function Logadmin() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  const redirectPath = location.state?.path || "/";
+  const redirectPath = location.state?.path || "/Admin";
   useEffect(() => {
     if (currentUser) {
       navigate(redirectPath, { replace: true });

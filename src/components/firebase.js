@@ -27,7 +27,6 @@
 
   // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
 // Initialize Firestore
 export const db = firebase.firestore();
 
