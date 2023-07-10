@@ -187,7 +187,6 @@ export default function Home() {
           />
         </div>
       )}
-  <Link to="/Dashboard">Dashboard</Link>
    
     </>
   );

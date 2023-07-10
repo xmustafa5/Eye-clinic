@@ -355,10 +355,13 @@
 .btntext {
   background: var(--hcolor);
   transition: 0.7s ease;
-  color: #fff;
+  color: #0a0a33 !important;
+  transition: all 250ms;
+
 }
 .btntext:hover {
-  background-color: var(--scolor);
+  background-color: var(--scolor) !important;  transform: translateY(-8px);
+  color: var(--thcolor ) ;
 }
 
 /**/

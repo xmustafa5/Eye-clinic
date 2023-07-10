@@ -4,10 +4,23 @@ import "../Modal.css";
 import { db } from "./firebase";
 import { useAuth } from "../context/AuthContext";
 import ProductDetails from "./ProductDetalis";
-const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket, basketItems, setPopupMessage, setShowPopup }) => {
+import "./buttoncss.css"
+const Card = ({
+  title,
+  color1,
+  color2,
+  imageUrl1,
+  imageUrl2,
+  price,
+  addToBasket,
+  basketItems,
+  setPopupMessage,
+  setShowPopup,
+}) => {
   const [selectedOption, setSelectedOption] = useState("option1");
   const [imageSource, setImageSource] = useState(imageUrl1);
-  const { currentUser, handlePopupToggle ,isOverlayVisible,isPopupOpen} = useAuth();
+  const { currentUser, handlePopupToggle, isOverlayVisible, isPopupOpen } =
+    useAuth();
 
   useEffect(() => {
     if (selectedOption === "option1") {
@@ -21,71 +34,64 @@ const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket,
     setSelectedOption(option);
   };
 
+  const handleAddToBasket = () => {
+    // handlePopupToggle()
 
-
- 
-  
-    const handleAddToBasket = () => {
-      // handlePopupToggle()
-      
-//   if(currentUser){
-//     handlePopupToggle()
-// }
-      const item = {
-        title,
-        imageUrl: selectedOption === "option1" ? imageUrl1 : imageUrl2,
-        color: selectedOption === "option1" ? color1 : color2,
-        price,
-      };
-    
-      // Check if the item already exists in the 'basket' collection in Firestore
-      db.collection("basket")
-        .where("userId", "==", currentUser.uid) // Add the user's ID as a filter
-        .where("title", "==", item.title)
-        .where("color", "==", item.color)
-        .where("imageUrl", "==", item.imageUrl)
-        .get()
-        .then((querySnapshot) => {
-          if (querySnapshot.size > 0) {
-            setPopupMessage("Item already in the basket");
-            setShowPopup(true);
-          } else {
-            addToBasket({ ...item, userId: currentUser.uid }); // Add the selected item with userId to the basket
-    
-            // Add item to the 'basket' collection in Firestore
-            db.collection("basket")
-              .add({ ...item, userId: currentUser.uid }) // Add userId to the basket item
-              .then(() => {
-                setPopupMessage("Item added to the basket!");
-                setShowPopup(true);
-              })
-              .catch((error) => {
-                setPopupMessage("Failed to add item to the basket.");
-                setShowPopup(true);
-              });
-          }
-        });
+    //   if(currentUser){
+    //     handlePopupToggle()
+    // }
+    const item = {
+      title,
+      imageUrl: selectedOption === "option1" ? imageUrl1 : imageUrl2,
+      color: selectedOption === "option1" ? color1 : color2,
+      price,
     };
- 
-    
-  
+
+    // Check if the item already exists in the 'basket' collection in Firestore
+    db.collection("basket")
+      .where("userId", "==", currentUser.uid) // Add the user's ID as a filter
+      .where("title", "==", item.title)
+      .where("color", "==", item.color)
+      .where("imageUrl", "==", item.imageUrl)
+      .get()
+      .then((querySnapshot) => {
+        if (querySnapshot.size > 0) {
+          setPopupMessage("Item already in the basket");
+          setShowPopup(true);
+        } else {
+          addToBasket({ ...item, userId: currentUser.uid }); // Add the selected item with userId to the basket
+
+          // Add item to the 'basket' collection in Firestore
+          db.collection("basket")
+            .add({ ...item, userId: currentUser.uid }) // Add userId to the basket item
+            .then(() => {
+              setPopupMessage("Item added to the basket!");
+              setShowPopup(true);
+            })
+            .catch((error) => {
+              setPopupMessage("Failed to add item to the basket.");
+              setShowPopup(true);
+            });
+        }
+      });
+  };
+
   const myStyle = {
     backgroundImage: `url(${imageSource})`,
   };
 
   return (
-    <>        
-
+    <>
       <ul className="content">
-        <li>
-          <div className="projcard">
-            <div className="projimg" style={myStyle}> 
+        <li className="">
+          <div className="projcard boxs">
+            <div className="projimg" style={myStyle}>
               {/* <img src={imageSource} alt="Selected Option"  /> */}
             </div>
             <div className="projinfo">
               <strong className="projtitle">
                 <span className="titlecard">{title}</span>
-                <div>
+              <div>
                   {color1 && (
                     <button
                       className={`radio-button ${
@@ -93,7 +99,7 @@ const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket,
                       }`}
                       onClick={() => handleOptionClick("option1")}
                     >
-                      {color1}
+                     <p className="btntext2"> {color1}</p>
                     </button>
                   )}
                   {color2 && (
@@ -103,26 +109,33 @@ const Card = ({ title, color1, color2, imageUrl1, imageUrl2, price, addToBasket,
                       }`}
                       onClick={() => handleOptionClick("option2")}
                     >
-                      {color2}
+                     <p className="btntext2"> {color2}</p>
                     </button>
+                    
                   )}
-                </div>
+                </div> 
               </strong>
-            <div className="prices"><p className="iopp">{price}$</p></div>  
+              <div className="prices">
+                <p className="iopp">{price}$</p>
+              </div>
             </div>
             <div className="fexbtn">
-              
-              <button className="button-29" onClick={handleAddToBasket}>
+              {/* <button className="button-5" onClick={handleAddToBasket}>
                 Add to Basket
-              </button>
+              </button> */}
               {/* <button className="button-29" onClick={handlePopupToggle}>
                 Add to Basket
               </button> */}
+
+              <div className={"homebtngroup1"}>
+                <button className={"btnbtnprimary"}>
+                  <p className={"btntext1"}>Buy</p>
+                  <span className={"square"}></span>
+                </button>
+              </div>
             </div>
-           
           </div>
         </li>
-        
       </ul>
     </>
   );
