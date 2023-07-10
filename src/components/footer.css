@@ -602,15 +602,14 @@
     position: relative;
     z-index: 120;
     background-color: #721657;
+    transition: all 0.7s ease-in-out;
   }
   .contactsssss .contactcard {
     display: flex !important;
     left: 50%;
     width: calc(100% - 68px);
   }
-  .section-with-items {
-    top: 37% !important;
-  }
+
   .wrapperrr {
     margin-bottom: 9px;
   }
@@ -620,16 +619,28 @@
   .flexo {
     display: grid;
     place-items: center;
-  }
+
+  } 
   .prth {
     font-size: 14px;
+
   }
   .flexo div {
     /*mabye dalet*/
     width: calc(100% - 10px);
+  }  .section-with-items {
+    top: 30% !important;
+  }  .section-with {    
+
+    padding-bottom: 161px;
+    
+  }
+  .section-with-not {    
+
+    padding-bottom: 100px !important ;
   }
   .section-with-no-items {
-    top: 16% !important;
+    top: 19% !important;
     left: 50%;
   }
 }
