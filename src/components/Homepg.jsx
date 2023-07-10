@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import bannerline from "../assets/images/banner-line-11.png"
 import bannerimgbg from "../assets/images/banner-img-bg1.png"
 import bannerimg from "../assets/images/100.png"
-import banneralimenticon1 from "../assets/images/banner-aliment-icon-1.png"
-import banneralimenticon2 from "../assets/images/banner-aliment-icon-2.png"
-import banneralimenticon3 from "../assets/images/banner-aliment-icon-3.png"
+import banneralimenticon1 from "../assets/images/banner-aliment-icon-12.png"
+import banneralimenticon2 from "../assets/images/banner-aliment-icon-23.png"
+import banneralimenticon3 from "../assets/images/banner-aliment-icon-35.png"
 import banneralimenticon4 from "../assets/images/banner-aliment-icon-4.png"
 import shape3 from "../assets/images/shape-31.png";
 import shape1 from "../assets/images/shape-11.png";
@@ -227,6 +227,7 @@ the best quality  - <br/>  At our Vision Eye Clinic <br />
         </div> 
          </div>
          <div className={` ${flexoClass} `} id="vsi">
+
          <div className={`flexo ${transformClass}`}>
   {filteredItems.length > 0 ? (
     <div>
