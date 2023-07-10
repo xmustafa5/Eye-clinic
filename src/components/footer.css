@@ -697,7 +697,7 @@
   }
   .prth {
     font-size: 8px !important;
-    padding: 11px !important;
+    padding: 10px !important;
   }
   .flexo div {
     /*mabye dalet*/
@@ -705,7 +705,7 @@
     border-radius: 10px;
   }
   .section-with-items{
-    top: 39% !important;
+    top: 38% !important;
   }
   .section-with {
     padding-bottom: 190px;
@@ -714,7 +714,7 @@
     padding-bottom: 69px !important ;
   }
   .section-with-no-items {
-    top: 31% !important;
+    top: 30% !important;
   }
   .transition {
     opacity: 0;
@@ -733,4 +733,5 @@
   .visible .transform-effect {
     transform: translateY(8px);
   }
+
 }
