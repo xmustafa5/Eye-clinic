@@ -598,6 +598,14 @@
 }
 /* Styles for devices with a width of 1024px or larger */
 @media (min-width: 1095px) and (max-width: 1600px) {
+  .transition {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .transition.visible {
+    opacity: 1;
+  }
   .contactsssss {
     position: relative;
     z-index: 120;

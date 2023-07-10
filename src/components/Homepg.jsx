@@ -66,9 +66,10 @@ const Homepg = () => {
 
     fetchFilteredItems();
   }, [searchInput]);
-  const contactcardnone = filteredItems.length > 0 ? "section-with-items" : "section-with-no-items";
-  const contactcardn = filteredItems.length > 0 ? "section-with" : "section-with-not";
-
+  const contactcardnone = filteredItems.length > 0 ? "section-with-items items-visible" : "section-with-no-items";
+  const flexoClass = filteredItems.length > 0 ? "flexo items-visible transition visible" : "flexo transition";
+  const contactcardn = filteredItems.length > 0 ? "section-with " : "section-with-not" ;
+  
   return (
     <div className='home pt-10 '>
     <div className={"home22"}>
@@ -200,7 +201,7 @@ const Homepg = () => {
       <div className={"er"}   >
 
       <section className={`contactsssss  ${contactcardn} ` } >
-        <div className={`contactcard  ${contactcardnone} `} >
+        <div className={`contactcard   ${contactcardnone} `} >
           <div className='block'>
 
           
@@ -214,7 +215,10 @@ const Homepg = () => {
             </div>
         </div> 
          </div>
-         <div className="flexo">
+         <div className={` ${flexoClass}`}>
+
+         
+         <div className={`flexo `}>
   {filteredItems.length > 0 ? (
     <div>
       {filteredItems.map((item, index) => (
@@ -272,7 +276,7 @@ const Homepg = () => {
   ) : (
     <></>
   )}    
- </div>
+ </div></div>
   </div>
 </section>
 </div>
