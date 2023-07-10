@@ -485,7 +485,6 @@
     background-color: #0a0a33;
   }
   .contactsssss .contactcard {
-    top: 68%;
     display: block;
     margin-top: 10;
   }
@@ -495,9 +494,9 @@
   .contactcardh2 {
     font-size: 18px !important;
   }
-  .flexo {
+  .flexo { width: 100%;
     display: grid;
-    place-items: center;
+    place-items: end;
   }
   .vvv {
     padding: 7px !important;
@@ -510,19 +509,19 @@
   }
   .flexo div {
     /*mabye dalet*/
-    width: calc(100% - 20px);
+    width: calc(100% - 10px);
   }
   .section-with-items {
-    top: 60% !important;
+    top: 34.2% !important;
   }
   .section-with {
     padding-bottom: 180px;
   }
   .section-with-not {
-    padding-bottom: 10px !important ;
+    padding-bottom: 80px !important ;
   }
   .section-with-no-items {
-    top: 10% !important;
+    top: 18% !important;
   }
 }
 
@@ -531,7 +530,7 @@
   .contactsssss {
     position: relative;
     z-index: 120;
-    background-color: #003d99;
+    background-color: #616c7c;
   }
   .contactsssss .contactcard {
     top: 64%;
