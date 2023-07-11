@@ -9,12 +9,11 @@ const Admin = () => {
         window.location.href = '/logadmin';
       };
   return (
-    <section className="pro " >
+    <section className="pro colorize" >
       <div className="r ccc">
       <div className={"homebtngroup"}>
       <div>
-      <h1>Welcome to the Admin Page</h1>
-      <button onClick={handleLogout}>Logout</button>
+      <button className="colse_admin" onClick={handleLogout}>Close Admin</button>
     </div>
             <Link to="/requests">
               <button
