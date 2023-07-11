@@ -494,6 +494,9 @@ gap: 5px;}
   width: 70px !important;
 
 }
+.inputsr:focus{
+  all:unset;
+}
 input:focus {
   background-color: lightblue;
   border-color: blue;
@@ -668,6 +671,7 @@ font-size: 14px;
   gap: 3px;
   font-size: 16px;
   }
+  
   }
 
 
@@ -697,6 +701,16 @@ font-size: 14px;
   .logo {
     font-size: 22px !important;
     margin-left: 27px;
+  }
+  .modal-content{
+    background-color: #089797 !important;
+    width: 360px;   }
+  .input33{
+    width: 80%;
+    font: 14px
+  }
+  .downselec{
+    width: 80%;
   }
   }
 
