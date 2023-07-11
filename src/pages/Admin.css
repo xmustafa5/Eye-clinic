@@ -33,5 +33,5 @@
     color: #fff;
   }
   .btntext:hover {
-    background-color: var(--scolor);
+    background-color: var(--scolor) !important;
   }

@@ -359,8 +359,8 @@
 
 }
 .btntext:hover {
-  background-color: var(--scolor) !important;  transform: translateY(-8px);
-  color: var(--thcolor ) ;
+  background-color: #17212b !important;  transform: translateY(-8px);
+  color: var(--blcolor ) !important;
 }
 
 /**/

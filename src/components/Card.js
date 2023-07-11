@@ -76,18 +76,18 @@ const Card = ({
       });
   };
 
-  const myStyle = {
-    backgroundImage: `url(${imageSource})`,
-  };
+  // const myStyle = {
+  //   backgroundImage: `url(${imageSource})`,
+  // };
 
   return (
     <>
       <ul className="content">
         <li className="">
-          <div className="projcard boxs"><div   className="ssss">
-            <div className="projimg" >
-              
-            <img src={imageSource} alt="Selected Option"  />
+          <div className="projcard boxs">
+            <div className="ssss">
+              <div className="projimg">
+                <img src={imageSource} alt="Selected Option" />
               </div>
               {/* <img src={imageSource} alt="Selected Option"  /> */}
             </div>

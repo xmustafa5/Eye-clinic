@@ -21,7 +21,7 @@ const Basket = () => {
   const [inputValue9, setInputValue9] = useState("");
   const [selectedLensType, setSelectedLensType] = useState("");
 
-  const [popupMessage, setPopupMessage] = useState('');
+  const [popupMessage, setPopupMessage] = useState("");
   const [showPopup, setShowPopup] = useState(false);
   const { currentUser } = useAuth();
 
@@ -42,7 +42,7 @@ const Basket = () => {
         console.error("Error fetching basket items:", error);
       }
     };
-    
+
     fetchBasketItems();
   }, [currentUser]);
   useEffect(() => {
@@ -58,7 +58,7 @@ const Basket = () => {
   }, [showPopup]);
 
   if (isLoading) {
-    return <Loading/>;
+    return <Loading />;
   }
   const removeFromBasket = (itemId) => {
     db.collection("basket")
@@ -108,7 +108,6 @@ const Basket = () => {
   const handleInput7Change = (e) => {
     setInputValue7(e.target.value);
   };
-  
 
   const handleInput8Change = (e) => {
     setInputValue8(e.target.value);
@@ -171,15 +170,16 @@ const Basket = () => {
       console.error("Error adding data to requests collection:", error);
     }
   };
-  if(isPopupOpen) {
-    document.body.classList.add('active-modal')
+  if (isPopupOpen) {
+    document.body.classList.add("active-modal");
   } else {
-    document.body.classList.remove('active-modal')
+    document.body.classList.remove("active-modal");
   }
   return (
-    <section className='pro'>
+    <section className="pro">
       <div className="fex titles">
-      <h1>Basket</h1>   </div>
+        <h1>Basket</h1>
+      </div>
       {basketItems.length > 0 ? (
         <ul className="content">
           {basketItems.map((item, index) => (
@@ -190,23 +190,22 @@ const Basket = () => {
             //   <img src={item.imageUrl} alt="" width={300} />
             //   <button onClick={() => removeFromBasket(item.id)}>Remove</button>
             // </li>
-            <li >
-            <div className="projcard">
-              <div className="projimg" style={  {  backgroundImage: `url(${item.imageUrl})`}}> 
-                {/* <img src={imageSource} alt="Selected Option"  /> */}
+            <li>
+              <div className="projcard boxs">
+              <div className="ssss">
+              <div className="projimg">
+                <img src={item.imageUrl} alt="Selected Option" />
               </div>
-              <div className="projinfo">
-                <strong className="projtitle">
-                  <span className="titlecard">{item.title}</span>
-                  <div>
-                    {item.color && (
-                      <button
-                        className={`radio-button`}
-                      >
-                        {item.color}
-                      </button>
-                    )}
-                    {/* {color2 && (
+              {/* <img src={imageSource} alt="Selected Option"  /> */}
+            </div>
+                <div className="projinfo">
+                  <strong className="projtitle">
+                    <span className="titlecard">{item.title}</span>
+                    <div>
+                      {item.color && (
+                        <button className={`radio-button`}>{item.color}</button>
+                      )}
+                      {/* {color2 && (
                       <button
                         className={`radio-button ${
                           selectedOption === "option2" ? "active" : ""
@@ -216,31 +215,37 @@ const Basket = () => {
                         {color2}
                       </button>
                     )} */}
+                    </div>
+                  </strong>
+                  <div className="prices">
+                    <p className="iopp">{item.price}$</p>
                   </div>
-                </strong>
-              <div className="prices"><p className="iopp">{item.price}$</p></div>  
-              </div>
-              <div className="fexbtn">
-                
-                <button className="button-29" onClick={() => removeFromBasket(item.id)}>
-                  remove 
-                </button>
+                </div>
+                <div className="fexbtn">
+                  <button
+                    className="button-29"
+                    onClick={() => removeFromBasket(item.id)}
+                  >
+                    remove
+                  </button>
                 </div>
               </div>
-          </li>            
-
+            </li>
           ))}
-         
+
           {/* dd */}
-          
-        </ul> 
-  ): (
-      <section className="noitem">  <p>No items in the basket.</p></section>
-        )}
-     <div className="fex bynow">
-      <button className="button-29" onClick={handlePopupToggle}>
-              Button 29
-            </button>  </div>  
+        </ul>
+      ) : (
+        <section className="noitem">
+          {" "}
+          <p>No items in the basket.</p>
+        </section>
+      )}
+      <div className="fex bynow">
+        <button className="button-29" onClick={handlePopupToggle}>
+          Button 29
+        </button>{" "}
+      </div>
       {isOverlayVisible && <div className="overlay"></div>}
       {isPopupOpen && (
         <div className="popuplog">
@@ -263,15 +268,14 @@ const Basket = () => {
           />
         </div>
       )}
-            {/* <Link to="/requests">View Requests</Link> */}
-            {showPopup && (
-            
-          <div className="popup">
+      {/* <Link to="/requests">View Requests</Link> */}
+      {showPopup && (
+        <div className="popup">
           <div className="popup1">
-            <h1 className='massage'>{popupMessage}</h1>
+            <h1 className="massage">{popupMessage}</h1>
           </div>
-          </div>
-        )}
+        </div>
+      )}
     </section>
   );
 };
