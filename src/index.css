@@ -190,7 +190,7 @@ section {
   top: 300px;
   width: 100px;
   height: 40px;
-  background-color: #026161;
+  background-color: var(--thcolor);
   border-radius: 0px 10px 10px 0px;
   display: grid;
   justify-content: right;
