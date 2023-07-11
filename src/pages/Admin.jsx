@@ -21,7 +21,7 @@ const Admin = () => {
                 data-aos="zoom-in"
                 data-aos-duration="1400"
               >
-                <p className={"btntext"}>Requests</p>
+                <p className={"btntext2"}>Requests</p>
                 <span className={"square"}></span>
               </button>
             </Link>
@@ -31,7 +31,7 @@ const Admin = () => {
                 data-aos="zoom-in"
                 data-aos-duration="1400"
               >
-                <p className={"btntext"}>Dashboard</p>
+                <p className={"btntext2"}>Dashboard</p>
                 <span className={"square"}></span>
               </button>
             </Link>

@@ -11,28 +11,27 @@
     flex-wrap: wrap;
     gap: 30px;
   }
-.btntext {
+.btntext2 {
     position: relative;
     font-family: "Roboto", sans-serif;
     font-size: 15px;
     font-weight: 500;
     border-radius: 8px;
-    color: #ffffff;
-    padding: 20px 45px;
+    padding: 16px 45px;
     text-transform: uppercase;
     overflow: hidden;
   }
-  .btntext {
+  .btntext2 {
     position: relative;
     z-index: 5;
   }
   
-  .btntext {
-    background: var(--hhcolor);
+  .btntext2 {
+    background: var(--scolor);
     transition: 0.7s ease;
-    color: #fff;
+    color: #30a3e6;
   }
-  .btntext:hover {
+  .btntext2:hover {
     background-color: var(--scolor) !important;
   }
 
@@ -72,5 +71,17 @@
       hsla(175, 82%, 46%, 0.3),
       transparent 70%
     );
-
+   
+  } .colse_admin{
+    color: #12d0c5;
+    background-color: #242f3d;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s;
+  }
+  .colse_admin:hover{
+    background-color: #35455b;
+    padding: 10px 20px;
+    border-radius: 10px;
+    
   }
