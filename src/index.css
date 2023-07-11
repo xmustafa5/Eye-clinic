@@ -592,6 +592,35 @@ section{
 .titlecard{
   font-size: 14px;
 }
+hr{
+  border-top: 1px solid var(--blcolor) !important;
+  width: 80px  !important;
+  padding: 4px;
+}
+
+.fot a{
+  background-color: var(--blcolor);
+  padding: 2px;margin: 10px !important;
+  border-radius: 10px;
+  color: var(--scolor) !important;
+  display: grid;
+  place-items: center;
+  transition:   0.7 ease-in-out;
+
+}
+.fot a:hover{
+  transform: translateY(-10);
+  background-color: var(--fcolor);
+  color: var(--thcolor) !important;
+  transform: translateY(-4px);
+
+}
+.fott{
+  display: flex;
+  justify-content: center;
+gap: 3px;
+font-size: 14px;
+}
 }
 /* outmedit */
 
