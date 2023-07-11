@@ -86,10 +86,10 @@
     border-radius: 10px;
     
   }
-  .dddde{
+  .dddde{position: relative;
   }
   
-.containero {    position: relative;
+.containero {    
 
 	align-items: center;
 	display: flex;
@@ -98,13 +98,17 @@
 }
 
 .shapeW {  position: absolute;
-  right: 50;
+  left: 43% !important;
+  bottom: 60%;
 	background: linear-gradient(45deg, #00ffb6  0%, #000fa3 100%);
 	animation: morph 8s ease-in-out infinite;
 	border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-	height: 400px;
-	width: 400px;
-	box-shadow: 0 0 20px #000
+	height: 220px;
+	width: 220px;
+	box-shadow: 0 0 20px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes morph {

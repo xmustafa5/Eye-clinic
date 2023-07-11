@@ -14,7 +14,10 @@ const Admin = () => {
       <div className="r ccc">  
       
            <div class="containero">
-        <div class="shapeW"></div>
+        <div class="shapeW">
+
+          <h1>Admin</h1>
+        </div>
       </div>
         <div className="dddde">
        
