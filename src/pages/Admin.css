@@ -32,7 +32,8 @@
     color: #30a3e6;
   }
   .btntext2:hover {
-    background-color: var(--scolor) !important;
+    background-color: #1a435a !important;
+    color: #12d0c5;
   }
 
   .colorize {
