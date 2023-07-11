@@ -32,11 +32,8 @@ export default function Navbar() {
           <Link key={i} to={link.link}>
             {link.name}
           </Link>
-
         ))}
-                    <a class="aa" href="#shop" >shop</a>
-                  {/* <Button className="btn btn-primary" onClick={handleLogout}>log out</Button> */}
-
+    
       </nav>
       <img
         className='burger'
