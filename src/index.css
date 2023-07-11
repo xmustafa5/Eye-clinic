@@ -670,10 +670,13 @@ font-size: 14px;
   height: 490px;   }
   .input33{
     width: 70%;
-    height: 40px;
+    height: 30px;
+    padding: 0 !important;
   }
+
     .labol{
-      margin-bottom: 4px;
+      margin-bottom: 0px;
+      margin-top: 0px;
     }
   .downselec{
     width: 70%;
@@ -687,7 +690,8 @@ font-size: 14px;
   width: 70%;
  }
  .erwq{
-  margin-bottom: 15px;
+  margin-bottom: 4px;
+  margin-top: 10px;
  }
   }
 
