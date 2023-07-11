@@ -665,7 +665,30 @@ font-size: 14px;
   gap: 3px;
   font-size: 16px;
   }
-  
+  .modal-content{
+    width: 320px;
+  height: 490px;   }
+  .input33{
+    width: 70%;
+    height: 40px;
+  }
+    .labol{
+      margin-bottom: 4px;
+    }
+  .downselec{
+    width: 70%;
+    margin-bottom: 8px;
+
+  }
+  .inputsr{
+    width: 50px !important;
+  }
+ .sels{
+  width: 70%;
+ }
+ .erwq{
+  margin-bottom: 15px;
+ }
   }
 
 
@@ -703,12 +726,6 @@ font-size: 14px;
     height: 40px;
   }
  
-  input:focus {
-    color: rgb(249, 0, 0);
-    font-style: italic;
-    background-color: #026161 !important;
-    border: none !important;
-  }
   .downselec{
     width: 80%;
   }

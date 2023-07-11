@@ -47,7 +47,7 @@ const ProductDetails = ({
         <div onClick={handlePopupToggle} className="overlay"></div>
         <div className="modal-content">
           <div className="flex">
-            <div className="flex flex-col w-96 mt-4 mb-4 items-start gap-8">
+            <div className="flex erwq  flex-col w-96 mt-4 mb-4 items-start gap-8">
               <Input className="input33" size="lg" label="name" onChange={handleInput1Change} />
               <Input className="input33" size="lg" label="location" onChange={handleInput2Change} />
               <Input className="input33"
@@ -73,7 +73,7 @@ const ProductDetails = ({
               <div className="w-full flex justify-center  align-Items-center ">
                 <label
                   for="first_name"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  class="block labol mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   right eye
                 </label>
