@@ -87,7 +87,7 @@ const ProductDetails = ({
                     onChange={handleInput4Change}
                   />
                 </div>
-                <div className="w-20 mr-2 min-w-13 inp  ">
+                <div className="w-20 mr-2  inp  ">
                   <Input
                     size="md"
                     className="w-20 inputsr "
@@ -122,18 +122,19 @@ const ProductDetails = ({
                     onChange={handleInput7Change}
                   />
                 </div>
-                <div className="w-20  inp min-w-13 inputsr">
+                <div className="w-20  mr-2 inp min-w-13 inputsr">
                   <Input
-                    size="CYL"
-                    className="w-20 inputsr "
-                    label="Input 8"
+                    size="md"
+                    className="w-20  inputsr "
+                    label="CYL"
                     onChange={handleInput8Change}
                   />
                 </div>
                 <div className="w-20 inp mr-2 ">
                   <Input
                     size="md"
-                    className="w-20 inputsr "
+                    label="AIX"
+                    className="w-20  inputsr "
                     onChange={handleInput9Change}
                   />
                 </div>
