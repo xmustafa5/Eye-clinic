@@ -494,14 +494,8 @@ gap: 5px;}
   width: 70px !important;
 
 }
-.inputsr:focus{
-  all:unset;
-}
-input:focus {
-  background-color: lightblue;
-  border-color: blue;
-  box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
-}
+
+
 .searchi {
   margin-left: 100px;
   display: flex;
@@ -703,15 +697,36 @@ font-size: 14px;
     margin-left: 27px;
   }
   .modal-content{
-    background-color: #089797 !important;
     width: 360px;   }
   .input33{
     width: 80%;
-    font: 14px
+    height: 40px;
+ 
+  }
+  .input33::placeholder {
+    color: gray !important;
+    border-radius: red; 
+    font-size: 16px !important;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  input:focus {
+    color: rgb(249, 0, 0);
+    font-style: italic;
+    background-color: #026161 !important;
+    border: none !important;
   }
   .downselec{
     width: 80%;
   }
+  .inputsr{
+    width: 60px !important;
+  }
+ 
+
+    
+  
   }
 
 /* Styles for devices with a width between 768px and 1023px */

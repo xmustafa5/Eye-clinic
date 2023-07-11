@@ -1,6 +1,7 @@
 import { Input, Button, Select, Option } from "@material-tailwind/react";
 import React, { useState } from "react";
 import Items from "./authlogin/Items";
+
 const ProductDetails = ({
   handlePopupToggle,
   handleInput1Change,
@@ -33,8 +34,9 @@ const ProductDetails = ({
     { value: "Progressive PH.BC", text: "Progressive PH.BC" },
   ];
 
+  
   const [selected, setSelected] = useState(options[0].value);
-
+    
   const handleChange = (event) => {
     console.log(event.target.value);
     setSelected(event.target.value);
@@ -89,7 +91,7 @@ const ProductDetails = ({
                   <Input
                     size="md"
                     className="w-20 inputsr "
-                    label="CYL"
+                    label="CYL "
                     onChange={handleInput5Change}
                   />
                 </div>
