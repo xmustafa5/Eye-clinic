@@ -2,8 +2,8 @@ export default function Footer() {
   return <>
   
     <footer className="bg-neutral-200 text-center text-white dark:bg-neutral-600 fot">
-  <div className="  pt-9">
-    <div className="mb-6 ffff flex justify-center ">
+  <div className="pt-9">
+    <div className="mb-6  flex justify-center ">
       <a href="#!" className=" mr-9 text-neutral-800 dark:text-neutral-200">
         <svg
           xmlns="http://www.w3.org/2000/svg"

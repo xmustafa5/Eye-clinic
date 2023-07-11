@@ -192,18 +192,20 @@ const Basket = () => {
             // </li>
             <li>
               <div className="projcard boxs">
-              <div className="ssss">
-              <div className="projimg">
-                <img src={item.imageUrl} alt="Selected Option" />
-              </div>
-              {/* <img src={imageSource} alt="Selected Option"  /> */}
-            </div>
+                <div className="ssss">
+                  <div className="projimg">
+                    <img src={item.imageUrl} alt="Selected Option" />
+                  </div>
+                  {/* <img src={imageSource} alt="Selected Option"  /> */}
+                </div>
                 <div className="projinfo">
                   <strong className="projtitle">
                     <span className="titlecard">{item.title}</span>
                     <div>
                       {item.color && (
-                        <button className={`radio-button`}>{item.color}</button>
+                        <button className={`radio-button bg-cyan-500 `}>
+                          <p className="btntext2  "> {item.color}</p>
+                        </button>
                       )}
                       {/* {color2 && (
                       <button
@@ -222,12 +224,15 @@ const Basket = () => {
                   </div>
                 </div>
                 <div className="fexbtn">
-                  <button
-                    className="button-29"
-                    onClick={() => removeFromBasket(item.id)}
-                  >
-                    remove
-                  </button>
+                  <div className={"homebtngroup1"}>
+                    <button
+                      className={"btnbtnprimary"}
+                      onClick={() => removeFromBasket(item.id)}
+                    >
+                      <p className={"btntext1"}>remove</p>
+                      <span className={"square"}></span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </li>
@@ -237,14 +242,16 @@ const Basket = () => {
         </ul>
       ) : (
         <section className="noitem">
-          {" "}
           <p>No items in the basket.</p>
         </section>
       )}
       <div className="fex bynow">
-        <button className="button-29" onClick={handlePopupToggle}>
-          Button 29
-        </button>{" "}
+      <div className={"homebtngroup1"}>
+                <button className={"btnbtnprimary "} onClick={handlePopupToggle}>
+                  <p className={"btntext  hover:bg-sky-700"}>Buy</p>
+                  <span className={"square"}></span>
+                </button>
+              </div>
       </div>
       {isOverlayVisible && <div className="overlay"></div>}
       {isPopupOpen && (
