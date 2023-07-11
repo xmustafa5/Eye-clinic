@@ -11,9 +11,13 @@ const Admin = () => {
       };
   return (
     <section className="pro colorize" >
-      <div className="r ccc">
-        <div className="">
-
+      <div className="r ccc">  
+      
+           <div class="containero">
+        <div class="shapeW"></div>
+      </div>
+        <div className="dddde">
+       
       
       <div className={"homebtngroup mb-4 "}>
      
