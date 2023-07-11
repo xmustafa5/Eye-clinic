@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Admin.css"
+import Items from './../components/authlogin/Items';
 const Admin = () => {
     const handleLogout = () => {
         // Clear the authentication status in localStorage
@@ -11,7 +12,7 @@ const Admin = () => {
   return (
     <section className="pro colorize" >
       <div className="r ccc">
-        <div className="mb-10">
+        <div className="">
 
       
       <div className={"homebtngroup mb-4 "}>
@@ -38,7 +39,7 @@ const Admin = () => {
             </Link>
             
           </div>
-          <div>
+          <div className="flex justify-center align-Items-center">
       <button className="colse_admin" onClick={handleLogout}>Close Admin</button>
     </div>
       </div>
