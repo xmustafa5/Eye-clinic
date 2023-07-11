@@ -112,6 +112,10 @@
 }
 .admitt{
   font-size: 28px;
+  font-weight: 600;
+letter-spacing: 2px;
+  font-family:  sans-serif;
+  text-transform: uppercase;
 }
 @keyframes morph {
 	0% {
