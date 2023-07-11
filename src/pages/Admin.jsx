@@ -16,7 +16,7 @@ const Admin = () => {
            <div class="containero">
         <div class="shapeW">
 
-          <h1>Admin</h1>
+          <h1 className="admitt">Admin</h1>
         </div>
       </div>
         <div className="dddde">
