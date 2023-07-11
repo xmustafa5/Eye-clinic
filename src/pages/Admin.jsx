@@ -11,10 +11,11 @@ const Admin = () => {
   return (
     <section className="pro colorize" >
       <div className="r ccc">
-      <div className={"homebtngroup"}>
-      <div>
-      <button className="colse_admin" onClick={handleLogout}>Close Admin</button>
-    </div>
+        <div className="mb-10">
+
+      
+      <div className={"homebtngroup mb-4 "}>
+     
             <Link to="/requests">
               <button
                 className={"btnbtnprimary"}
@@ -35,8 +36,13 @@ const Admin = () => {
                 <span className={"square"}></span>
               </button>
             </Link>
+            
           </div>
+          <div>
+      <button className="colse_admin" onClick={handleLogout}>Close Admin</button>
+    </div>
       </div>
+        </div>
     </section>
   );
 };
