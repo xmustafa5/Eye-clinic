@@ -667,24 +667,22 @@ font-size: 14px;
   }
   .modal-content{
     width: 320px;
-  height: 490px;   }
+  height: 490px; gap: 0;  }
   .input33{
     width: 70%;
-    height: 30px;
+    height: 40px;
     padding: 0 !important;
   }
 
-    .labol{
-      margin-bottom: 0px;
-      margin-top: 0px;
-    }
+   
   .downselec{
     width: 70%;
-    margin-bottom: 8px;
 
   }
   .inputsr{
     width: 50px !important;
+    height: 40px;
+
   }
  .sels{
   width: 70%;
@@ -692,6 +690,7 @@ font-size: 14px;
  .erwq{
   margin-bottom: 4px;
   margin-top: 10px;
+  gap: 8px !important;
  }
   }
 

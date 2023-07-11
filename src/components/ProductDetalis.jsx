@@ -46,7 +46,7 @@ const ProductDetails = ({
       <div className="modal">
         <div onClick={handlePopupToggle} className="overlay"></div>
         <div className="modal-content">
-          <div className="flex">
+          <div className="flex ">
             <div className="flex erwq  flex-col w-96 mt-4 mb-4 items-start gap-8">
               <Input className="input33" size="lg" label="name" onChange={handleInput1Change} />
               <Input className="input33" size="lg" label="location" onChange={handleInput2Change} />
