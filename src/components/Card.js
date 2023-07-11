@@ -130,7 +130,7 @@ const Card = ({
               </button> */}
 
               <div className={"homebtngroup1"}>
-                <button className={"btnbtnprimary"}>
+                <button className={"btnbtnprimary"} onClick={handleAddToBasket}>
                   <p className={"btntext1"}>Buy</p>
                   <span className={"square"}></span>
                 </button>

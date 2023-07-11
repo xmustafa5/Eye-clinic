@@ -132,7 +132,6 @@ const ProductDetails = ({
                   <Input
                     size="md"
                     className="w-20 inputsr "
-                    label="AIX"
                     onChange={handleInput9Change}
                   />
                 </div>

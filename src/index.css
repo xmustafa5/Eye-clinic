@@ -444,6 +444,12 @@ section {
 }
 .inputsr {
   width: 70px !important;
+
+}
+input:focus {
+  background-color: lightblue;
+  border-color: blue;
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
 }
 .searchi {
   margin-left: 100px;
