@@ -36,28 +36,41 @@
     background-color: var(--scolor) !important;
   }
 
-
-  .colorize::before { 
-    content: '';
-    position: absolute;
-    top:  -200px;
-    left: -400px;
-    width:  800px;
-    height: 800px;
-    border-radius: 50%;
-    background: radial-gradient(ellipse at center, hsla(217, 100%, 50%, 0.3), transparent 70%);
+  .colorize {
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    padding-top: 70px;
+    padding: 50px 15px 0;
+    display: block;
   }
-   .colorize::after {
-    content: '';
+  .colorize::before {
+    content: "";
     position: absolute;
-    top:    100px;
+    bottom: -200px;
+    left: -500px;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 80%;
+    background: radial-gradient(
+      ellipse at center,
+      hsla(217, 76%, 49%, 0.5),
+      transparent 70%
+    );
+  }
+  .colorize::after {
+    content: "";
+    position: absolute;
+    z-index: 100 !important ;
+    top: 100px;
     right: -400px;
-    width:  800px;
+    width: 800px;
     height: 800px;
     border-radius: 50%;
-    background: radial-gradient(ellipse at center, hsla(313, 47%, 22%, 0.3), transparent 70%);
-  }
+    background: radial-gradient(
+      ellipse at center,
+      hsla(175, 82%, 46%, 0.3),
+      transparent 70%
+    );
 
-  .colse_admin{
-    
   }
