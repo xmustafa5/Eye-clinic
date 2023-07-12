@@ -4,10 +4,13 @@
  
     --hhcolor: #30a3e6;
   }
+  .rr{
+    padding: 30px 100px;
+  }
   .dddd{
-    position: relative;
-    background-color: #000fa3;
-    width: 200px;
+    width: 400px;
+    margin-bottom: 34px;
+    width: 100%;
   }
 .homebtngroup {
     display: flex;
@@ -114,18 +117,16 @@
     border-radius: 10px;
     
   }
-  .dddde{position: relative;
-  }
+
   
-.containero {    
+.containeroo {    
 
 	align-items: center;
 	display: flex;
-	height: 100vh;
 	justify-content: center;
 }
 
-.shapeW {  position: absolute;
+.shapeW {  
   left: 43% !important;
   bottom: 60%;
 	background: linear-gradient(45deg, #00ffb6  0%, #000fa3 100%);

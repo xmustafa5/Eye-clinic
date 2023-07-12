@@ -11,15 +11,16 @@ const Admin = () => {
   };
   return (
     <section className="pro colorize">
-      <div className="r ccc">
-        <div className="dddd">
-          <div class="containero">
+      <div className="rr ccc">
+       
+        <div className="dddde">
+           <div className="dddd">
+          <div class="containeroo">
             <div class="shapeW">
               <h1 className="admitt">Admin</h1>
             </div>
           </div>
         </div>
-        <div className="dddde">
           <div className={"homebtngroup mb-4 "}>
             <Link to="/requests">
               <button
