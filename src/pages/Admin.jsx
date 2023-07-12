@@ -41,14 +41,17 @@ const Admin = () => {
                 data-aos="zoom-in"
                 data-aos-duration="1400"
               >
-                <p className={"btntext3"}>Add item</p>
+                <p className={"btntext3"}>item</p>
                 <span className={"square"}></span>
               </button>
             </Link>
           </div>
           <div className="flex justify-center align-Items-center">
             <button className="colse_admin" onClick={handleLogout}>
-              Close Admin
+              
+
+              
+              Close
             </button>
           </div>
         </div>

@@ -120,6 +120,7 @@
     padding: 10px 20px;
     border-radius: 10px;
     transition: all 0.3s;
+
   }
   .colse_admin:hover{
     background-color: #35455b;
@@ -182,6 +183,18 @@ letter-spacing: 2px;
     height: 180px !important;
 	width: 180px;
   }
+  .btntext3{
+    padding: 10px 30px;
+  }
+  .colse_admin{
+    padding: 10px 80px;
+    
+  }
+  .colse_admin p{
+background-color: #000fa3; 
+padding: 20px 210px ;
+width: 100% !important;
+ }
   }
   /* outmedit */
   
