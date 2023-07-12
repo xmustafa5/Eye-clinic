@@ -15,10 +15,13 @@ const Admin = () => {
        
         <div className="dddde">
            <div className="dddd">
+            <div className="ddddd">
+
+           
           <div class="containeroo">
             <div class="shapeW">
               <h1 className="admitt">Admin</h1>
-            </div>
+            </div> </div>
           </div>
         </div>
           <div className={"homebtngroup mb-4 "}>
