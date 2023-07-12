@@ -11,7 +11,7 @@
     flex-wrap: wrap;
     gap: 30px;
   }
-.btntext2 {
+.btntext {
     position: relative;
     font-family: "Roboto", sans-serif;
     font-size: 15px;
@@ -21,21 +21,44 @@
     text-transform: uppercase;
     overflow: hidden;
   }
-  .btntext2 {
+  .btntext {
     position: relative;
     z-index: 5;
   }
   
-  .btntext2 {
+  .btntext {
+    background: var(--hhcolor);
+    transition: 0.7s ease;
+    color: #30a3e6;
+  }
+  .btntext:hover {
+    background-color: var(--scolor) !important;
+    color: #12d0c5;
+  }
+  .btntext3 {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 16px 45px;
+    text-transform: uppercase;
+    overflow: hidden;
+  }
+  .btntext3 {
+    position: relative;
+    z-index: 5;
+  }
+  
+  .btntext3 {
     background: var(--scolor);
     transition: 0.7s ease;
     color: #30a3e6;
   }
-  .btntext2:hover {
+  .btntext3:hover {
     background-color: #1a435a !important;
     color: #12d0c5;
   }
-
   .colorize {
     margin: auto;
     overflow: hidden;

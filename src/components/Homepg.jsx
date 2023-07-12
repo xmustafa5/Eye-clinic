@@ -15,12 +15,13 @@ import "./Home4.css"
 import "./footer.css"
 import { Link } from 'react-router-dom';
 import { db } from "../components/firebase";
+import Loading from "./Loading";
 // import AOS from 'aos';
 // import 'aos/dist/aos.css';
 const Homepg = () => {
   const [searchInput, setSearchInput] = useState("");
   const [filteredItems, setFilteredItems] = useState([]);
-
+  const [isLoading, setIsLoading] = useState(true);
   const handleSearchInputChange = (e) => {
     setSearchInput(e.target.value);
   };
@@ -59,6 +60,7 @@ const Homepg = () => {
 
         const items = Object.values(groupedItems);
         setFilteredItems(items);
+        setIsLoading(false);
       } catch (error) {
         console.error("Error fetching filtered items:", error);
       }
@@ -82,6 +84,9 @@ const Homepg = () => {
         sectionn.scrollIntoView({ behavior: 'smooth' });
       }
     };
+    if (isLoading) {
+      return <Loading />;
+    }
   return (
     <div className='home pt-10 '>
     <div className={"home22"}>
