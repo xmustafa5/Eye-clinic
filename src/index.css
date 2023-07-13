@@ -780,7 +780,10 @@ gap: 14px !important;
   width: 80%;
  }
 
-    
+    .zoom-in {
+  transform: scale(1.2); /* Adjust the scale value as desired */
+  transition: transform 0.3s ease-in-out; /* Optional: Add a transition for smooth scaling effect */
+}
   
   }
 
