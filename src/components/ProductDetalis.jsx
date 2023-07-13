@@ -43,11 +43,9 @@ const ProductDetails = ({
   };
   
   const handleInputFocus = () => {
-    const productDetailsElement = document.getElementById('product-details');
-    if (productDetailsElement) {
-      productDetailsElement.scrollIntoView({ behavior: 'smooth' });
-    }
+    document.body.classList.add("zoom-in"); // Apply zoom-in class to body
   };
+
   const handleInputBlur = () => {
     document.body.classList.remove("zoom-in"); // Remove zoom-in class from body
   };
