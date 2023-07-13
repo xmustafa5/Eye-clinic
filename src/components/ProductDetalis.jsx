@@ -35,36 +35,17 @@ const ProductDetails = ({
   ];
 
   
-  const [selected, setSelected] = useState(options[0].value);
-    
-  const handleChange = (event) => {
-    console.log(event.target.value);
-    setSelected(event.target.value);
-  };
   
-  const handleInputFocus = () => {
-    document.body.classList.add("zoom-in"); // Apply zoom-in class to body
-  };
-
-  const handleInputBlur = () => {
-    document.body.classList.remove("zoom-in"); // Remove zoom-in class from body
-  };
+  
   return (
     <>
-      <div id="product-details" className="modal">
+      <div  className="modal">
         <div onClick={handlePopupToggle} className="overlay"></div>
         <div className="modal-content">
           <div className="flex ">
             <div className="flex erwq  flex-col w-96 mt-4 mb-4 items-start gap-8">
-            <Input
-          onFocus={handleInputFocus}
-          onBlur={handleInputBlur}
-          className="input33"
-          size="lg"
-          label="name"
-          onChange={handleInput1Change}
-        />            
-          <Input onFocus={handleInputFocus} className="input33" size="lg" label="location" onChange={handleInput2Change} />
+              <Input  className="input33" size="lg" label="name" onChange={handleInput1Change} />
+              <Input  className="input33" size="lg" label="location" onChange={handleInput2Change} />
               <Input className="input33"
                 size="lg"
                 label="phone number"
@@ -84,7 +65,7 @@ const ProductDetails = ({
             <input  type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-14 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" />
         </div>
         </div> */}
-        <div className="downselec">
+        <div className="downselec ">
               <div className="w-full flex justify-center  align-Items-center ">
                 <label
                   for="first_name"
