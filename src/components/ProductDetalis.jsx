@@ -41,13 +41,16 @@ const ProductDetails = ({
     console.log(event.target.value);
     setSelected(event.target.value);
   };
+  
   const handleInputFocus = () => {
     const productDetailsElement = document.getElementById('product-details');
     if (productDetailsElement) {
       productDetailsElement.scrollIntoView({ behavior: 'smooth' });
     }
   };
-  
+  const handleInputBlur = () => {
+    document.body.classList.remove("zoom-in"); // Remove zoom-in class from body
+  };
   return (
     <>
       <div id="product-details" className="modal">
@@ -62,7 +65,8 @@ const ProductDetails = ({
           size="lg"
           label="name"
           onChange={handleInput1Change}
-        />              <Input onFocus={handleInputFocus} className="input33" size="lg" label="location" onChange={handleInput2Change} />
+        />            
+          <Input onFocus={handleInputFocus} className="input33" size="lg" label="location" onChange={handleInput2Change} />
               <Input className="input33"
                 size="lg"
                 label="phone number"
