@@ -191,7 +191,7 @@
 /**/
 .homeleft {
   position: relative;
-  z-index: 2;
+  z-index:    112;
 
   width: 100%;
 }

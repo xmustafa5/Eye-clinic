@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
-:root {
+/* :root {
   --fcolor: #17212b;
   --scolor: #242f3d;
   --thcolor: #12d0c5;
   --blcolor: #30a3e6;
-}
+} */
+
 
 * {
   font-family: "Inter", sans-serif;
