@@ -102,7 +102,7 @@ const Card = ({
                       }`}
                       onClick={() => handleOptionClick("option1")}
                     >
-                      <p className="btntext2"> {color1}</p>
+                      <p className="btntext2 "> {color1}</p>
                     </button>
                   )}
                   {color2 && (

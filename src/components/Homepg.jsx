@@ -223,10 +223,10 @@ the best quality  - <br/>  At our Vision Eye Clinic <br />
           <div className='block'>
             <div className={"contactcardbg"}><img src={cta} alt="jk" /></div>
             <div class={"griditem"}>
-          <h2 className={"contactcardh2"} >Start Your Best Online Classes With Us</h2>
+          <h2 className={"contactcardh2"} >Discover your last current vision  </h2>
           <div class={"wrapperrr"} data-aos="fade-left" data-aos-duration="900">
             <input type="text" value={searchInput}
-            onChange={handleSearchInputChange}  placeholder="Email Address"  className={"input"} />
+            onChange={handleSearchInputChange}  placeholder="Number Phone"  className={"input"} />
            
             </div>
         </div> 

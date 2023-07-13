@@ -46,7 +46,9 @@
     padding: 2px;
     font-weight: 500;
     font-family: "Roboto", sans-serif;
+   
 }
-.btntext2.active{
+.btntext2:focus{
     transition: all 0, 7s ease;
+    
 }

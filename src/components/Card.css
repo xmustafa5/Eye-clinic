@@ -137,12 +137,14 @@ position: relative;  transition: all 0.3s ease-out;
   border: solid 0.1px var(--fcolor);
   transition: all 0.7s ease;
   border-radius: 10px;
+  color: #fff;
 }
 
 .radio-button.active {
   transition: all 0, 7s ease;
   background-color: var(--fcolor);
-  color: var(--thcolor);
+  color: var(--thcolor) !important;
+  
 }
 .prices {
   width: 100%;
