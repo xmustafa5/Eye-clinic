@@ -176,7 +176,7 @@ const Basket = () => {
     document.body.classList.remove("active-modal");
   }
   return (
-    <section className="pro">
+    <section className="pro ff">
       <div className="fex titles">
         <h1>Basket</h1>
       </div>
@@ -255,7 +255,7 @@ const Basket = () => {
       </div>
       {isOverlayVisible && <div className="overlay"></div>}
       {isPopupOpen && (
-        <div className="popuplog h-full">
+        <div className="popuplog ">
           <ProductDetails
             handlePopupToggle={handlePopupToggle}
             handleInput1Change={handleInput1Change}
