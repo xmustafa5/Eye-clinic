@@ -50,7 +50,7 @@ const ProductDetails = ({
   
   return (
     <>
-      <div className="modal">
+      <div id="product-details" className="modal">
         <div onClick={handlePopupToggle} className="overlay"></div>
         <div className="modal-content">
           <div className="flex ">
