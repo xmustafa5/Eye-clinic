@@ -169,7 +169,7 @@ the best quality  - <br/>  At our Vision Eye Clinic <br />
 
             
             <img
-              src={bannerimg}
+              src={'https://firebasestorage.googleapis.com/v0/b/glassesd-cd48f.appspot.com/o/100.png?alt=media&token=46563ef2-7187-4aa3-9f52-ef13ecaea9a9'}
               alt="banner img"
               className="bannerimg"
              
@@ -226,11 +226,11 @@ the best quality  - <br/>  At our Vision Eye Clinic <br />
           <h2 className={"contactcardh2"} >Discover your last current vision  </h2>
           <div class={"wrapperrr"} data-aos="fade-left" data-aos-duration="900">
             <input type="text" value={searchInput}
-            onChange={handleSearchInputChange}  placeholder="Number Phone"  className={"input"} />
+            onChange={handleSearchInputChange}  placeholder="Phone Number "  className={"input"} />
            
             </div>
         </div> 
-         </div>
+          </div>
          <div className={` ${flexoClass} `} id="vsi">
 
          <div className={`flexo ${transformClass}`}>
@@ -241,7 +241,7 @@ the best quality  - <br/>  At our Vision Eye Clinic <br />
           <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
-                <th scope="col" class="vvv  prth  px-6 py-3">
+                <th scope="col" class="vvv  prth  px-6 py-3"> 
                   Product name
                 </th>
                 <th scope="col" class="vvv  prth px-6 py-3">
