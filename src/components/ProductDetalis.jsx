@@ -41,6 +41,13 @@ const ProductDetails = ({
     console.log(event.target.value);
     setSelected(event.target.value);
   };
+  const handleInputFocus = () => {
+    const productDetailsElement = document.getElementById('product-details');
+    if (productDetailsElement) {
+      productDetailsElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <>
       <div className="modal">
@@ -48,7 +55,7 @@ const ProductDetails = ({
         <div className="modal-content">
           <div className="flex ">
             <div className="flex erwq  flex-col w-96 mt-4 mb-4 items-start gap-8">
-              <Input className="input33" size="lg" label="name" onChange={handleInput1Change} />
+              <Input onFocus={handleInputFocus} className="input33" size="lg" label="name" onChange={handleInput1Change} />
               <Input className="input33" size="lg" label="location" onChange={handleInput2Change} />
               <Input className="input33"
                 size="lg"

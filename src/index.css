@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
 /* :root {
   --fcolor: #17212b;
@@ -223,6 +224,15 @@ section {
 }
 .contt:hover {
   transform: none;
+}
+input,
+select {
+  font-size: 16px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .cartimg {
   position: absolute;
@@ -701,6 +711,7 @@ gap: 14px !important;
     width: 70%;
     height: 40px;
     padding: 0 !important;
+    outline: none !important;
   }
 
    
