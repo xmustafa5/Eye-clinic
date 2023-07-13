@@ -255,7 +255,7 @@ const Basket = () => {
       </div>
       {isOverlayVisible && <div className="overlay"></div>}
       {isPopupOpen && (
-        <div className="popuplog">
+        <div className="popuplog h-full">
           <ProductDetails
             handlePopupToggle={handlePopupToggle}
             handleInput1Change={handleInput1Change}
