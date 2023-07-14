@@ -9,13 +9,30 @@
     justify-content: center;
     align-items: center;
 }
+.vvv{
+    color: black;
+}
 .form{
     background-color: aqua;
 }
 @media (min-width: 111px) and (max-width: 370px) {
     .form{
-        background-color: rgb(211, 251, 12);
+        background-color: rgb(200, 255, 0);
+        font-size: 16px;
+        width: 100%;
     }
+    .flexinputs{
+        display: block !important;
+        background-color: aqua;
+    }
+    .contfrom{
+  margin-bottom: 22px;
+    }
+    .proo {
+        padding: 61px 0px;
+    }
+
+
 }
 
 @media (min-width: 370px) and (max-width: 570px) {
@@ -29,27 +46,12 @@
         background-color: aqua;
     }
     .contfrom{
-  margin-bottom: 18px;
+  margin-bottom: 22px;
     }
     .proo {
         padding: 61px 0px;
     }
-    
-}
-
-@media (min-width: 570px) and (max-width: 770px) {
-    .form{
-        background-color: rgb(156, 160, 97);
-    }
-}
-@media (min-width: 992px) and (max-width: 1095px) {
-    .form{
-        background-color: rgb(69, 39, 74);
-    }
-}
-@media (min-width: 1095px) and (max-width: 1600px) {
-    .form{
-        background-color: rgb(206, 53, 33);
-    }
 
 }
+
+
