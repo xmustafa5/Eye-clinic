@@ -510,6 +510,19 @@ position: relative;  transition: all 0.3s ease-out;
 }
 .projinfo {
   padding: 0.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.projtitle {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-weight: 800;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
 .inputs {
   display: flex;
