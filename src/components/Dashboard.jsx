@@ -231,13 +231,13 @@ const Dashboard = () => {
       </form>
 </div>
       <div className="proo">
-        {" "}
+        
         <h1 className="fex mt-10 text-lg mb-6 titles">items</h1>
-        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg dddddd">
           <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="px-6 py-3 ">
                   Product name
                 </th>
                 <th scope="col" class="px-6 py-3">
@@ -278,7 +278,7 @@ const Dashboard = () => {
                       <h2>no title</h2>
                     )}
                   </th>
-                  <td class="px-6 py-4">{product.color1}</td>
+                  <td class="px-6 py-4  ">{product.color1}</td>
                   <td class="px-6 py-4">{product.color2}</td>
                   <td class="px-6 py-4">{product.price}</td>
                   <td class="px-6 py-4">

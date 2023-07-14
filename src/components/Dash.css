@@ -31,6 +31,12 @@
     .contfrom{
   margin-bottom: 18px;
     }
+    .proo {
+        padding: 61px 16px;
+    }
+    .dddddd{
+        width: 100%;
+   }
 }
 
 @media (min-width: 570px) and (max-width: 770px) {
