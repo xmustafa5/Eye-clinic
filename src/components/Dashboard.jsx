@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { db, storage } from "../components/firebase";
 import { Link } from "react-router-dom";
-
+import "./Dash.css"
 const Dashboard = () => {
   const [imageFile1, setImageFile1] = useState(null);
   const [imageFile2, setImageFile2] = useState(null);
@@ -109,9 +109,13 @@ const Dashboard = () => {
 
   return (
     <div className="pro">
-      <form onSubmit={handleSubmit} className="">
-         <div className="fleox">   <h1 className="fex titles pt-8">Add Item</h1></div>
-  <div className="flex justify-center mt-4 mb-3">
+
+      <form onSubmit={handleSubmit} className="form">
+        <div className="fleoxx">
+          
+          <h1 className="fex titles pt-8">Add Item</h1>
+        </div>
+        <div className=" flex justify-center mt-4 mb-3">
           <div>
             <label
               for="first_name"
@@ -223,66 +227,71 @@ const Dashboard = () => {
           </button>
         </div>
       </form>
-      <div className="proo" >        <h1 className="fex mt-10 text-lg mb-6 titles">items</h1>
 
-      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-              <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr>
-                  <th scope="col" class="px-6 py-3">
-                    Product name
-                  </th>
-                  <th scope="col" class="px-6 py-3">
-                    Color1
-                  </th>
-                  <th scope="col" class="px-6 py-3">
-                    color2
-                  </th>
-                  <th scope="col" class="px-6 py-3">
-                    Price
-                  </th>
-                  <th scope="col" class="px-6 py-3">
-                    Action
-                  </th>
-                </tr>
-              </thead>
-        {products.map((product) => (
-          // <div key={product.id}>
-          //   <h3>{product.title}</h3>
-          //   {product.color1 && <p>Color 1: {product.color1}</p>}
-          //   {product.color2 && <p>Color 2: {product.color2}</p>}
-          //   <p>Price: {product.price}</p>
-          //   <button onClick={() => handleRemoveProduct(product.id)}>
-          //     Remove Product
-          //   </button>
-          //   <hr />
-          // </div>
+      <div className="proo">
+        {" "}
+        <h1 className="fex mt-10 text-lg mb-6 titles">items</h1>
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+              <tr>
+                <th scope="col" class="px-6 py-3">
+                  Product name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Color1
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  color2
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Price
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Action
+                </th>
+              </tr>
+            </thead>
+            {products.map((product) => (
+              // <div key={product.id}>
+              //   <h3>{product.title}</h3>
+              //   {product.color1 && <p>Color 1: {product.color1}</p>}
+              //   {product.color2 && <p>Color 2: {product.color2}</p>}
+              //   <p>Price: {product.price}</p>
+              //   <button onClick={() => handleRemoveProduct(product.id)}>
+              //     Remove Product
+              //   </button>
+              //   <hr />
+              // </div>
 
-         
-              <tbody key={product.id} >
+              <tbody key={product.id}>
                 <tr>
                   <th
                     scope="row"
                     class="px-6 py-4 font-medium text-gray-200 whitespace-nowrap dark:text-white"
                   >
-                    {product.title.length >0  ? (product.title) : (
+                    {product.title.length > 0 ? (
+                      product.title
+                    ) : (
                       <h2>no title</h2>
-                    )  }
+                    )}
                   </th>
                   <td class="px-6 py-4">{product.color1}</td>
                   <td class="px-6 py-4">{product.color2}</td>
                   <td class="px-6 py-4">{product.price}</td>
                   <td class="px-6 py-4">
-                    <Link onClick={() => handleRemoveProduct(product.id)} class="font-medium text-blue-300 dark:text-blue-200 hover:underline">
+                    <Link
+                      onClick={() => handleRemoveProduct(product.id)}
+                      class="font-medium text-blue-300 dark:text-blue-200 hover:underline"
+                    >
                       remove
                     </Link>
                   </td>
                 </tr>
               </tbody>
-            
-        ))}
-        </table>
-          </div>
+            ))}
+          </table>
+        </div>
       </div>
     </div>
   );

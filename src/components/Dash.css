@@ -1,0 +1,38 @@
+.fleoxx {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.form{
+    background-color: aqua;
+}
+@media (min-width: 111px) and (max-width: 370px) {
+    .form{
+        background-color: rgb(211, 251, 12);
+    }
+}
+
+@media (min-width: 370px) and (max-width: 570px) {
+    .form{
+        background-color: rgb(0, 55, 7);
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 570px) and (max-width: 770px) {
+    .form{
+        background-color: rgb(156, 160, 97);
+    }
+}
+@media (min-width: 992px) and (max-width: 1095px) {
+    .form{
+        background-color: rgb(69, 39, 74);
+    }
+}
+@media (min-width: 1095px) and (max-width: 1600px) {
+    .form{
+        background-color: rgb(206, 53, 33);
+    }
+
+}
