@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { db, storage } from "../components/firebase";
-import Items from "./authlogin/Items";
 import { Link } from "react-router-dom";
 
 const Dashboard = () => {
@@ -161,7 +160,7 @@ const Dashboard = () => {
                   value={color1}
                   onChange={(e) => setColor1(e.target.value)}
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Doe"
+                  placeholder="black"
                 />
               </div>
             </div>
@@ -193,7 +192,7 @@ const Dashboard = () => {
                   value={color2}
                   onChange={(e) => setColor2(e.target.value)}
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Doe"
+                  placeholder="whithe"
                 />
               </div>
               <div></div>
@@ -213,7 +212,7 @@ const Dashboard = () => {
               value={price}
               onChange={(e) => setPrice(e.target.value)}
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="Doe"
+              placeholder="200"
             />
           </div>{" "}
           <button
