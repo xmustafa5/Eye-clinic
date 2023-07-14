@@ -123,18 +123,21 @@ const Requests = () => {
                             <p className="iopp">{item.price}$</p>
                           </div>
                           <div className="fexbtn">
-                          <button
-                            className="btntext3"
-                            onClick={() =>
-                              removeItemFromRequest(
-                                request.id,
-                                item.id,
-                                request.items.length
-                              )
-                            }
-                          >
-                            Remove
-                          </button>
+                          <div className={"homebtngroup1"}>
+                    <button
+                      className={"btnbtnprimary"}
+                      onClick={() =>
+                        removeItemFromRequest(
+                          request.id,
+                          item.id,
+                          request.items.length
+                        )
+                      }                    >
+                      <p className={"btntext5"}>remove</p>
+                      <span className={"square"}></span>
+                    </button>
+                  </div>
+                         
                         </div>
                         </div>
                      
