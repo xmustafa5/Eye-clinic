@@ -90,15 +90,13 @@ const Requests = () => {
 
             
               <div className="fex inputs">
-                <p>name: {request.input1}</p>
-                <p>location: {request.input2}</p>
-                <p>number: {request.input3}</p>
-                <p>lensType: {request.lensType}</p>
-                <p>Glasses:</p>
-              </div>
-              <div>
-    
-        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                <div className="flex w-full justify-center text-lg mb-2">
+                     <p> {request.input1}</p>
+                <p> - {request.input2}</p>
+                <p>- {request.input3}</p>
+                </div>
+             
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
           <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
@@ -147,6 +145,11 @@ const Requests = () => {
             </tbody>
           </table>
         </div>
+                <h1 className="text-xl mt-2">Glasses:</h1>
+              </div>
+              <div>
+    
+       
      
     </div>
 
