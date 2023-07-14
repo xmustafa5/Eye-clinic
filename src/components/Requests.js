@@ -124,7 +124,7 @@ const Requests = () => {
                           </div>
                           <div className="fexbtn">
                           <button
-                            className="button-29"
+                            className="btntext3"
                             onClick={() =>
                               removeItemFromRequest(
                                 request.id,
