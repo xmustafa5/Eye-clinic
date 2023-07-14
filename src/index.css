@@ -470,9 +470,22 @@ gap: 5px;}
 }
 
 .borditem {
-  display: flex;
+  display: block;
   border: solid 1px var(--thcolor);
   padding: 20px;
+  background-color: #089797 !\;
+}
+.desition{
+  display: flex;
+  background-color: #6b85d8;
+}
+.contento {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap; /*ينزل الكروت بالرسبومسف*/
+  background-color: #12d0c5;
 }
 .inputs {
   display: flex;

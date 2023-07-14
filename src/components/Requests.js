@@ -27,7 +27,7 @@ const Requests = () => {
     return <p>Loading...</p>;
   }
 
-  const removeItemFromRequest = async (requestId, itemId,length) => {
+  const removeItemFromRequest = async (requestId, itemId, length) => {
     try {
       // Remove the item from the request document
       await db
@@ -51,13 +51,13 @@ const Requests = () => {
           return item;
         });
       });
-      
+
       console.log("Item successfully removed from the request");
     } catch (error) {
       console.error("Error removing item from the request:", error);
     }
-    if(length == 1){
-      removeRequest(requestId)
+    if (length == 1) {
+      removeRequest(requestId);
     }
   };
 
@@ -75,7 +75,6 @@ const Requests = () => {
     } catch (error) {
       console.error("Error removing request:", error);
     }
-    
   };
 
   return (
@@ -86,18 +85,20 @@ const Requests = () => {
       {requestItems.length > 0 ? (
         <ul className="content d">
           {requestItems.map((request) => (
-            <li className="borditem" key={request.id}>
+            <li className="borditem " key={request.id}>
+              <div className="desition">
+
+            
               <div className="fex inputs">
-                <p className="pcolor">name: {request.input1}</p>
+                <p>name: {request.input1}</p>
                 <p>location: {request.input2}</p>
                 <p>number: {request.input3}</p>
-                <p>number: {request.input7}</p>
                 <p>lensType: {request.lensType}</p>
                 <p>products:</p>
               </div>
 
               {request.items && request.items.length > 0 ? (
-                <ul className="content">
+                <ul className="contento">
                   {request.items.map((item) => (
                     <li key={item.id}>
                       <div className="projcard">
@@ -106,7 +107,9 @@ const Requests = () => {
                           style={{
                             backgroundImage: `url(${item.imageUrl})`,
                           }}
-                        ></div>
+                        >
+                          
+                        </div>
                         <div className="projinfo">
                           <strong className="projtitle">
                             <span className="titlecard">{item.title}</span>
@@ -125,7 +128,13 @@ const Requests = () => {
                         <div className="fexbtn">
                           <button
                             className="button-29"
-                            onClick={() => removeItemFromRequest(request.id, item.id,request.items.length)}
+                            onClick={() =>
+                              removeItemFromRequest(
+                                request.id,
+                                item.id,
+                                request.items.length
+                              )
+                            }
                           >
                             Remove Item
                           </button>
@@ -133,21 +142,19 @@ const Requests = () => {
                       </div>
                     </li>
                   ))}
-                </ul>
+                </ul> 
               ) : (
-                
                 <p>No items in the request.</p>
               )}
-
+ </div>
               <div className="fexbtn">
-                 <button
+                <button
                   className="button-29"
                   onClick={() => removeRequest(request.id)}
                 >
                   Remove Request
                 </button>
-              </div> 
-            
+              </div>
             </li>
           ))}
         </ul>
