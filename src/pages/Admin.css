@@ -77,6 +77,9 @@
     background-color: #1a435a !important;
     color: #12d0c5;
   }
+  .btnbtnprimary{
+    z-index: 4;
+  }
   .colorize {
     margin: auto;
     overflow: hidden;
@@ -102,7 +105,7 @@
   .colorize::after {
     content: "";
     position: absolute;
-    z-index: 100 !important ;
+    z-index: w !important ;
     top: 100px;
     right: -400px;
     width: 800px;
@@ -157,6 +160,7 @@ letter-spacing: 2px;
   font-family:  sans-serif;
   text-transform: uppercase;
 }
+
 @keyframes morph {
 	0% {
 		border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
