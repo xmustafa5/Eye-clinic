@@ -111,8 +111,6 @@ const Dashboard = () => {
   return (
     <div className="pro">
 <div className="contfrom">
-
-
       <form onSubmit={handleSubmit} className="form">
         <div className="fleoxx">
           
@@ -230,7 +228,7 @@ const Dashboard = () => {
           </button>
         </div>
       </form>
-</div>
+</div>  
       <div className="proo">
         
         <h1 className="fex mt-10 text-lg mb-6 titles">items</h1>
