@@ -544,7 +544,31 @@ position: relative;  transition: all 0.3s ease-out;
   border-radius: 10px;
   color: #fff;
 }
+.btntext4 {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-transform: uppercase;
+  overflow: hidden;
+  color: #17212b !important;
+}
+.btntext4 {
+  position: relative;
+  z-index: 5;
+}
 
+.btntext4 {
+  background: var(--blcolor) ;
+  transition: 0.7s ease;
+  color: #30a3e6;
+}
+.btntext4:hover {
+  background-color: #1a435a !important;
+  color: #fff;
+}
 
 /* end reques css */
 .inputs {

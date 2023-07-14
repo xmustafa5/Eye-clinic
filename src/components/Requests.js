@@ -133,7 +133,7 @@ const Requests = () => {
                           request.items.length
                         )
                       }                    >
-                      <p className={"btntext5"}>remove</p>
+                      <p className={"btntext4"}>remove</p>
                       <span className={"square"}></span>
                     </button>
                   </div>
