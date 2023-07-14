@@ -86,7 +86,7 @@ const Requests = () => {
         <ul className="content d">
           {requestItems.map((request) => (
             <li className="borditem " key={request.id}>
-              <div className="desition">
+              <div className="">
 
             
               <div className="fex inputs">
@@ -101,8 +101,8 @@ const Requests = () => {
                 <ul className="contento">
                   {request.items.map((item) => (
                     <li key={item.id}>
-                      <div className="projcard">
-                      <div className="ssss">
+                      <div className="projcardo">
+                      <div className="sssso">
                   <div className="projimg">
                     <img src={item.imageUrl} alt="Selected Option" />
                   </div>

@@ -487,6 +487,27 @@ gap: 5px;}
   flex-wrap: wrap; /*ينزل الكروت بالرسبومسف*/
   background-color: #12d0c5;
 }
+.projcardo {
+  background-color: var(--scolor);
+  border: 1px solid var(--scolor);
+  min-height: 14em;
+  width: 20em;
+  overflow: hidden; /**/
+  border-radius: 10px;
+  margin: 20px;
+  /* transition: all 0.7s ease; */
+ top: 0;
+position: relative;  transition: all 0.3s ease-out;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.sssso{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+
+}
 .inputs {
   display: flex;
   justify-content: center;
