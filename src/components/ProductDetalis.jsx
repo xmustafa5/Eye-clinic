@@ -153,9 +153,7 @@ const ProductDetails = ({
               </select>
               <div className="flex items-center ">
                 <div className=" ffff">
-                  <a href="#buttons-with-link">
                     <Button onClick={handleByNowClick}>By Now</Button>
-                  </a>
                 </div>
               </div>
             </div>
