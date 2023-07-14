@@ -514,6 +514,8 @@ position: relative;  transition: all 0.3s ease-out;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
+  gap: 6px;
 }
 .projtitle {
   display: flex;
@@ -521,9 +523,30 @@ position: relative;  transition: all 0.3s ease-out;
   text-transform: uppercase;
   font-weight: 800;
   align-items: center;
+  background-color: #12d0c5;
   flex-direction: column;
   gap: 10px;
 }
+.centerbrn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.radio-buttono {
+  border: none;
+  background-color: transparent ;
+  cursor: pointer;
+  padding: 3px 8px;
+  border: solid 0.1px var(--fcolor);
+  transition: all 0.7s ease;
+  border-radius: 10px;
+  color: #fff;
+}
+
+
+/* end reques css */
 .inputs {
   display: flex;
   justify-content: center;

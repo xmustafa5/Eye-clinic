@@ -111,9 +111,9 @@ const Requests = () => {
                         <div className="projinfo">
                           <strong className="projtitle">
                             <span className="titlecard">{item.title}</span>
-                            <div>
+                            <div className="centerbrn"> 
                               {item.color && (
-                                <button className={`radio-button`}>
+                                <button className={`radio-buttono`}>
                                   {item.color}
                                 </button>
                               )}
@@ -133,7 +133,7 @@ const Requests = () => {
                               )
                             }
                           >
-                            Remove Item
+                            Remove
                           </button>
                         </div>
                         </div>
