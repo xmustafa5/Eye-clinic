@@ -109,13 +109,15 @@ const Dashboard = () => {
 
   return (
     <div className="pro">
+<div className="contfrom">
+
 
       <form onSubmit={handleSubmit} className="form">
         <div className="fleoxx">
           
           <h1 className="fex titles pt-8">Add Item</h1>
         </div>
-        <div className=" flex justify-center mt-4 mb-3">
+        <div className="  flex justify-center mt-4 mb-3 ">
           <div>
             <label
               for="first_name"
@@ -227,7 +229,7 @@ const Dashboard = () => {
           </button>
         </div>
       </form>
-
+</div>
       <div className="proo">
         {" "}
         <h1 className="fex mt-10 text-lg mb-6 titles">items</h1>
