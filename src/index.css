@@ -471,12 +471,12 @@ gap: 5px;}
 
 .borditem {
   display: block;
-  border: solid 1px var(--thcolor);
-  padding: 20px;
+  background-color: var(--scolor) ;
+  padding: 10px;
+  border-radius: 10px;
 }
 .desition{
   display: flex;
-  background-color: #6b85d8;
 }
 .contento {
   display: flex;
@@ -484,10 +484,9 @@ gap: 5px;}
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap; /*ينزل الكروت بالرسبومسف*/
-  background-color: #12d0c5;
 }
 .projcardo {
-  background-color: var(--scolor);
+  background-color: var(--fcolor);
   border: 1px solid var(--scolor);
   min-height: 14em;
   width: 20em;
@@ -522,7 +521,6 @@ position: relative;  transition: all 0.3s ease-out;
   text-transform: uppercase;
   font-weight: 800;
   align-items: center;
-  background-color: #12d0c5;
   flex-direction: column;
   gap: 10px;
 }
@@ -541,7 +539,7 @@ position: relative;  transition: all 0.3s ease-out;
   border: solid 0.1px var(--fcolor);
   transition: all 0.7s ease;
   border-radius: 10px;
-  color: #fff;
+  color: var(--thcolor);
 }
 .btntext4 {
   position: relative;
