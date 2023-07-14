@@ -234,24 +234,24 @@ const Dashboard = () => {
       <div className="proo">
         
         <h1 className="fex mt-10 text-lg mb-6 titles">items</h1>
-        <div class="relative overflow-x-auto shadow-md sm:rounded-lg ">
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
           <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
-                <th scope="col" class=" px-6 py-3 ">
+                <th scope="col" class="vvv  prth  px-6 py-3"> 
                   Product name
                 </th>
-                <th scope="col" class="px-6 py-3">
-                  Color1
+                <th scope="col" class="vvv  prth px-6 py-3">
+                  SPH
                 </th>
-                <th scope="col" class="vvv px-6 py-3">
-                  color2
+                <th scope="col" class=" vvv prth px-6 py-3">
+                  CYL
                 </th>
-                <th scope="col" class="px-6 py-3">
-                  Price
+                <th scope="col" class="vvv  prth px-6 py-3">
+                  AIX
                 </th>
-                <th scope="col" class="px-6 py-3">
-                  Action
+                <th scope="col" class="vvv  prth px-6 py-3">
+                  lens type
                 </th>
               </tr>
             </thead>
@@ -268,21 +268,21 @@ const Dashboard = () => {
               // </div>
 
               <tbody key={product.id}>
-                <tr>
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium text-gray-200 whitespace-nowrap dark:text-white"
-                  >
+              <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+              <th
+                  scope="row"
+                  class="vvv px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
                     {product.title.length > 0 ? (
                       product.title
                     ) : (
-                      <h2>no title</h2>
+                      <th>no title</th>
                     )}
                   </th>
-                  <td class="px-6 py-4 vvv path ">{product.color1}</td>
-                  <td class="px-6 py-4">{product.color2}</td>
-                  <td class="px-6 py-4">{product.price}</td>
-                  <td class="px-6 py-4">
+                  <td class="vvv px-6 py-4">{product.color1}</td>
+                  <td class="vvv px-6 py-4">{product.color2}</td>
+                  <td class="vvv px-6 py-4">{product.price}</td>
+                  <td class="vvv px-6 py-4">
                     <Link
                       onClick={() => handleRemoveProduct(product.id)}
                       class="font-medium text-blue-300 dark:text-blue-200 hover:underline"
