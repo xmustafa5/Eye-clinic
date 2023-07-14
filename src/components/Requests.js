@@ -86,7 +86,7 @@ const Requests = () => {
         <ul className="content d">
           {requestItems.map((request) => (
             <li className="borditem " key={request.id}>
-              <div className="">
+              <div className="pb-4">
 
             
               <div className="fex inputs">
@@ -98,7 +98,7 @@ const Requests = () => {
               </div>
 
               {request.items && request.items.length > 0 ? (
-                <ul className="contento">
+                <ul className="contento pb-4">
                   {request.items.map((item) => (
                     <li key={item.id}>
                       <div className="projcardo">
@@ -110,7 +110,7 @@ const Requests = () => {
                 </div>
                         <div className="projinfo">
                           <strong className="projtitle">
-                            <span className="titlecard">{item.title}</span>
+                            <span className="titlecard">{item.title} </span>
                             <div className="centerbrn"> 
                               {item.color && (
                                 <button className={`radio-buttono`}>
