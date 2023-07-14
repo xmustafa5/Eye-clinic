@@ -122,8 +122,7 @@ const Requests = () => {
                           <div className="prices">
                             <p className="iopp">{item.price}$</p>
                           </div>
-                        </div>
-                        <div className="fexbtn">
+                          <div className="fexbtn">
                           <button
                             className="button-29"
                             onClick={() =>
@@ -137,6 +136,8 @@ const Requests = () => {
                             Remove Item
                           </button>
                         </div>
+                        </div>
+                     
                       </div>
                     </li>
                   ))}

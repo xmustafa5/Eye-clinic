@@ -508,6 +508,9 @@ position: relative;  transition: all 0.3s ease-out;
   background-color: #fff;
 
 }
+.projinfo {
+  padding: 0.7em;
+}
 .inputs {
   display: flex;
   justify-content: center;
