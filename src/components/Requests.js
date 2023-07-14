@@ -102,14 +102,12 @@ const Requests = () => {
                   {request.items.map((item) => (
                     <li key={item.id}>
                       <div className="projcard">
-                        <div
-                          className="projimg"
-                          style={{
-                            backgroundImage: `url(${item.imageUrl})`,
-                          }}
-                        >
-                          
-                        </div>
+                      <div className="ssss">
+                  <div className="projimg">
+                    <img src={item.imageUrl} alt="Selected Option" />
+                  </div>
+                  {/* <img src={imageSource} alt="Selected Option"  /> */}
+                </div>
                         <div className="projinfo">
                           <strong className="projtitle">
                             <span className="titlecard">{item.title}</span>
