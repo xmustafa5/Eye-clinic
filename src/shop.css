@@ -113,6 +113,7 @@ li{
         text-transform: uppercase;
         font-weight: 800;
         margin-top: 10px;
+        direction: rtl;
     }
     .mpre{
         text-decoration: none;
