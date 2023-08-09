@@ -117,11 +117,7 @@ export default function Home() {
   useEffect(() => {
     setBasketItemCount(basketItems.length);
   }, [basketItems]);
-  const [searchTerm, setSearchTerm] = useState(""); // State for search term
-
-  const filteredProducts = products.filter((product) =>
-  product.title.toLowerCase().includes(searchTerm.toLowerCase())
-);
+  
   return (
     <>
       <div className="app">
@@ -135,36 +131,24 @@ export default function Home() {
             <h2>shapping</h2>
           </div>
           <div className="r">
-          <input
-        type="text"
-        placeholder="Search games..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-               {filteredProducts.length === 0 ? (
-                <section className="r">
-                            <p>No matching products found.</p>
+          <input type="text" />
 
-                </section>
-              
-        ) : (
-          filteredProducts.map((product) => (
-            <Card
-              key={product.id}
-              title={product.title}
-              color1={product.color1}
-              color2={product.color2}
-              imageUrl1={product.imageUrl1}
-              imageUrl2={product.imageUrl2}
-              price={product.price}
-              basketItems={basketItems}
-              addToBasket={handleAddToBasket}
-              setPopupMessage={setPopupMessage}
-              setShowPopup={setShowPopup}
-              handlePopupToggle={handlePopupToggle}
-            />
-          ))
-        )}
+            {products.map((product) => (
+              <Card
+                key={product.id}
+                title={product.title}
+                color1={product.color1}
+                color2={product.color2}
+                imageUrl1={product.imageUrl1}
+                imageUrl2={product.imageUrl2}
+                price={product.price}
+                basketItems={basketItems}
+                addToBasket={handleAddToBasket}
+                setPopupMessage={setPopupMessage}
+                setShowPopup={setShowPopup}
+                handlePopupToggle={handlePopupToggle}
+              />
+            ))}
           </div>
         </section>
         {showPopup && (
