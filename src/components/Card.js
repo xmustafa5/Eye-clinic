@@ -79,7 +79,7 @@ const Card = ({
   // const myStyle = {
   //   backgroundImage: `url(${imageSource})`,
   // };
-
+ 
   return (
     <>
       <ul className="content">
