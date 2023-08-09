@@ -131,7 +131,6 @@ export default function Home() {
             <h2>shapping</h2>
           </div>
           <div className="r">
-          <input type="text" />
 
             {products.map((product) => (
               <Card
