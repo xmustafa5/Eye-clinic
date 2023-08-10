@@ -619,6 +619,8 @@ position: relative;  transition: all 0.3s ease-out;
 }
 .inputsr {
   width: 70px !important;
+  font-size: unset !important;
+  
 
 }
 
@@ -899,7 +901,9 @@ gap: 14px !important;
 
   
   }
-
+.input33{
+  font-size: unset !important;
+}
 /* Styles for devices with a width between 768px and 1023px */
 @media (min-width: 770px) and (max-width: 992px) {
   section{

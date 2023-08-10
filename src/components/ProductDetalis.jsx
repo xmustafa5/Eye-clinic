@@ -48,13 +48,64 @@ const ProductDetails = ({
         <div className="modal-content">
           <div className="flex ">
             <div className="flex erwq  flex-col w-96 mt-4 mb-4 items-start gap-8">
-              <Input className="input33" size="lg" label="name" onChange={handleInput1Change} />
-              <Input className="input33" size="lg" label="location" onChange={handleInput2Change} />
+            <div class="relative z-0 w-full mb-2 group">
+                <input
+                onChange={handleInput1Change} 
+                  type="email"
+                  name="floating_email"
+                  id="floating_email"
+                  class="block py-2.5 px-0 w-full input33 text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_email"
+                  class="peer-focus:font-medium absolute text-sm text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  name
+                </label>
+              </div>
+              <div class="relative z-0 w-full mb-2 group">
+                <input
+                onChange={handleInput2Change}
+                  type="email"
+                  name="floating_email"
+                  id="floating_email"
+                  class="block py-2.5 px-0 w-full input33 text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_email"
+                  class="peer-focus:font-medium absolute text-sm text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  location
+                </label>
+              </div>
+              <div class="relative z-0 w-full mb-2 group">
+                <input
+                onChange={handleInput3Change}
+                  type="email"
+                  name="floating_email"
+                  id="floating_email"
+                  class="block py-2.5 px-0 w-full input33 text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_email"
+                  class="peer-focus:font-medium absolute text-sm text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  phone number
+                </label>
+              </div>
+              {/* <Input className="input33" size="lg" label="name" onChange={handleInput1Change} /> */}
+              {/* <Input className="input33" size="lg" label="location" onChange={handleInput2Change} />
               <Input className="input33"
                 size="lg"
                 label="phone number"
                 onChange={handleInput3Change}
-              />
+              /> */}
               {/* <div class="grid gap-5 mb-3 md:grid-cols-3">
         <div>
             <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First name</label>
@@ -79,14 +130,34 @@ const ProductDetails = ({
                 </label>
               </div>
               <div className="downselect">
-                <div className="w-20 mr-2 inp ">
+                {/* <div className="w-20 mr-2 inp ">
                   <Input
                     size="md"
                     className="inputsr "
                     label="SPH"
                     onChange={handleInput4Change}
                   />
-                </div>
+                </div> */}
+                <div class="relative z-0 w-full mb-2 group">
+                <input
+                onChange={handleInput4Change}
+                  type="text"
+                  name="floating_email"
+                  id="floating_email"
+                  class="block py-2.5 px-0 w-full inputsr text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_email"
+                  class="peer-focus:font-medium absolute text-sm text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  SPH
+                </label>
+              </div>
+
+
+
                 <div className="w-20 mr-2  inp  ">
                   <Input
                     size="md"
