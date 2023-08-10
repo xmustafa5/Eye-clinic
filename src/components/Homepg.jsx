@@ -87,6 +87,7 @@ const Homepg = () => {
     if (isLoading) {
       return <Loading />;
     }
+    
   return (
     <div className='home pt-10 '>
     <div className={"home22"}>
@@ -216,9 +217,9 @@ the best quality  - <br/>  At our Vision Eye Clinic <br />
           </div>
          
       </div> 
-      <div className={"er"}   >
+      <div className={"er"}   id="v">
 
-      <section className={`contactsssss  ${contactcardn} ` } >
+      <section className={`contactsssss  ${contactcardn} ` }  >
         <div className={`contactcard   ${contactcardnone} `} >
           <div className='block'>
             <div className={"contactcardbg"}><img src={cta} alt="jk" /></div>

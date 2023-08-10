@@ -20,7 +20,9 @@ function App() {
     <>   
          <AuthProvider>
       <Layout>
-        <Routes>
+        <Routes>         
+           <Route  path="/login" element={<Login/>} />
+
           <Route path='/' element={<RequireAuth><Home/></RequireAuth>} />
           <Route path='/Baskett' element={<RequireAuth><Baskett /></RequireAuth>} />
           <Route path='/Loading' element={<Loading />} />
@@ -28,7 +30,6 @@ function App() {
           <Route  path="/Dashboard" element={ <AuthContextAdmin><Dashboard/></AuthContextAdmin> } />
           <Route path="/admin" element={<AuthContextAdmin><Admin/></AuthContextAdmin>} />
           <Route  path="/Logadmin" element={<Logadmin />} />
-          <Route  path="/login" element={<Login/>} />
           <Route path='/forgot-password' element={<ForgotPassword />} />
           <Route path='/Singup' element={<Singup />} />
           <Route path='/Dashboardd' element={<RequireAuth><Dashboardd /></RequireAuth>} />

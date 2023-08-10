@@ -33,40 +33,7 @@ export default function Login() {
 
   return (
     <>
-      {/* <div
-        className="d-flex align-items-center justify-content-center "
-        style={{ minHeight: "100vh" }}
-      >
-        <div className="w-100" style={{ maxWidth: "400px" }}>
-          <h2 className="text-center mb-4">Log In</h2>
-          {error && <Alert variant="danger">{error}</Alert>}
-          <Form onSubmit={handleSubmit}>
-            <Form.Group>
-              <Form.Label htmlFor="email">Email</Form.Label>
-              <Form.Control id="email" type="email" ref={emailRef} required />
-            </Form.Group>
-            <Form.Group>
-              <Form.Label htmlFor="password">Password</Form.Label>
-              <Form.Control
-                id="password"
-                type="password"
-                ref={passwordRef}
-                required
-              />
-            </Form.Group>
-            <Button disabled={loading} className="w-100 mt-3" type="submit">
-              Log In
-            </Button>
-          </Form>
-          <div className="w-100 text-center mt-3">
-            <Link to="/forgot-password">Forgot Password?</Link>
-          </div>
-
-          <div className="w-100 text-center mt-2">
-            Need an account? <Link to="/Singup">Sign Up</Link>
-          </div>
-        </div>
-      </div> */}
+      
       <div className="fix signup ">
         <Card color="transparent" shadow={false}>
           <Typography variant="h4" className="text-blue-600	">
@@ -85,7 +52,7 @@ export default function Login() {
                   ref={emailRef}
                   name="floating_email"
                   id="floating_email"
-                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  class="block py-2.5 px-0 w-full  text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required
                 />
@@ -102,7 +69,7 @@ export default function Login() {
                   ref={passwordRef}
                   name="floating_password"
                   id="floating_password"
-                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  class="block py-2.5 px-0 w-full  text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required
                 />

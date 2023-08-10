@@ -15,15 +15,12 @@ export default function Navbar() {
     // 👇️ toggle isActive state on click
     setIsActive(current => !current);
   };
-  const handleLogout = async ()=>{
-    setError("")
-    try{
-      await logout();
-      naviagte("/login")
-    }catch{
-      setError("felid to logout")
+  const handleButtonClick = () => {
+    const section = document.getElementById("shop");
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
     }
-  }
+  };
   return (
     <header className='navbar'>
       <h1 className='logo' >Eye clinic</h1>
