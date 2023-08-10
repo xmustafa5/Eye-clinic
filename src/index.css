@@ -594,8 +594,14 @@ position: relative;  transition: all 0.3s ease-out;
 }
 .signup {
   align-items: center;
+  background-color: var(--fcolor);
 }
-
+.totlog{
+  color: var(--thcolor);
+}
+.hgt{
+  color: white;
+}
 .downselect {
   width: 100%;
   display: flex;
