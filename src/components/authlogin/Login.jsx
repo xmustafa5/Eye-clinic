@@ -52,7 +52,7 @@ export default function Login() {
                   ref={emailRef}
                   name="floating_email"
                   id="floating_email"
-                  class="block py-2.5 px-0 w-full  text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer"
+                  class="block py-2.5 px-0 w-full  text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer"
                   placeholder=" "
                   required
                 />
@@ -69,7 +69,7 @@ export default function Login() {
                   ref={passwordRef}
                   name="floating_password"
                   id="floating_password"
-                  class="block py-2.5 px-0 w-full  text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer"
+                  class="block py-2.5 px-0 w-full  text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer"
                   placeholder=" "
                   required
                 />
@@ -81,7 +81,7 @@ export default function Login() {
                 </label>
               </div>
 
-              {/* <input size="lg" label="Email"  required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John"  />
+              {/* <input size="lg" label="Email"  required class="bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John"  />
               <input type="password" size="lg" label="Password"  required />
               <input type="password" size="lg" label="Password Confirmation"  /> */}
             </div>
@@ -89,7 +89,7 @@ export default function Login() {
             <Button className="mt-6" fullWidth type="submit" disabled={loading}>
               Register
             </Button>
-            <Typography color="gray" className="mt-4 text-center font-normal">
+            <Typography color="gray" className="mt-4 hgt text-center font-normal">
             Need an account? {" "}       
               <Link
                 to="/Singup"

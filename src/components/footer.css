@@ -132,7 +132,6 @@
   padding-right: 70px;
   color: #0a0a33;
   font-family: "Roboto", sans-serif;
-  font-size: 15px;
   border: none;
   outline: none;
 }
@@ -676,7 +675,6 @@
   }
   .input {
     height: 34px;
-    font-size: 14px !important;
   }
   .flexo {
     width: 100%;
