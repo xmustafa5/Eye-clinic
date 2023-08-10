@@ -138,7 +138,7 @@ const ProductDetails = ({
                     onChange={handleInput4Change}
                   />
                 </div> */}
-                <div class="relative z-0 w-full mb-2 group">
+                <div class="relative z-0 w-full group">
                 <input
                 onChange={handleInput4Change}
                   type="text"
@@ -158,23 +158,58 @@ const ProductDetails = ({
 
 
 
-                <div className="w-20 mr-2  inp  ">
+                {/* <div className="w-20 mr-2  inp  ">
                   <Input
                     size="md"
                     className="w-20 inputsr "
                     label="CYL "
                     onChange={handleInput5Change}
                   />
-                </div>
-                <div className="w-20  mr-2 inp ">
+                </div> */}
+                <div class="relative z-0 w-full group">
+                <input
+                onChange={handleInput5Change}
+                  type="text"
+                  name="floating_email"
+                  id="floating_email"
+                  class="block py-2.5 px-0 w-full inputsr text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_email"
+                  class="peer-focus:font-medium absolute text-sm text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  CYL
+                </label>
+              </div>
+                {/* <div className="w-20  mr-2 inp ">
                   <Input
                     size="md"
                     className="w-20 inputsr "
                     label="AIX"
                     onChange={handleInput6Change}
                   />
-                </div>
-              </div></div>
+                </div> */}
+                <div class="relative z-0 ">
+                <input
+                onChange={handleInput6Change}
+                  type="text"
+                  name="floating_email"
+                  id="floating_email"
+                  class="block py-2.5 px-0 w-full inputsr text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_email"
+                  class="peer-focus:font-medium absolute text-sm text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  AIX
+                </label>
+              </div>
+              </div>
+              </div>
               <div className="downselec">
               <div className="w-full flex justify-center  align-Items-center ">
                 <label
@@ -185,30 +220,84 @@ const ProductDetails = ({
                 </label>
               </div>
               <div className="downselect">
-                <div className="w-20 mr-2 inp">
+                {/* <div className="w-20 mr-2 inp ">
                   <Input
                     size="md"
-                    className="w-20  inputsr "
+                    className="inputsr "
                     label="SPH"
-                    onChange={handleInput7Change}
+                    onChange={handleInput4Change}
                   />
-                </div>
-                <div className="w-20  mr-2 inp min-w-13 inputsr">
+                </div> */}
+                <div class="relative z-0 w-full  group">
+                <input
+                onChange={handleInput7Change}
+                  type="text"
+                  name="floating_email"
+                  id="floating_email"
+                  class="block py-2.5 px-0 w-full inputsr text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_email"
+                  class="peer-focus:font-medium absolute text-sm text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  SPH
+                </label>
+              </div>
+
+
+
+                {/* <div className="w-20 mr-2  inp  ">
                   <Input
                     size="md"
-                    className="w-20  inputsr "
-                    label="CYL"
-                    onChange={handleInput8Change}
+                    className="w-20 inputsr "
+                    label="CYL "
+                    onChange={handleInput5Change}
                   />
-                </div>
-                <div className="w-20 inp mr-2 ">
+                </div> */}
+                <div class="relative z-0 w-full  group">
+                <input
+                onChange={handleInput8Change}
+                  type="text"
+                  name="floating_email"
+                  id="floating_email"
+                  class="block py-2.5 px-0 w-full inputsr text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_email"
+                  class="peer-focus:font-medium absolute text-sm text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  CYL
+                </label>
+              </div>
+                {/* <div className="w-20  mr-2 inp ">
                   <Input
                     size="md"
+                    className="w-20 inputsr "
                     label="AIX"
-                    className="w-20  inputsr "
-                    onChange={handleInput9Change}
+                    onChange={handleInput6Change}
                   />
-                </div>
+                </div> */}
+                <div class="relative z-0 ">
+                <input
+                onChange={handleInput9Change}
+                  type="text"
+                  name="floating_email"
+                  id="floating_email"
+                  class="block py-2.5 px-0 w-full inputsr text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_email"
+                  class="peer-focus:font-medium absolute text-sm text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  AIX
+                </label>
+              </div>
               </div>
               </div>
               <select
