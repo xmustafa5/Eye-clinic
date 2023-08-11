@@ -146,6 +146,23 @@ position: relative;  transition: all 0.3s ease-out;
   color: var(--thcolor) !important;
   
 }
+.radio-buttone {
+  border: none;
+  background-color: transparent ;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: solid 0.1px var(--fcolor);
+  transition: all 0.7s ease;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.radio-buttone.active {
+  transition: all 0, 7s ease;
+  background-color: var(--fcolor);
+  color: var(--thcolor) !important;
+  
+}
 .prices {
   width: 100%;
   display: flex;

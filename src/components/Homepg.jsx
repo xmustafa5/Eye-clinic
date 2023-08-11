@@ -90,6 +90,7 @@ const Homepg = () => {
     
   return (
     <div className='home pt-10 '>
+      
     <div className={"home22"}>
         <div className={"shape"}>
           <div className={"shape1"}>

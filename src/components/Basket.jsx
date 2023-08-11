@@ -201,9 +201,9 @@ const Basket = () => {
                 <div className="projinfo">
                   <strong className="projtitle">
                     <span className="titlecard">{item.title}</span>
-                    <div>
+                    <div className="gggl">
                       {item.color && (
-                        <button className={`radio-button bg-cyan-500 `}>
+                        <button className={`radio-buttone bg-cyan-500 `}>
                           <p className="btntext2  "> {item.color}</p>
                         </button>
                       )}
