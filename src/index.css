@@ -853,7 +853,9 @@ gap: 14px !important;
  
   }
 
-
+.drop{
+  z-index: 200 !important;
+}
 /* Styles for devices with a width between 321px and 767px */
 @media (min-width: 570px) and (max-width: 770px) {
   section{

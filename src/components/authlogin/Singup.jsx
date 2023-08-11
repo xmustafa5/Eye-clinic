@@ -9,8 +9,6 @@ import {
   Button,
   Typography,
 } from "@material-tailwind/react";
-import { storage } from '../firebase'; // Add this import
-import { updateProfile } from 'firebase/auth'; // Add this import
 export default function Signup() {
   const nameRef = useRef(); // Add a reference for the name input field
   const emailRef = useRef();
@@ -22,33 +20,23 @@ export default function Signup() {
   const navigate = useNavigate();
   const [imageFile, setImageFile] = useState(null);
 
-  const handleImageChange = (e) => {
-    setImageFile(e.target.files[0]);
-  };
-  
-  async function handleSubmit(e) {
-    e.preventDefault();
-    if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-      return setError("Passwords do not match");
-    }
-    try {
-      setError("");
-      setLoading(true);
-      const user = await signup(emailRef.current.value, passwordRef.current.value, nameRef.current.value);
-      if (imageFile) {
-        const storageRef = storage.ref();
-        const imageRef = storageRef.child(`user-images/${user.uid}`);
-        await imageRef.put(imageFile);
-        const imageUrl = await imageRef.getDownloadURL();
-        await updateProfile(user, { photoURL: imageUrl });
-      }
-      navigate("/");
-    } catch {
-      setError("Failed to create an account");
-    }
-    setLoading(false);
+  // Inside your Signup component
+async function handleSubmit(e) {
+  e.preventDefault();
+  if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+    return setError("Passwords do not match");
+  }
+  try {
+    setError("");
+    setLoading(true);
+    await signup(emailRef.current.value, passwordRef.current.value, nameRef.current.value);
+    navigate("/");
+  } catch (error) {
+    setError("Failed to create an account: " + error.message); // Display the specific error message
   }
   
+  setLoading(false);
+}
 
 
   return (
@@ -133,8 +121,7 @@ export default function Signup() {
       <input type="password" ref={passwordConfirmRef} name="floating_password " id="floating_password" class="block py-2.5 px-0 w-full  text-white  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer" placeholder=" " required />
       <label for="floating_password"  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">password Confirmation</label>
   </div>
-  <input type="file" onChange={handleImageChange} />
-
+  
               {/* <input size="lg" label="Email"  required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John"  />
               <input type="password" size="lg" label="Password"  required />
               <input type="password" size="lg" label="Password Confirmation"  /> */}
