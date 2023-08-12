@@ -532,6 +532,10 @@ position: relative;  transition: all 0.3s ease-out;
   
   gap: 6px;
 }
+.imageprofile{
+  width: 2rem;
+  height: 2rem;
+}
 .projtitle {
   display: flex;
   justify-content: space-between;

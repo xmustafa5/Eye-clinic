@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import bannerline from "../assets/images/banner-line-11.png"
 import bannerimgbg from "../assets/images/banner-img-bg1.png"
-import bannerimg from "../assets/images/100.png"
+import bannerimg from "../assets/images/100-min.png"
 import banneralimenticon1 from "../assets/images/banner-aliment-icon-12.png"
 import banneralimenticon2 from "../assets/images/banner-aliment-icon-23.png"
 import banneralimenticon3 from "../assets/images/banner-aliment-icon-35.png"
@@ -171,7 +171,8 @@ the best quality  - <br/>  At our Vision Eye Clinic <br />
 
             
             <img
-              src={'https://firebasestorage.googleapis.com/v0/b/glassesd-cd48f.appspot.com/o/100.png?alt=media&token=46563ef2-7187-4aa3-9f52-ef13ecaea9a9'}
+              // src={'https://firebasestorage.googleapis.com/v0/b/glassesd-cd48f.appspot.com/o/100.png?alt=media&token=46563ef2-7187-4aa3-9f52-ef13ecaea9a9'}
+              src={bannerimg}
               alt="banner img"
               className="bannerimg"
              
