@@ -28,6 +28,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: var(--scolor);
+  overflow: hidden;
 }
 
 .logo{
@@ -62,7 +63,9 @@ nav a:hover{
     font-size: 20px;
     margin-left: 20px;
   }
+.navbar{
 
+}
   #mune {
     display: flex;
     flex-direction: column;
@@ -484,6 +487,18 @@ gap: 5px;}
   padding: 10px;
   border-radius: 10px;
 }
+.fde{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+filter: drop-shadow( 0px 5px 10px rgba(1 1 1 / 45%));}
+.fde1{
+  position: absolute;
+    top: 40%;
+    left: 40%;
+    filter: drop-shadow( 0px 5px 10px rgba(1, 1, 1, 0.678));}
+
+
 @media (min-width: 111px ) and (max-width: 400px) {
   .borditem {
     display: block;
@@ -584,8 +599,8 @@ position: relative;  transition: all 0.3s ease-out;
   color: #30a3e6;
 }
 .btntext4:hover {
-  background-color: #1a435a !important;
-  color: #fff;
+  background-color: #266285 !important;
+  color: #12d0c5 !important;
 }
 
 /* end reques css */

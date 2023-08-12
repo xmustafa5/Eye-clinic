@@ -166,7 +166,7 @@ export default function Navbar() {
               <div className="popuplog  ">
                 <div className="modal">
                   <div onClick={handlePopupToggle} className="overlay"></div>
-                  <div className="modal-content1">
+                  <div className="modal-content mo">
                     <div className="gtre">
                       <div class="relative z-0 w-full mb-6 group">
                         <input
@@ -186,7 +186,7 @@ export default function Navbar() {
                           Full Name
                         </label>
                       </div>
-                      
+
                       <input
                         id="dropzone-file"
                         type="file"
@@ -201,51 +201,42 @@ export default function Navbar() {
                           style={{ maxWidth: "100%", maxHeight: "200px" }}
                         />
                       )} */}
-                      <div className="w-full grid place-content-center">
-                                <img
-  src={selectedImageFile ? URL.createObjectURL(selectedImageFile) : currentUser.photoURL || ddd}
-  alt="Profile"
-  className="w-40  h-40  mt-4 rounded-full"
-/>
-                      </div>
-              
-                      <div class="flex items-center justify-center w-full">
-                        <label
+                      <div className=" fde ">
+                        <div className="fde">
+
+                      
+                        <img
+                          src={
+                            selectedImageFile
+                              ? URL.createObjectURL(selectedImageFile)
+                              : currentUser.photoURL || ddd
+                          }
+                          alt="Profile"
+                          className="w-40  h-40  mt-4 rounded-full"
+                        />   <div>
+                          <label for="dropzone-file" class=" fde1 z-10 cursor-pointer">
+                        <svg
                           for="dropzone-file"
-                          class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="3em"
+                          viewBox="0 0 512 512"
                         >
-                          <div class="flex flex-col items-center justify-center pt-5 pb-6">
-                            <svg
-                              class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
-                              aria-hidden="true"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 20 16"
-                            >
-                              <path
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
-                              />
-                            </svg>
-                            <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
-                              <span class="font-semibold">Click to upload</span>
-                              or drag and drop
-                            </p>
-                            <p class="text-xs text-gray-500 dark:text-gray-400">
-                              SVG, PNG, JPG or GIF (MAX. 800x400px)
-                            </p>
-                          </div>
-                          <input
-                            id="dropzone-file"
-                            type="file"
-                            class="hidden"
+                          <path
+                            d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z"
+                            fill='#a2a2d2'
                           />
-                        </label>
+                        </svg>
+                      </label>
+                        </div> </div>
+                      
+                         
                       </div>
-                      <button onClick={handleImageCrop}>Change</button>
+
+                     
+<div className="w-full grid place-content-center mt-8">
+                        <button className="btntext4" onClick={handleImageCrop}>Change</button>
+
+</div>
                     </div>
                   </div>
                 </div>
@@ -263,7 +254,7 @@ export default function Navbar() {
       <h1 className="logo">Eye clinic</h1>
       <nav id="mune" className={isActive ? "active " : ""}>
         {links.map((link, i) => (
-          <Link key={i} to={link.link}>
+          <Link key={i} to={link.link}  onClick={handleClick}>
             {link.name}
           </Link>
         ))}

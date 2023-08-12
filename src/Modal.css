@@ -27,17 +27,9 @@
 .overlay {
     background: rgba(49, 49, 49, 0.503);
 }
-.modal-content1{
+.mo{
     background-color: var(--fcolor) !important;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    line-height: 1.4;
-    padding: 14px 28px;
-    border-radius: 3px;
-    max-width: 600px !important;
-    z-index: 230;
+   
 }
 .modal-content {
     position: absolute;

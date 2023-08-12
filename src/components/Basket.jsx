@@ -228,7 +228,7 @@ const Basket = () => {
     document.body.classList.remove("active-modal");
   }
   return (
-    <section className="pro ff">
+    <section className="pro ">
       <div className="fex titles">
         <h1>Basket</h1>
       </div>
