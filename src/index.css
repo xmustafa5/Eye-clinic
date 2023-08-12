@@ -770,6 +770,9 @@ hr{
 gap: 3px;
 font-size: 14px;
 }
+.mo{
+  height: 350px !important;
+}
 .modal-content{
   width: 290px;
 height: 490px; gap: 0;  }
@@ -845,6 +848,9 @@ gap: 14px !important;
   gap: 3px;
   font-size: 16px;
   }
+  .mo{
+    height: 350px !important;
+  }
   .modal-content{
     width: 320px;      height: 554px;
 
@@ -910,6 +916,7 @@ gap: 14px !important;
     font-size: 22px !important;
     margin-left: 27px;
   }
+  
   .modal-content{
     width: 360px;   }
   .input33{

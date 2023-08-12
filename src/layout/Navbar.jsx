@@ -137,7 +137,7 @@ export default function Navbar() {
           <img
             src={currentUser.photoURL || ddd} // Use currentUser's photoURL if available, otherwise use default image
             alt="Profile"
-            className="w-8 h-8 rounded-full"
+            className=" w-8 h-8 lg:w-10 lg:h-10  rounded-full"
           />
         </button>
 
@@ -158,7 +158,7 @@ export default function Navbar() {
           <div className="py-2">
             <button
               onClick={handlePopupToggle} // Add a new function for handling avatar editing
-              className="block absolute top-11 dddder left-32  px-4 py-2 text-sm text-gray-700  dark:text-gray-200 "
+              className="block absolute top-11 lg:top-12 dddder left-32  px-4 py-2 text-sm text-gray-700  dark:text-gray-200 "
             >
               Edit
             </button>
