@@ -171,7 +171,9 @@ section {
 .h1home {
   font-size: 40px;
 }
-
+.errors{
+  color: rgb(255, 57, 57);
+}
 .popup {
   justify-content: center;
   align-items: center;
@@ -192,7 +194,9 @@ section {
   margin: 10px;
   border-radius: 20px 20px;
 }
-
+.dddder:hover{
+  background-color: none !important;
+}
 .massage {
   font-size: 20px;
   color: red;
@@ -823,8 +827,12 @@ gap: 14px !important;
   font-size: 16px;
   }
   .modal-content{
-    width: 320px;
-  height: 490px; gap: 0;  }
+    width: 320px;      height: 554px;
+
+     gap: 0;  }
+     .mactive{    height: 515px;
+
+     }
   .input33{
     width: 70%;
     height: 40px;

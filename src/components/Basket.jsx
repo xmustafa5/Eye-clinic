@@ -5,6 +5,7 @@ import ProductDetails from "./ProductDetalis";
 import { Link } from "react-router-dom";
 import Loading from "./Loading";
 import { useAuth } from "../context/AuthContext";
+
 const Basket = () => {
   const [basketItems, setBasketItems] = useState([]);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -20,6 +21,8 @@ const Basket = () => {
   const [inputValue8, setInputValue8] = useState("");
   const [inputValue9, setInputValue9] = useState("");
   const [selectedLensType, setSelectedLensType] = useState("");
+  const [validationMessage, setValidationMessage] = useState("");
+  const [error, setError] = useState("");
 
   const [popupMessage, setPopupMessage] = useState("");
   const [showPopup, setShowPopup] = useState(false);
@@ -77,20 +80,54 @@ const Basket = () => {
   };
 
   const handlePopupToggle = () => {
+    setError(""); // Clear the error message
     setIsPopupOpen(!isPopupOpen);
     setIsOverlayVisible(!isOverlayVisible);
   };
 
   const handleInput1Change = (e) => {
     setInputValue1(e.target.value);
+    const inputValue = e.target.value;
+    if (!inputValue) {
+      setError("name is empty");
+      return; // Exit the function to prevent further processing
+    } else {
+      setError(""); // Clear the error message since the condition is false
+    }
+    
   };
 
   const handleInput2Change = (e) => {
     setInputValue2(e.target.value);
+    const inputValue = e.target.value;
+
+    if (!inputValue) {
+      setError("location is empty");
+      return; // Exit the function to prevent further processing
+    } else {
+      setError(""); // Clear the error message since the condition is false
+    }
+    
   };
 
   const handleInput3Change = (e) => {
     setInputValue3(e.target.value);
+     const inputValue = e.target.value;
+     const numericValue = inputValue.replace(/\D/g, ''); // Remove non-numeric characters
+  
+     if (numericValue !== inputValue) {
+       setInputValue3(numericValue);
+       setError("Please enter numbers only.");
+     }else if(numericValue.length > 11 || numericValue.length < 11){
+       setInputValue3(inputValue);
+
+       setError("Please enter 11 numbers .");
+
+     } else {
+       setInputValue3(inputValue);
+       setError(""); // Clear validation message
+     }
+    
   };
 
   const handleInput4Change = (e) => {
@@ -121,6 +158,21 @@ const Basket = () => {
     setSelectedLensType(e.target.value);
   };
   const handleByNowClick = async () => {
+    setError("");
+
+
+    if (!inputValue1) {
+      setError("name is empty");
+      return; // Exit the function to prevent further processing
+    } 
+    if (!inputValue2) {
+      setError("location is empty");
+      return; // Exit the function to prevent further processing
+    }
+    if (!inputValue3) {
+      setError("number is empty");
+      return; // Exit the function to prevent further processing
+    }  
     // Check if the data already exists in the requests collection
     const existingRequestsSnapshot = await db
       .collection("requests")
@@ -268,10 +320,14 @@ const Basket = () => {
             handleInput8Change={handleInput8Change}
             handleInput9Change={handleInput9Change}
             handleLensTypeChange={handleLensTypeChange}
+            inputValue3={inputValue3}
+            inputValue1={inputValue1}
+            validationMessage={validationMessage}
             handleByNowClick={handleByNowClick}
             selectedLensType={selectedLensType} // Pass selectedLensType as a prop
             setSelectedLensType={setSelectedLensType}
             showPopup={showPopup}
+            error={error}
           />
         </div>
       )}

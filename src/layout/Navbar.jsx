@@ -5,14 +5,18 @@ import { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { useAuth } from '../context/AuthContext';
 import ddd from '../assets/LASIK-Self-Test_NY.png'
+import ReactCrop from 'react-image-crop';
+import 'react-image-crop/dist/ReactCrop.css';
 export default function Navbar() {
   const [isActive, setIsActive] = useState(false);
   const [isActive1, setIsActive1] = useState(false);
   const [error, setError] = useState("");
   const { currentUser,logout  } = useAuth(); // Include currentUser from your AuthContext
   const naviagte = useNavigate();
-  console.log(currentUser); // Add this line for debugging
-
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [zoom, setZoom] = useState(1);
+  const [crop, setCrop] = useState({ aspect: 1 / 1 }); // Adjust aspect ratio as needed
+const [croppedImage, setCroppedImage] = useState(null);
   const handleClick = event => {
     // 👇️ toggle isActive state on click
     setIsActive(current => !current);
@@ -23,6 +27,61 @@ export default function Navbar() {
       section.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  const handleEditAvatar = () => {
+    setIsPopupOpen(!isPopupOpen);
+    setIsOverlayVisible(!isOverlayVisible);
+
+    // Reset cropping values when opening the popup
+    setCrop({ x: 0, y: 0 });
+    setZoom(1);
+  };
+  const getCroppedImg = (image, crop) => {
+    const canvas = document.createElement('canvas');
+    const scaleX = image.naturalWidth / image.width;
+    const scaleY = image.naturalHeight / image.height;
+    canvas.width = crop.width * scaleX;
+    canvas.height = crop.height * scaleY;
+    const ctx = canvas.getContext('2d');
+  
+    ctx.drawImage(
+      image,
+      crop.x * scaleX,
+      crop.y * scaleY,
+      crop.width * scaleX,
+      crop.height * scaleY,
+      0,
+      0,
+      crop.width * scaleX,
+      crop.height * scaleY
+    );
+  
+    return new Promise((resolve, reject) => {
+      canvas.toBlob(
+        (blob) => {
+          if (!blob) {
+            console.error('Error cropping image');
+            reject();
+            return;
+          }
+          const croppedImageUrl = URL.createObjectURL(blob);
+          resolve(croppedImageUrl);
+        },
+        'image/jpeg',
+        1
+      );
+    });
+  };
+  const handleImageCrop = async () => {
+    try {
+      const croppedImageUrl = await getCroppedImg(selectedImage, crop);
+      setCroppedImage(croppedImageUrl);
+    } catch (error) {
+      console.error('Error cropping image:', error);
+    }
+  
+    // Close the popup after cropping
+    handlePopupToggle();
+  };
   const handleLogout = async ()=>{
     setError("")
     try{
@@ -32,6 +91,13 @@ export default function Navbar() {
       setError("felid to logout")
     }
   }
+
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+  const handlePopupToggle = () => {
+    setIsPopupOpen(!isPopupOpen);
+    setIsOverlayVisible(!isOverlayVisible);
+  };
   return (
     <header className='navbar'>
            <div className='image_login absolute top-20 left-4 drop'>
@@ -57,14 +123,50 @@ export default function Navbar() {
       </div>
     ) : null}
 
-    <div className="py-2">
-      <a
-        onClick={handleLogout}
-        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-      >
-        Sign out
-      </a>
+<div className="py-2">
+  <button
+    onClick={handlePopupToggle} // Add a new function for handling avatar editing
+    className="block absolute top-11 dddder left-32  px-4 py-2 text-sm text-gray-700  dark:text-gray-200 "
+  >
+    Edit
+  </button>
+  {isPopupOpen && (
+    <div className="popuplog ">
+      <div className="modal">
+        <div onClick={handlePopupToggle} className="overlay"></div>
+        <div className="modal-content">
+          <div className="gtre">
+            <input
+              type="file"
+              onChange={(e) => setSelectedImage(e.target.files[0])}
+            />
+            {selectedImage && (
+  <div className="crop-container">
+    <ReactCrop
+  src={URL.createObjectURL(selectedImage)}
+  crop={crop}
+  onImageLoaded={(image) => {
+    const aspectRatio = image.naturalWidth / image.naturalHeight;
+    setCrop({ aspect: aspectRatio });
+  }}
+  onChange={(newCrop) => setCrop(newCrop)}
+/>
+
+  </div>
+)}
+            <Button onClick={handleImageCrop}>Crop and Save</Button>
+          </div>
+        </div>
+      </div>
     </div>
+  )}
+  <a
+    onClick={handleLogout}
+    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+  >
+    Sign out
+  </a>
+</div>
   </div>
 </div>
       <h1 className='logo' >Eye clinic</h1>

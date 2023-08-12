@@ -1,12 +1,15 @@
 import { Input, Button, Select, Option } from "@material-tailwind/react";
 import React, { useState } from "react";
 import Items from "./authlogin/Items";
+import {  Alert } from "react-bootstrap";
 
 const ProductDetails = ({
   handlePopupToggle,
   handleInput1Change,
   handleInput2Change,
   handleInput3Change,
+  inputValue3,
+  inputValue1,
   handleInput4Change,
   handleInput5Change,
   handleInput6Change,
@@ -17,7 +20,10 @@ const ProductDetails = ({
   selectedLensType,
   setSelectedLensType,
   handleByNowClick,
+  validationMessage,
+  error={error}
 }) => {
+  
   const options = [
     { value: "", text: "Lens Type" },
     { value: "M.C", text: "M.C" },
@@ -36,18 +42,25 @@ const ProductDetails = ({
 
   
   const [selected, setSelected] = useState(options[0].value);
-    
+  const [isSizeAdded, setIsSizeAdded] = useState(false);
+
   const handleChange = (event) => {
     console.log(event.target.value);
     setSelected(event.target.value);
+  };
+  const isPhoneNumberValid = !error;
+  const handleCheckboxChange = () => {
+    setIsSizeAdded(!isSizeAdded);
   };
   return (
     <>
       <div className="modal">
         <div onClick={handlePopupToggle} className="overlay"></div>
-        <div className="modal-content">
+        <div className={`modal-content ${isPhoneNumberValid ? "mactive" : ""} `}>
           <div className="flex ">
             <div className="flex erwq  flex-col w-96 mt-4 mb-4 items-start gap-8">
+            {error && <Alert variant="danger" className="errors">{error}</Alert>}
+
             <div class="relative z-0 w-full mb-2 group">
                 <input
                 onChange={handleInput1Change} 
@@ -57,7 +70,8 @@ const ProductDetails = ({
                   class="block py-2.5 px-0 w-full input33 text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer"
                   placeholder=" "
                   required
-                />
+                />           
+
                 <label
                   for="floating_email"
                   class="peer-focus:font-medium absolute text-sm text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
@@ -65,6 +79,7 @@ const ProductDetails = ({
                   name
                 </label>
               </div>
+
               <div class="relative z-0 w-full mb-2 group">
                 <input
                 onChange={handleInput2Change}
@@ -90,14 +105,16 @@ const ProductDetails = ({
                   id="floating_email"
                   class="block py-2.5 px-0 w-full input33 text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer"
                   placeholder=" "
+                  
                   required
-                />
+                />         
                 <label
                   for="floating_email"
                   class="peer-focus:font-medium absolute text-sm text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   phone number
                 </label>
+     
               </div>
               {/* <Input className="input33" size="lg" label="name" onChange={handleInput1Change} /> */}
               {/* <Input className="input33" size="lg" label="location" onChange={handleInput2Change} />
@@ -120,11 +137,29 @@ const ProductDetails = ({
             <input  type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-14 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" />
         </div>
         </div> */}
+       <div className="flex items-center">
+  <input
+    id="checked-checkbox"
+    type="checkbox"
+    value=""
+    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+    checked={isSizeAdded}
+    onChange={handleCheckboxChange}
+
+  />
+  <label
+    htmlFor="checked-checkbox"
+    className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+  >
+    add size
+  </label>
+</div>
+        
         <div className="downselec">
               <div className="w-full flex justify-center  align-Items-center ">
                 <label
                   for="first_name"
-                  class="block labol mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  class={`block labol mb-2 text-sm font-medium  ${!isSizeAdded ? " opacity-50" : ""} text-gray-900 dark:text-white`}
                 >
                   right eye
                 </label>
@@ -144,20 +179,19 @@ const ProductDetails = ({
                   type="text"
                   name="floating_email"
                   id="floating_email"
-                  class="block py-2.5 px-0 w-full inputsr text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer"
+                  class={`block py-2.5 px-0 w-full ${!isSizeAdded ? "cursor-not-allowed opacity-50" : ""}  inputsr text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer`}
                   placeholder=" "
                   required
+                  disabled={!isSizeAdded}
+
                 />
                 <label
                   for="floating_email"
-                  class="peer-focus:font-medium absolute text-sm text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  class={`peer-focus:font-medium absolute text-sm  ${!isSizeAdded ? " opacity-50" : ""} text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
                 >
                   SPH
                 </label>
               </div>
-
-
-
                 {/* <div className="w-20 mr-2  inp  ">
                   <Input
                     size="md"
@@ -172,13 +206,14 @@ const ProductDetails = ({
                   type="text"
                   name="floating_email"
                   id="floating_email"
-                  class="block py-2.5 px-0 w-full inputsr text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer"
+                  class={`block py-2.5 px-0 w-full inputsr ${!isSizeAdded ? "cursor-not-allowed opacity-50" : ""} text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer`}
                   placeholder=" "
                   required
+                  disabled={!isSizeAdded}
                 />
                 <label
                   for="floating_email"
-                  class="peer-focus:font-medium absolute text-sm text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  class={`peer-focus:font-medium absolute text-sm  ${!isSizeAdded ? " opacity-50" : ""} text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
                 >
                   CYL
                 </label>
@@ -197,13 +232,14 @@ const ProductDetails = ({
                   type="text"
                   name="floating_email"
                   id="floating_email"
-                  class="block py-2.5 px-0 w-full inputsr text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer"
+                  class={`block py-2.5 px-0 w-full inputsr ${!isSizeAdded ? "cursor-not-allowed opacity-50" : ""} text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer`}
                   placeholder=" "
                   required
+                  disabled={!isSizeAdded}
                 />
                 <label
                   for="floating_email"
-                  class="peer-focus:font-medium absolute text-sm text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  class={`peer-focus:font-medium absolute text-sm  ${!isSizeAdded ? " opacity-50" : ""} text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
                 >
                   AIX
                 </label>
@@ -214,7 +250,7 @@ const ProductDetails = ({
               <div className="w-full flex justify-center  align-Items-center ">
                 <label
                   for="first_name"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  class={`block labol mb-2 text-sm font-medium  ${!isSizeAdded ? " opacity-50" : ""} text-gray-900 dark:text-white`}
                 >
                   left eye
                 </label>
@@ -234,13 +270,14 @@ const ProductDetails = ({
                   type="text"
                   name="floating_email"
                   id="floating_email"
-                  class="block py-2.5 px-0 w-full inputsr text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer"
+                  class={`block py-2.5 px-0 w-full inputsr ${!isSizeAdded ? "cursor-not-allowed opacity-50" : ""} text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer`}
                   placeholder=" "
                   required
+                  disabled={!isSizeAdded}
                 />
                 <label
                   for="floating_email"
-                  class="peer-focus:font-medium absolute text-sm text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  class={`peer-focus:font-medium absolute text-sm  ${!isSizeAdded ? " opacity-50" : ""} text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
                 >
                   SPH
                 </label>
@@ -262,13 +299,14 @@ const ProductDetails = ({
                   type="text"
                   name="floating_email"
                   id="floating_email"
-                  class="block py-2.5 px-0 w-full inputsr text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer"
+                  class={`block py-2.5 px-0 w-full inputsr ${!isSizeAdded ? "cursor-not-allowed opacity-50" : ""} text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer`}
                   placeholder=" "
                   required
+                  disabled={!isSizeAdded}
                 />
                 <label
                   for="floating_email"
-                  class="peer-focus:font-medium absolute text-sm text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  class={`peer-focus:font-medium absolute text-sm  ${!isSizeAdded ? " opacity-50" : ""} text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
                 >
                   CYL
                 </label>
@@ -287,15 +325,17 @@ const ProductDetails = ({
                   type="text"
                   name="floating_email"
                   id="floating_email"
-                  class="block py-2.5 px-0 w-full inputsr text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer"
+                  class={`block py-2.5 px-0 w-full inputsr ${!isSizeAdded ? "cursor-not-allowed opacity-50" : ""} text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-y-cyan-400 peer`}
                   placeholder=" "
+                  
                   required
+                  disabled={!isSizeAdded}
                 />
                 <label
                   for="floating_email"
-                  class="peer-focus:font-medium absolute text-sm text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  class={`peer-focus:font-medium absolute text-sm ${!isSizeAdded ? " opacity-50" : ""} text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
                 >
-                  AIX
+                  AIXc
                 </label>
               </div>
               </div>
@@ -303,7 +343,8 @@ const ProductDetails = ({
               <select
                 value={selectedLensType}
                 onChange={handleLensTypeChange}
-                className="bg-gray-50 border sels border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                disabled
+                className={`bg-gray-50 border sels  ${!isSizeAdded ? "cursor-not-allowed  opacity-50" : ""} border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}
               >
                 {options.map((option) => (
                   <option key={option.value} value={option.value}>
@@ -313,7 +354,8 @@ const ProductDetails = ({
               </select>
               <div className="flex items-center ">
                 <div className=" ffff">
-                    <Button onClick={handleByNowClick}>By Now</Button>
+                <Button onClick={isPhoneNumberValid ? handleByNowClick : null} disabled={!isPhoneNumberValid}>
+By Now</Button>
                 </div>
               </div>
             </div>

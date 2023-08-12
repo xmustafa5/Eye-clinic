@@ -14,6 +14,7 @@ import RequireAuth from './context/RequirAuth';
 import Dashboardd from './components/authlogin/Dashboardd';
 import Admin from './pages/Admin';
 import AuthContextAdmin from './context/AuthContextAdmin';
+import Crop from './components/Crop';
 
 function App() {
   const location = useLocation();
@@ -39,6 +40,7 @@ function App() {
             <Route path='/forgot-password' element={<ForgotPassword />} />
             <Route path='/Singup' element={<Singup />} />
             <Route path='/Dashboardd' element={<RequireAuth><Dashboardd /></RequireAuth>} />
+            <Route path='/crop' element={<RequireAuth><Crop /></RequireAuth>} />
           </Routes>
         </Layout>
       </AuthProvider>
