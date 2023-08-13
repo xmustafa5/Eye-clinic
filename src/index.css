@@ -63,13 +63,11 @@ nav a:hover{
     font-size: 20px;
     margin-left: 20px;
   }
-.navbar{
 
-}
   #mune {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: relative;
     top: 53px;
     right: -200px;
     padding: 0;
@@ -177,13 +175,15 @@ section {
 .errors{
   color: rgb(255, 57, 57);
 }
+.rere{
+  z-index: 300;
+}
 .popup {
   justify-content: center;
   align-items: center;
   position: fixed;
   bottom: 16px;
   left: 16px;
-  width: 400px;
 }
 .popup1 {
   display: grid;
@@ -233,6 +233,9 @@ section {
   transform: translateX(-70px);
   transition: all 0.7s ease-in-out;
   z-index: 200;
+}
+.fee54{
+  color: #17212b !important;
 }
 .contt:hover {
   transform: none;
@@ -647,6 +650,28 @@ position: relative;  transition: all 0.3s ease-out;
 
 }
 
+/*spinner*/
+/* Add these styles to your CSS */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #12d0c5;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 .searchi {
   margin-left: 100px;

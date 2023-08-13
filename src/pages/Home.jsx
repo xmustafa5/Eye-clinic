@@ -169,7 +169,7 @@ export default function Home() {
                 </svg>
                 <span class="sr-only">Check icon</span>
               </div>
-              <div class="ml-3 text-sm font-normal">{popupMessage}</div>
+              <div class="ml-3 text-sm font-normal fee54 ">ffff{popupMessage}</div>
             </div>
           </div>
         )}

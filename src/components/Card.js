@@ -5,6 +5,10 @@ import { db } from "./firebase";
 import { useAuth } from "../context/AuthContext";
 import ProductDetails from "./ProductDetalis";
 import "./buttoncss.css";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/opacity.css'; 
+import Spinner from './Spinner'; // Import your spinner component
+
 const Card = ({
   title,
   color1,
@@ -19,6 +23,9 @@ const Card = ({
 }) => {
   const [selectedOption, setSelectedOption] = useState("option1");
   const [imageSource, setImageSource] = useState(imageUrl1);
+  const [isLoading, setIsLoading] = useState(false); // Add a loading state
+  const [isAddingToBasket, setIsAddingToBasket] = useState(false); // Add a state for the adding process
+  
   const { currentUser, handlePopupToggle, isOverlayVisible, isPopupOpen } =
     useAuth();
 
@@ -35,6 +42,8 @@ const Card = ({
   };
 
   const handleAddToBasket = () => {
+    setIsAddingToBasket(true); // Start the adding process
+
     // handlePopupToggle()
 
     //   if(currentUser){
@@ -58,6 +67,7 @@ const Card = ({
         if (querySnapshot.size > 0) {
           setPopupMessage("Item already in the basket");
           setShowPopup(true);
+          setIsAddingToBasket(false); // Finish the adding process
         } else {
           addToBasket({ ...item, userId: currentUser.uid }); // Add the selected item with userId to the basket
 
@@ -67,6 +77,8 @@ const Card = ({
             .then(() => {
               setPopupMessage("Item added to the basket!");
               setShowPopup(true);
+              setIsAddingToBasket(false); // Finish the adding process
+
             })
             .catch((error) => {
               setPopupMessage("Failed to add item to the basket.");
@@ -86,9 +98,19 @@ const Card = ({
         <li className="">
           <div className="projcard boxs">
             <div className="ssss">
-              <div className="projimg">
-                <img src={imageSource} alt="Selected Option" />
-              </div>
+            <div className="projimg">
+            {isLoading ? (
+          <Spinner />
+        ) : (
+          // <LazyLoadImage
+          <img
+            src={imageSource}
+            alt="Selected Option"
+            effect="opacity"
+            afterLoad={() => setIsLoading(false)}
+          />
+        )}
+      </div>
               {/* <img src={imageSource} alt="Selected Option"  /> */}
             </div>
             <div className="projinfo">
@@ -130,10 +152,21 @@ const Card = ({
               </button> */}
 
               <div className={"homebtngroup1"}>
-                <button className={"btnbtnprimary"} onClick={handleAddToBasket}>
-                  <p className={"btntext1"}>Buy</p>
-                  <span className={"square"}></span>
-                </button>
+              <button
+            className={"btnbtnprimary"}
+            onClick={handleAddToBasket}
+            disabled={isAddingToBasket} // Disable the button while adding is in progress
+          >
+            {isAddingToBasket ? (
+                             <p className={"btntext1"}><Spinner /></p>
+                              // Display spinner while adding is in progress
+            ) : (
+              <>
+                <p className={"btntext1"}>Buy</p>
+                <span className={"square"}></span>
+              </>
+            )}
+          </button>
               </div>
             </div>
           </div>
